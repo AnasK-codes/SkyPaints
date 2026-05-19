@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skypaints | The Ethereal Canvas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#503788",
+              "surface-container-highest": "#e4e0f0",
+              "surface-container-high": "#eae6f6",
+              "on-tertiary-fixed-variant": "#6a3a1b",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "surface": "#fcf8ff",
+              "primary": "#170040",
+              "on-secondary-fixed-variant": "#653e00",
+              "inverse-on-surface": "#f3efff",
+              "tertiary-fixed": "#ffdbc8",
+              "on-primary-fixed": "#24005b",
+              "outline-variant": "#cbc4d2",
+              "primary-container": "#2e1065",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed": "#2a1700",
+              "surface-dim": "#dcd8e8",
+              "tertiary-container": "#411a00",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#1b1a25",
+              "secondary-container": "#fea619",
+              "surface-bright": "#fcf8ff",
+              "on-tertiary-fixed": "#321200",
+              "inverse-primary": "#d1bcff",
+              "outline": "#7a7582",
+              "surface-container": "#f0ecfc",
+              "on-secondary-container": "#684000",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#d1bcff",
+              "tertiary": "#210a00",
+              "primary-fixed": "#eaddff",
+              "surface-variant": "#e4e0f0",
+              "inverse-surface": "#302f3b",
+              "on-tertiary-container": "#bc7e59",
+              "on-tertiary": "#ffffff",
+              "surface-tint": "#6950a2",
+              "tertiary-fixed-dim": "#fdb78e",
+              "on-primary-container": "#987ed4",
+              "background": "#fcf8ff",
+              "secondary": "#855300",
+              "on-surface": "#1b1a25",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#494550",
+              "surface-container-low": "#f6f2ff",
+              "secondary-fixed": "#ffddb8",
+              "secondary-fixed-dim": "#ffb95f"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(46, 16, 101, 0.1);
+        }
+        .mask-fade {
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Navbar -->
+<header class="bg-white/60 dark:bg-violet-950/60 backdrop-blur-xl rounded-full mt-4 mx-auto max-w-7xl sticky top-4 z-50 shadow-[0px_12px_40px_rgba(46,16,101,0.08)] flex justify-between items-center px-8 py-3 w-[95%]">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-serif italic text-violet-950 dark:text-violet-50" href="#">Skypaints</a>
+<nav class="hidden md:flex gap-6">
+<a class="text-violet-950 dark:text-white font-bold border-b-2 border-orange-300 UI/Labels: Manrope 500. hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Home</a>
+<a class="text-violet-700/70 dark:text-violet-200/70 UI/Labels: Manrope 500. hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Products</a>
+<a class="text-violet-700/70 dark:text-violet-200/70 UI/Labels: Manrope 500. hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Colors</a>
+<a class="text-violet-700/70 dark:text-violet-200/70 UI/Labels: Manrope 500. hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Inspiration</a>
+<a class="text-violet-700/70 dark:text-violet-200/70 UI/Labels: Manrope 500. hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Tools</a>
+<a class="text-violet-700/70 dark:text-violet-200/70 UI/Labels: Manrope 500. hover:text-violet-950 dark:hover:text-white transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary rounded-full px-6 py-2 font-medium scale-95 duration-200 ease-in-out hover:bg-primary transition-all shadow-lg shadow-primary-container/20">Explore Colors</button>
+<span class="material-symbols-outlined text-violet-900 dark:text-violet-100 cursor-pointer">account_circle</span>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-8">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-surface via-surface-container-low to-secondary-fixed/10"></div>
+<img alt="" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="Luxurious minimalist interior with soft lavender walls, velvet furniture, and ethereal morning light streaming through tall windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADVvFf21pwfN6f417HrFn5jAvLvbwjxnLTIUIRA3uzwwBoWR2SohURye1WYxRkvuVOVYLDhT44KJHoIt2O_KoQmwqIpbotAlqIaM3YgEbazIesMwXZztYN7d2AwaSXkn6SjNmf2kMlq6egiQzsBQFh_m06N2xd3kTG1m5Fl912MWOp4MYUbknEqJxyXb4PL3CcUVDoEtmtnuvotBmWWd5zywM9H-CJZgTVjzUuNr68JEYE498Yg7o3jo5Upfo0GLQk2-hBDObwFNg"/>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+<h1 class="font-headline text-6xl md:text-8xl text-primary tracking-tight leading-none text-glow">
+                Transform Your <span class="italic font-light">Walls</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-on-surface-variant leading-relaxed">
+                Experience the atmospheric depth of Skypaints. Our artisanal finishes capture the shifting light of the celestial hours.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+<button class="bg-primary-container text-on-primary px-10 py-4 rounded-full text-lg font-medium transition-all hover:scale-105 shadow-xl shadow-primary-container/20">
+                    Order a Swatch Kit
+                </button>
+<button class="bg-surface-container-lowest/80 backdrop-blur-md text-primary px-10 py-4 rounded-full text-lg font-medium border border-outline-variant/20 transition-all hover:bg-white">
+                    View 2024 Collection
+                </button>
+</div>
+</div>
+</section>
+<!-- Category Strip -->
+<section class="py-12 bg-surface-container-low">
+<div class="mask-fade overflow-x-auto no-scrollbar flex items-center gap-12 px-12 whitespace-nowrap">
+<a class="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">home_pin</span> Interior Finishes
+            </a>
+<a class="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">landscape</span> Exterior Durability
+            </a>
+<a class="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">texture</span> Tactile Textures
+            </a>
+<a class="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">eco</span> Sustainable Living
+            </a>
+<a class="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">palette</span> Artist Collaborations
+            </a>
+<a class="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined">format_paint</span> Professional Tools
+            </a>
+</div>
+</section>
+<!-- Featured Carousel (Editorial Style) -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div class="space-y-4">
+<h2 class="font-headline text-4xl md:text-5xl text-primary">Season of Serenity</h2>
+<p class="text-on-surface-variant max-w-lg">Explore curated palettes designed to bring the tranquility of nature into your private sanctuary.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="p-4 rounded-full bg-surface-container hover:bg-surface-container-high text-primary transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-4 rounded-full bg-surface-container hover:bg-surface-container-high text-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden shadow-2xl shadow-primary/5 transition-transform hover:-translate-y-2">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a textured wall painted in a warm terracotta hue with organic brush strokes and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACNezK4UKE0imkRuFUTH873h8KbB-qVZnS0_FJiaW41watg-FDSCRuUHx3ttk7mr7HFb-a-_ROiNYqJhpleJS2-D3nEqUUY9v3Z5t5r_s5AA0RpkHkc03NjyUc4vBjoY1Av1tdegidffiOP26TsNh9qVq2g7iXAVP-w9fZijDlqpftPrLnDYW80_0mb3_5hMTqC9fuYjI9EHSDRdMuZ6vfJ5EENtTgyR-dgOnqUdbNWnrgLK-6NxZK0JDRgtvaz4U__d6B137i4eY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-on-primary">
+<span class="text-sm font-medium tracking-widest uppercase opacity-70 mb-2 block">Warmth</span>
+<h3 class="font-headline text-3xl mb-4">Golden Hour</h3>
+<button class="flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1">Discover Palette</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden shadow-2xl shadow-primary/5 transition-transform hover:-translate-y-2 translate-y-8">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist living room with deep forest green walls and a large round mirror reflecting soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1NfQhnxPOjiSPDeosjPn_fEvA9ivP3oeb_RpXbroCozPaVx7qm9L1iDCniciIXSOnWkoww0CL2gUk6o2AByJMyIoowaXYo87WP0hoXkaZzi4k0Idmn9sJJ0DpI6dcbSgnko4M8cpWwDf-ajE2jVWk-cFkmpRvVXQ3Nt6nPYwO_zaWUTLhViHStMUO6_SU0kfr0C_ybJMrNbryMCJG-XPdePJ540u72kaHIe5DbAQtzSESYZRCdAYMFgh4QPcibcP3KtF-CIi1XQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-on-primary">
+<span class="text-sm font-medium tracking-widest uppercase opacity-70 mb-2 block">Depth</span>
+<h3 class="font-headline text-3xl mb-4">Midnight Mist</h3>
+<button class="flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1">Discover Palette</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative aspect-[3/4] rounded-xl overflow-hidden shadow-2xl shadow-primary/5 transition-transform hover:-translate-y-2">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Artistic studio shot of paint swatches in shades of soft blue and sage green on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFt2yaSRZuEf6krSTj5Eh1qypJ7Gxh1NsWdhumEPibOWLVCEA9K69Hl9fCeMt5exjrtiHrgthh30GY5YFm0cT5z3ivTkYsjRIR7jaSVcKffLIgvq5UGsZntvcQEqIe4ybd_R7uUvIF0WjkYOuEpdlv05ZQ5vsWF5E0sDnp9-tk8SdGAKDSwUrKUEAQj_WYEfpyoIwOxYiKy5-CUqbqzqdHEM7JdW-Q3Iy6q5ytkv6bdhPF5lhNJRzg2sjO6U72Uk0eTUm8NNApzfs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-on-primary">
+<span class="text-sm font-medium tracking-widest uppercase opacity-70 mb-2 block">Balance</span>
+<h3 class="font-headline text-3xl mb-4">Ethereal Sage</h3>
+<button class="flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1">Discover Palette</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Transform Your Home (Split-screen) -->
+<section class="mt-32 flex flex-col lg:flex-row min-h-screen bg-surface-container-low overflow-hidden">
+<div class="w-full lg:w-1/2 p-12 lg:p-24 flex flex-col justify-center space-y-8">
+<span class="text-secondary-container font-bold tracking-[0.2em] uppercase text-sm">Our Philosophy</span>
+<h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight">Light is the <br/> <span class="italic font-light">final layer</span>.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">
+                We don't just sell color; we sell atmosphere. Skypaints are formulated with high-refraction minerals that interact with daylight, changing their mood from dawn to dusk.
+            </p>
+<div class="pt-8">
+<a class="group flex items-center gap-4 text-primary font-bold text-lg" href="#">
+                    Read the Skypaints Story
+                    <span class="material-symbols-outlined bg-primary text-on-primary p-2 rounded-full group-hover:translate-x-2 transition-transform">east</span>
+</a>
+</div>
+</div>
+<div class="w-full lg:w-1/2 relative min-h-[500px]">
+<img alt="" class="w-full h-full object-cover" data-alt="Painter applying smooth, thick lavender-tinted paint to a modern wall with high-end aesthetic focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7fWuvaySJL6PljwBCEB6WIzM36nCF8TzRE8mfyOLqSevxf0Z4VRZ7KuBn9UQF3AUb3aqurrBp2AvqsMsHS3Z_vJ2sMNY2tu6EPUINoVzWKOBhfKRPiEZNz7n9rcXSehaB5QjDLbF1pLvprGQXsrRqsm450v8uptijGuGa7RE3u0HAWZuwSbhKaBOlTosjxCV_0DRpVO936GT2ENyK4UO9uj35EbMG4BQc1ePAeqlTN9oph3OXTkQM9jLpjyJJYt_KE2sXRiSjtEE"/>
+<div class="absolute top-12 left-12 p-8 bg-white/40 backdrop-blur-xl rounded-xl border border-white/20 shadow-xl max-w-xs hidden md:block">
+<p class="text-primary font-serif italic text-xl">"The way the shadow moves across these walls is pure art."</p>
+<p class="mt-4 text-sm font-bold text-on-surface-variant">— Julianne V., Architect</p>
+</div>
+</div>
+</section>
+<!-- Everything a Home Needs (Bento Grid) -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl text-center mb-20 text-primary">Everything a Home Needs</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+<!-- Bento 1 -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container rounded-xl p-12 flex flex-col justify-between group cursor-pointer overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="text-3xl font-headline text-primary mb-4">The Architectural Series</h3>
+<p class="text-on-surface-variant max-w-xs">Ultra-matte finishes designed for modern structure and clarity.</p>
+</div>
+<div class="relative z-10 flex gap-4 mt-8">
+<span class="px-4 py-1 rounded-full border border-primary/20 text-xs font-bold text-primary">MATTE</span>
+<span class="px-4 py-1 rounded-full border border-primary/20 text-xs font-bold text-primary">SCUFF-PROOF</span>
+</div>
+<img alt="" class="absolute bottom-0 right-0 w-2/3 h-1/2 object-contain translate-y-12 translate-x-12 opacity-40 group-hover:scale-110 transition-transform" data-alt="Modernist white architecture with sharp geometric shadows and clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw7nPrsSYWVuwdmsLxKZUlYioTU-wsXDGUybZ24ZcO16ZMkpOHQ041-WLmRg-tTDSYDfzeXgPMKFHq_Cf6T--6BC9wdDYnCPdf0_-u6AHfeHD26ZHiRIqca6aLGJ_LakeQxYcbg3hAjsz5BbHDJtoH22WULKrdOOS-Nf0zWYOXkkUAZlQgrUExJU5v9PD9xTrC9N7-MoosHPShtnhyvxq8GwPuwPoLJhJj1pWc84fLKy20T_S0l472BEd1-s9oGOjCxxEj5-fP9nI"/>
+</div>
+<!-- Bento 2 -->
+<div class="md:col-span-2 bg-secondary-fixed rounded-xl p-8 flex items-center justify-between group cursor-pointer">
+<div>
+<h3 class="text-2xl font-headline text-on-secondary-fixed mb-2">Heritage Gloss</h3>
+<p class="text-on-secondary-fixed-variant text-sm">High-shine enamels for timeless woodwork.</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-on-secondary-fixed group-hover:rotate-45 transition-transform">auto_awesome</span>
+</div>
+<!-- Bento 3 -->
+<div class="md:col-span-1 bg-surface-container-highest rounded-xl p-8 flex flex-col justify-center text-center group cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 mx-auto">shield_with_heart</span>
+<h3 class="text-xl font-bold text-primary">Kitchen &amp; Bath</h3>
+<p class="text-xs text-on-surface-variant mt-2">Steam resistant &amp; antimicrobial.</p>
+</div>
+<!-- Bento 4 -->
+<div class="md:col-span-1 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between group cursor-pointer overflow-hidden relative">
+<h3 class="text-xl font-bold">Exterior Guard</h3>
+<p class="text-xs opacity-80">Weather protection for up to 15 years.</p>
+<img alt="" class="absolute bottom-0 right-0 w-1/2 opacity-20" data-alt="Detail of a modern dark blue exterior wall in sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMwnssgEWVXILsAk7IT1c8IsKitbx_kbKLr7ypG9HaGlH_nJZ8aU-RLj-z2wCxJopTl-5sDqwszfMRilRb1LyUdnmVY1zMuj3xP3_jgMx1Wsl1HuHcLKvf9Y7ptq3_ri0PU42DDi9Phw3jfb1O4j2hJ_PmdXpjZNVKJtkfq1ceRXFD5n9syl95j2RcIhqKIknzp_WjvaBzWCFSA3WQW-_Uu31TsLwiGUJNfRbWEKYoTD5OR5iiBVtrIR5yfsf62gJbDc6WR8BJQ3Q"/>
+</div>
+</div>
+</section>
+<!-- Color Tools -->
+<section class="py-24 bg-primary overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="font-headline text-5xl text-on-primary leading-tight">Master your <br/><span class="text-secondary-fixed">Canvas.</span></h2>
+<div class="space-y-6">
+<!-- Tool 1 -->
+<div class="flex items-start gap-6 p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer">
+<div class="p-3 rounded-full bg-secondary-fixed/20 text-secondary-fixed">
+<span class="material-symbols-outlined">calculate</span>
+</div>
+<div>
+<h4 class="text-on-primary font-bold text-lg">Paint Calculator</h4>
+<p class="text-on-primary-container text-sm mt-1">Precise measurement to minimize waste and cost.</p>
+</div>
+</div>
+<!-- Tool 2 -->
+<div class="flex items-start gap-6 p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer">
+<div class="p-3 rounded-full bg-secondary-fixed/20 text-secondary-fixed">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div>
+<h4 class="text-on-primary font-bold text-lg">Virtual Visualizer</h4>
+<h4 class="text-on-primary font-bold text-lg">Virtual Visualizer</h4>
+<p class="text-on-primary-container text-sm mt-1">Preview any shade on your walls using AR technology.</p>
+</div>
+</div>
+<!-- Tool 3 -->
+<div class="flex items-start gap-6 p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer">
+<div class="p-3 rounded-full bg-secondary-fixed/20 text-secondary-fixed">
+<span class="material-symbols-outlined">colorize</span>
+</div>
+<div>
+<h4 class="text-on-primary font-bold text-lg">The Shade Finder</h4>
+<p class="text-on-primary-container text-sm mt-1">A 3-minute quiz to find your home's unique palette.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-10 bg-secondary-fixed/10 blur-3xl rounded-full"></div>
+<img alt="" class="relative z-10 rounded-xl shadow-2xl border border-white/10" data-alt="Professional tablet showing an app with color palettes on top of a messy painter's workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCg6mlxL1P-4nGKfbLK6WBsxDhafHxaJXLK9x9UVyCKKdAX1nyzXDpqKfvY75dzptv1bhD0VgxGJCYFWPXz8-bb9nlmIm6TboVfJdMOI576SaUL3kFsBDXVhqteTLbc_Ap3DMB_JcoZdf_7Uu_4ALxGLRDBWSP3tZznRmJGalH8J9qJAEiVD-BlP1C1K0-3HsooIIkfno1ORfEw2Z3oeE1Pp9XoZfP7d36BTUh-f19X7ooDFJX2Y8HAoH2vXZpeKwfy9tNkkqnAtw"/>
+</div>
+</div>
+</section>
+<!-- Before/After -->
+<section class="py-32 px-8 max-w-7xl mx-auto text-center">
+<h2 class="font-headline text-4xl md:text-5xl text-primary mb-16">The Skypaints Effect</h2>
+<div class="relative aspect-video max-w-5xl mx-auto rounded-xl overflow-hidden group">
+<div class="flex h-full">
+<div class="w-1/2 h-full relative">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" data-alt="Dull, unpainted gray room with plain windows and empty space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXBZIk9VSrzTqdOOnqEgyaKyPj6iQzSnPQbt4a6rQkWdkQnp_MHkbmuhB9sX79jhvdnueuMbMvvI5KFpR_govCmkSz4UjiLX248jeasah_yJMWmJh5isevb6j47p9D5zNnFH41s5zxE5iPZPszSemR_ZKhSLMhx-V77T_B07UhC8ie4iw4wlSLJiJBJ8qvtJ9ouUZMlwgXzcdf6jZZfcHUIeInkuYHEG2NtEFzXy3rJjLdlFAna80f68kt1FHorBTBecoTm1FICec"/>
+<span class="absolute top-6 left-6 px-4 py-2 bg-black/50 backdrop-blur-md text-white rounded-full text-xs font-bold uppercase tracking-widest">Before</span>
+</div>
+<div class="w-1/2 h-full relative">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" data-alt="Modern living room with walls painted in a deep designer teal, stylish furniture, and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrJy2lOPj1sfDxTKxfNGUW2WAMGNLMN4AIcp6UuBLGWBjv9HoqpZpX04xFvi2OmWPg1r7ciJxL1LBC4WCKD1-mND4hC6N1I4nEPYQH4rTLFbcBPQisl4lFEZOrKdHVse-7FMShxvIzGsbKDIPWm5PS_D7Vj88nBozWYBPccqhLchzRcPVubp05_f0o_vjd079FRUk56GRlFDG-RYgUq0H6kcqE8ghoHLFRyiCVp7UrvZerhDMNg-46NVFaftbeAsFURcVi6o-xRs8"/>
+<span class="absolute top-6 right-6 px-4 py-2 bg-secondary-container backdrop-blur-md text-white rounded-full text-xs font-bold uppercase tracking-widest">After Skypaints</span>
+</div>
+</div>
+<div class="absolute inset-y-0 left-1/2 w-1 bg-white/30 backdrop-blur-sm flex items-center justify-center">
+<div class="w-10 h-10 rounded-full bg-white shadow-xl flex items-center justify-center text-primary cursor-col-resize">
+<span class="material-symbols-outlined">unfold_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="py-24 bg-surface-container-low px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline text-center text-4xl text-primary mb-20">Voices from the Atelier</h2>
+<div class="flex flex-wrap justify-center gap-8">
+<!-- Review Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-full border border-outline-variant/10 shadow-lg shadow-primary/5 flex items-center gap-6 max-w-md group hover:scale-105 transition-all">
+<img alt="" class="w-16 h-16 rounded-full object-cover ring-2 ring-secondary-fixed/50" data-alt="Portrait of a creative professional man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRTIxYCeqGTgSVSZwbTqMPh2yEI-HTjpPnmLgAPVzkfKmP8xhdjVdhuzuD9nt_ervCW9QCNoR9pNSZZVMHCF0SPp8Uc_CKk7jNN2QdGxxotrArxpDNHbcDiITzbyVuL8RWYtvdMMpCfGr64gbzTzWpbv8Wiyy6qmAgw4Q29g-jmolaKfHOaAIVdCIiOwMkMZoPQJMrVuc41fSVu4SyAGY21oYkCxTKrZiZ2LvCR8EvPRkXjDZe-bsdNg8EzkNA4dZOUxpDtKGnLH4"/>
+<div>
+<p class="text-primary italic leading-tight">"The texture is unlike anything else. It feels organic, almost alive."</p>
+<p class="mt-2 text-xs font-bold text-on-surface-variant uppercase tracking-widest">David K. — Interior Designer</p>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-full border border-outline-variant/10 shadow-lg shadow-primary/5 flex items-center gap-6 max-w-md group hover:scale-105 transition-all">
+<img alt="" class="w-16 h-16 rounded-full object-cover ring-2 ring-secondary-fixed/50" data-alt="Portrait of a young woman with a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6rAzXi9uFagY1B7yXRfyVmxPJ0-jgU6CySPhs-7626ffhjjS2ZIW2OR1Hf_OTgYSCYwBAJJ6IPLm0P6fatVC_RP4l2s9ev-oZcNEZ1PlrTEbJoWMYbkcLW_gvX1bRP4zXOtmSovNnn0KXxGvd5bVSqEVSNYo9Fjl-8p6SoBJP5aIFyQQScpIS3bHFL4uOZ-_aVcJGkGWthaMgIJV46lm1UMX7YD3LLZ2aDr58i040xV66JPc7RM-csd_32IcyEipDota0UG-KH7c"/>
+<div>
+<p class="text-primary italic leading-tight">"Midnight Mist transformed my bedroom into a cocoon of peace."</p>
+<p class="mt-2 text-xs font-bold text-on-surface-variant uppercase tracking-widest">Sarah L. — Homeowner</p>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-full border border-outline-variant/10 shadow-lg shadow-primary/5 flex items-center gap-6 max-w-md group hover:scale-105 transition-all">
+<img alt="" class="w-16 h-16 rounded-full object-cover ring-2 ring-secondary-fixed/50" data-alt="Portrait of an elegant woman looking thoughtful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiCAATshNaa1cG-YdYdTXYzs_VkMVyKJTK7k5eHd2P7Jvlh6BkcQg3Kk8tJSF7ssC6W9WwiXnl70fK_dd17s3JHx-zL70TD_KT0LFgld_iWOH1Oq1KRGkkmbFjQVrBqupQvwo42e_4UYaZXqFoHBVgSFEKpsbW43gMNM7bmrDyTmf-ymSbb3fobQUCchDsx4vDcHCXOjhTEeZ5ZRmJN7PkYpt5D4Ancx9sg93FFH28iFe9rcDrOarNvSoHC-AJKV35GaNcd3UZw5U"/>
+<div>
+<p class="text-primary italic leading-tight">"Coverage was perfect. Two coats and the room looks like a museum."</p>
+<p class="mt-2 text-xs font-bold text-on-surface-variant uppercase tracking-widest">Elena R. — Artist</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-32 px-8 max-w-3xl mx-auto">
+<h2 class="font-headline text-4xl text-center mb-16 text-primary">Inquiries</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<div class="flex justify-between items-center text-primary font-bold text-lg">
+<span>What makes Skypaints low-VOC?</span>
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant leading-relaxed hidden group-hover:block">
+                    Our formulation replaces petroleum-based solvents with plant-derived alternatives, ensuring your air quality remains as pristine as our colors.
+                </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<div class="flex justify-between items-center text-primary font-bold text-lg">
+<span>How do I choose between Matte and Eggshell?</span>
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant leading-relaxed hidden group-hover:block">
+                    Matte is ideal for low-traffic areas and hiding wall imperfections, while Eggshell offers a subtle glow and higher washability for living spaces.
+                </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border-b border-outline-variant/30 pb-6 group cursor-pointer">
+<div class="flex justify-between items-center text-primary font-bold text-lg">
+<span>Do you offer international shipping?</span>
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant leading-relaxed hidden group-hover:block">
+                    Currently, we ship our artisanal collections throughout North America and Europe, with selective availability in Asia-Pacific hubs.
+                </div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-violet-50 dark:bg-violet-950 w-full pt-16 pb-8 tonal shift from surface to surface-container-low">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-2 space-y-4">
+<a class="text-xl font-serif text-violet-950 dark:text-violet-50" href="#">Skypaints</a>
+<p class="text-violet-800/60 dark:text-violet-300/60 max-w-xs text-sm">Crafting the world's most atmospheric pigments for the modern sanctuary.</p>
+<div class="flex gap-4 pt-4">
+<span class="material-symbols-outlined text-violet-950 dark:text-violet-50 cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined text-violet-950 dark:text-violet-50 cursor-pointer hover:scale-110 transition-transform">camera</span>
+<span class="material-symbols-outlined text-violet-950 dark:text-violet-50 cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-violet-950 dark:text-violet-50 font-bold">Collections</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Celestial</a>
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Heritage</a>
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Monolith</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-violet-950 dark:text-violet-50 font-bold">Resources</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Color Theory</a>
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Sustainability</a>
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Application Guide</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-violet-950 dark:text-violet-50 font-bold">Company</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Store Locator</a>
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-violet-800/60 dark:text-violet-300/60 text-sm hover:text-orange-300 transition-all opacity-80 hover:opacity-100" href="#">Terms of Use</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-violet-950 dark:text-violet-50 font-bold">Newsletter</h4>
+<div class="flex">
+<input class="bg-surface-container border-none rounded-l-full px-4 py-2 w-full text-sm focus:ring-1 focus:ring-primary-container" placeholder="Email" type="email"/>
+<button class="bg-primary-container text-on-primary rounded-r-full px-4 py-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-violet-200/20 max-w-7xl mx-auto px-8 flex flex-col md:row justify-between items-center text-xs text-violet-800/40 dark:text-violet-300/40">
+<span>© 2024 Skypaints. Crafted in Serene Lavender.</span>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Pinterest</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body></html>

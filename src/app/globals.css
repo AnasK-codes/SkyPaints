@@ -17,11 +17,45 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+  .glass-nav {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(24px);
+  }
+  .text-glow {
+      text-shadow: 0 0 20px rgba(46, 16, 101, 0.1);
+  }
+  .mask-fade {
+      mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@keyframes slide-infinite {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-slide-infinite {
+  animation: slide-infinite 12s linear infinite;
+  will-change: transform;
+}
+.animate-slide-infinite:hover {
+  animation-play-state: paused;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
