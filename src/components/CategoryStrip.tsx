@@ -1,25 +1,42 @@
 export default function CategoryStrip() {
+  const categories = [
+    { icon: "home_pin", label: "Interior Finishes" },
+    { icon: "landscape", label: "Exterior Durability" },
+    { icon: "eco", label: "Sustainable Living" },
+    { icon: "palette", label: "Artist Collaborations" },
+    { icon: "format_paint", label: "Professional Tools" },
+  ];
+
   return (
-    <section className="py-12 bg-surface-container-low">
-      <div className="mask-fade overflow-x-auto no-scrollbar flex items-center gap-12 px-12 whitespace-nowrap">
-        <a className="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
-          <span className="material-symbols-outlined">home_pin</span> Interior Finishes
-        </a>
-        <a className="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
-          <span className="material-symbols-outlined">landscape</span> Exterior Durability
-        </a>
-        <a className="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
-          <span className="material-symbols-outlined">texture</span> Tactile Textures
-        </a>
-        <a className="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
-          <span className="material-symbols-outlined">eco</span> Sustainable Living
-        </a>
-        <a className="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
-          <span className="material-symbols-outlined">palette</span> Artist Collaborations
-        </a>
-        <a className="flex items-center gap-3 text-primary font-medium hover:text-secondary-container transition-colors" href="#">
-          <span className="material-symbols-outlined">format_paint</span> Professional Tools
-        </a>
+    <section className="py-12 bg-surface-container-low overflow-hidden">
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-infinite {
+          animation: scroll 40s linear infinite;
+        }
+        // .animate-scroll-infinite:hover {
+        //   animation-play-state: paused;
+        // }
+      `}</style>
+      <div className="mask-fade flex whitespace-nowrap">
+        <div className="flex w-max animate-scroll-infinite">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="flex gap-12 pr-12 items-center">
+              {categories.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 text-primary font-medium"
+                >
+                  <span className="material-symbols-outlined">{item.icon}</span>
+                  {item.label}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
