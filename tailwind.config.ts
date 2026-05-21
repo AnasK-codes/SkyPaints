@@ -58,6 +58,15 @@ const config: Config = {
         "secondary-fixed": "#ffddb8",
         "secondary-fixed-dim": "#ffb95f"
       },
+      keyframes: {
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(40px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        }
+      },
+      animation: {
+        "fade-in-up": "fade-in-up 1s ease-out forwards",
+      },
       fontFamily: {
         "headline": ["Noto Serif", "serif"],
         "body": ["Manrope", "sans-serif"],

@@ -1,16 +1,42 @@
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'Products', href: '/products' },
+    { name: 'Color Tools', href: '/tools' },
+    { name: 'Blogs', href: '/inspiration' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   return (
     <header className="bg-white/60 dark:bg-violet-950/60 backdrop-blur-xl fixed top-0 w-full left-0 z-50 shadow-[0px_12px_40px_rgba(46,16,101,0.08)]">
       <div className="mx-auto max-w-7xl flex justify-between items-center px-8 py-3 w-full">
         <div className="flex items-center gap-8">
-          <a className="text-2xl font-serif italic text-violet-950 dark:text-violet-50" href="#">Skypaints</a>
+          <Link className="text-2xl font-serif italic text-violet-950 dark:text-violet-50" href="/">Skypaints</Link>
           <nav className="hidden md:flex gap-6">
-            <a className="text-violet-950 dark:text-white font-bold border-b-2 border-orange-300 hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Home</a>
-            <a className="text-violet-700/70 dark:text-violet-200/70 hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Products</a>
-            <a className="text-violet-700/70 dark:text-violet-200/70 hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Colors</a>
-            <a className="text-violet-700/70 dark:text-violet-200/70 hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Inspiration</a>
-            <a className="text-violet-700/70 dark:text-violet-200/70 hover:text-violet-950 dark:hover:text-white transition-colors" href="#">Tools</a>
-            <a className="text-violet-700/70 dark:text-violet-200/70 hover:text-violet-950 dark:hover:text-white transition-colors" href="#">About</a>
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`${isActive
+                    ? 'text-violet-950 dark:text-white font-bold border-b-2 border-orange-300'
+                    : 'text-violet-700/70 dark:text-violet-200/70'
+                    } hover:text-violet-950 dark:hover:text-white transition-colors`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
         </div>
         <div className="flex items-center gap-4">
