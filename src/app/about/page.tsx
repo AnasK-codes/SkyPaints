@@ -1,20 +1,28 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function AboutPage() {
+  const heroImageRef = useRef<HTMLImageElement>(null);
+
   useEffect(() => {
-    // Parallax effect for hero image
+    let ticking = false;
     const handleScrollParallax = () => {
-      const heroImage = document.querySelector('[data-alt*="living room"]') as HTMLElement;
-      if (heroImage) {
-        const scrolled = window.pageYOffset;
-        heroImage.style.transform = `translateY(${scrolled * 0.3}px) scale(1.05)`;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (heroImageRef.current) {
+            const scrolled = window.scrollY;
+            heroImageRef.current.style.transform = `translateY(${scrolled * 0.3}px) scale(1.05) translateZ(0)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener('scroll', handleScrollParallax);
+    window.addEventListener('scroll', handleScrollParallax, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScrollParallax);
@@ -30,7 +38,8 @@ export default function AboutPage() {
           {/* 1. About Hero Section */}
           <section className="relative min-h-[716px] flex items-center px-8 md:px-12 pt-40 pb-20 overflow-hidden">
             <div className="absolute inset-0 z-0">
-              <img className="w-full h-full object-cover brightness-75 opacity-35 scale-105"
+              <img ref={heroImageRef} className="w-full h-full object-cover brightness-75 opacity-35 scale-105 will-change-transform"
+                fetchPriority="high"
                 data-alt="A luxurious high-ceiling living room with walls painted in a sophisticated, soft lavender matte finish. The sunlight streams through large floor-to-ceiling windows, casting gentle shadows. The furniture is minimalist and high-end, featuring deep violet velvet textures. The entire scene feels serene, ethereal, and meticulously curated for a premium architectural publication."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTbeBPZ2tduGEgh_7ArIhtV1ePbfwGxipUt0n7XaeDvwtnS_vc4MT3r3cDZAvP8HglsP6CFBcia8dlWQdBU254Tu5ep_S1jIIWdKWbIINxcx8-ENtwLsKWp5c3oTaC5yQ470UNmLVCnFAf-oz3AC2iukNptbWu-6ODZoV1foiK3sKKnCpjLNLYeTdtqembWrDFPGE_0Ou1k1xtHSZQ0I5BvMhzsT4iTP-7nCLy9Tu1BQwp6csGFEdwQFyGEFcSGBPQVJzoQY2eF3Y" />
               <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
@@ -54,8 +63,9 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-12 gap-16 items-center animate-fade-in-up" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
               <div className="lg:col-span-7">
                 <div className="relative rounded-xl overflow-hidden aspect-[4/3] ambient-shadow">
-                  <img className="w-full h-full object-cover"
+                  <Image className="w-full h-full object-cover"
                     alt="Skypaints Factory"
+                    fill
                     src="/images/factory.jpeg" />
                   <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
                 </div>
@@ -258,6 +268,7 @@ export default function AboutPage() {
               <div className="group">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden mb-6 ambient-shadow">
                   <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    loading="lazy"
                     data-alt="A professional portrait of Mustafa Malak, a charismatic man in his late 30s with an air of creative leadership. He is dressed in a structured navy linen blazer, standing against a soft-focus studio background of neutral lavender tones. His expression is confident and welcoming, reflecting the founder's vision for a premium lifestyle brand."
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd0FTNEJXtqSUnJTl0MWSG76tM8IGu-WNWB0lOH_v6S4rKDoScW-cbt5BJQPYEQDJrsmHzObeRWEuJhDGpwCM-AeyOIYPBRxSu6_nxsRI-sNCcy8ecW5XMQMyEcdX_aBLOkIXcasgl_7u329XlnPV1Zq1MineGwt2p6g4ka0in2gfHpGc85ruM0P2aH9mbmMFpWoDC6EvAydgC2-AQWVwPrhxHViJUVIKsoHzC_d4zkHrKI_QRTxB3Po_2nwmcXlm3Y2AYhtod_iQ" />
                 </div>
@@ -269,6 +280,7 @@ export default function AboutPage() {
               <div className="group">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden mb-6 ambient-shadow">
                   <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    loading="lazy"
                     data-alt="A portrait of Ayaan Khan, a sharp and professional product specialist. He wears a minimalist charcoal turtleneck, looking slightly away from the camera with an analytical gaze. The setting is a bright, modern architectural space with high-key lighting that emphasizes clean lines and premium textures."
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDso8K7OvChX7qR__7ZKhJjJPyXAe-E8rQ3CBD_KQQNB6DHF8bRHNGsU5GKHwLoTPbMalmYv33UwvOALxFTg_MiZ_6nBaHXHGXmeYtVnfaQlIPDTegSJhLQ9YnaSJicCjfdG_OPLk48vsTkj4DZlC5EFLYa9wZIe1qnOmC5BDGhoAm0w8Rpn2z2DVNaK64dApoktxBov9vawcP5kv3Wd-Ui2bqPpkLsAhbUVpelWAau2kCyjP5Ijr5vXXPyrGNPdkuo0kfTv2L-NZ0" />
                 </div>

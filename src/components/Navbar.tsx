@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -10,10 +11,17 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -63,7 +71,7 @@ export default function Navbar() {
           }`}>
           
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity group flex-shrink-0">
-            <img src="/images/logo.png" alt="Skypaints Logo" className="w-8 h-8 object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-300" />
+            <Image src="/images/logo.png" alt="Skypaints Logo" width={32} height={32} priority className="w-8 h-8 object-contain drop-shadow-sm group-hover:scale-110 transition-transform duration-300" />
             <span className="text-xl font-headline font-bold tracking-tight text-on-surface hidden sm:block">Skypaints</span>
           </Link>
 
