@@ -5,10 +5,10 @@ import { useState, useEffect, useCallback } from "react";
 
 export default function Hero() {
   const images = [
-    "/images/lavender-hero-1.png",
+    "/images/hero-image-1.jpg",
+    "/images/hero-image-2.jpg",
+    "/images/hero-image-3.jpg",
     "/images/lavender-hero-2.png",
-    "/images/lavender-hero-3.png",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuADVvFf21pwfN6f417HrFn5jAvLvbwjxnLTIUIRA3uzwwBoWR2SohURye1WYxRkvuVOVYLDhT44KJHoIt2O_KoQmwqIpbotAlqIaM3YgEbazIesMwXZztYN7d2AwaSXkn6SjNmf2kMlq6egiQzsBQFh_m06N2xd3kTG1m5Fl912MWOp4MYUbknEqJxyXb4PL3CcUVDoEtmtnuvotBmWWd5zywM9H-CJZgTVjzUuNr68JEYE498Yg7o3jo5Upfo0GLQk2-hBDObwFNg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,12 +66,18 @@ export default function Hero() {
           capture the shifting light of the celestial hours.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-          <button className="bg-primary-container text-on-primary px-10 py-4 rounded-full text-lg font-medium transition-all hover:scale-105 shadow-xl shadow-primary-container/20">
+          <a
+            href="/contact"
+            className="bg-primary-container text-on-primary px-10 py-4 rounded-full text-lg font-medium transition-all hover:scale-105 shadow-xl shadow-primary-container/20"
+          >
             Order Home Paints
-          </button>
-          <button className="bg-surface-container-lowest/80 backdrop-blur-md text-primary px-10 py-4 rounded-full text-lg font-medium border border-outline-variant/20 transition-all hover:bg-white">
+          </a>
+          <a
+            href="/products"
+            className="bg-surface-container-lowest/80 backdrop-blur-md text-primary px-10 py-4 rounded-full text-lg font-medium border border-outline-variant/20 transition-all hover:bg-white"
+          >
             View Collection
-          </button>
+          </a>
         </div>
       </div>
 
