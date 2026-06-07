@@ -41,12 +41,12 @@ export default function Navbar() {
       name: 'Color Tools', 
       href: '/tools',
       subLinks: [
-        { name: 'Paint Calculator', href: '/inspiration/cost-to-paint-2bhk-3bhk-india' },
-        { name: 'Paint Finishes', href: '/inspiration/how-to-choose-paint-finish' },
-        { name: 'Vastu Colours', href: '/inspiration/vastu-compliant-colours' },
-        { name: 'All Inspiration', href: '/inspiration' },
+        { name: 'Paint Calculator', href: '/tools#calculator' },
+        { name: 'Paint Finishes', href: '/tools#palette' },
+        { name: 'Vastu Colours', href: '/tools#vastu' },
       ]
     },
+    { name: 'Blogs', href: '/inspiration' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'About Us', href: '/about' },
     { 
@@ -54,9 +54,8 @@ export default function Navbar() {
       href: '/contact',
       subLinks: [
         { name: 'Contact Us', href: '/contact' },
-        { name: 'Store Locator', href: '/contact' },
-        { name: 'Trade Partners', href: '/contact' },
-        { name: 'Support', href: '/contact' },
+        { name: 'Store Locator', href: '/contact#factories-map' },
+        { name: 'Support', href: '/contact#inquiry-form' },
       ]
     },
   ];

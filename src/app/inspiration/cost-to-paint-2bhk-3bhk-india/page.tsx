@@ -54,7 +54,7 @@ export default function BlogPost() {
 
             <div className="bg-surface-container-low p-6 rounded-2xl border-l-4 border-secondary my-8">
               <p className="font-headline text-lg text-primary m-0">
-                <strong>Not sure where to start?</strong> Try our free <Link href="/tools" className="text-secondary underline">SkyPaints Budget Calculator</Link> to estimate your painting costs in seconds!
+                <strong>Not sure where to start?</strong> Try our free <Link href="/tools#calculator" className="text-secondary underline">SkyPaints Budget Calculator</Link> to estimate your painting costs in seconds!
               </p>
             </div>
 

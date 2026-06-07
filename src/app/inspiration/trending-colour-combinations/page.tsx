@@ -87,7 +87,7 @@ export default function TrendingCombinationsPage() {
           <p className="text-xl text-on-primary-container mb-10 max-w-2xl mx-auto">
             Take the guesswork out of painting. Upload a photo of your room and try out these trending combinations with our Virtual Visualizer.
           </p>
-          <Link href="/contact" className="bg-secondary-fixed text-on-secondary-fixed rounded-full px-10 py-5 font-bold text-lg hover:bg-secondary-fixed-dim transition-colors shadow-lg inline-block">
+          <Link href="/shades" className="bg-secondary-fixed text-on-secondary-fixed rounded-full px-10 py-5 font-bold text-lg hover:bg-secondary-fixed-dim transition-colors shadow-lg inline-block">
             Try Virtual Visualizer
           </Link>
         </section>

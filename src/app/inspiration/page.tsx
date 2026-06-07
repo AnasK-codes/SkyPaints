@@ -327,9 +327,9 @@ export default function InspirationPage() {
                 <div className="relative">
                   <input className="w-full bg-surface-container-highest/20 border border-outline/30 rounded-full py-4 px-6 text-on-primary placeholder:text-on-primary-container/70 focus:outline-none focus:border-secondary-fixed focus:ring-1 focus:ring-secondary-fixed transition-colors" placeholder="Your email address" type="email" />
                 </div>
-                <button className="w-full bg-secondary-fixed text-on-secondary-fixed font-bold rounded-full py-4 px-6 hover:bg-secondary-fixed-dim transition-colors shadow-md" type="submit">
-                  Subscribe
-                </button>
+                <a href="https://wa.me/917999295796" target="_blank" rel="noopener noreferrer" className="w-full bg-secondary-fixed text-on-secondary-fixed font-bold rounded-full py-4 px-6 hover:bg-secondary-fixed-dim transition-colors shadow-md text-center block">
+                  Contact on WhatsApp
+                </a>
               </form>
               <p className="text-xs text-on-primary-container/60 mt-4 text-center">We respect your privacy. Unsubscribe anytime.</p>
             </div>

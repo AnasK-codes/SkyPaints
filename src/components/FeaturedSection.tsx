@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedCarousel() {
   return (
@@ -38,9 +39,9 @@ export default function FeaturedCarousel() {
               Warmth
             </span>
             <h3 className="font-headline text-3xl mb-4">Golden Hour</h3>
-            <button className="flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1">
+            <Link href="/shades" className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors">
               Discover Palette
-            </button>
+            </Link>
           </div>
         </div>
         {/* Card 2 */}
@@ -58,9 +59,9 @@ export default function FeaturedCarousel() {
               Depth
             </span>
             <h3 className="font-headline text-3xl mb-4">Midnight Mist</h3>
-            <button className="flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1">
+            <Link href="/shades" className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors">
               Discover Palette
-            </button>
+            </Link>
           </div>
         </div>
         {/* Card 3 */}
@@ -78,9 +79,9 @@ export default function FeaturedCarousel() {
               Balance
             </span>
             <h3 className="font-headline text-3xl mb-4">Ethereal Sage</h3>
-            <button className="flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1">
+            <Link href="/shades" className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors">
               Discover Palette
-            </button>
+            </Link>
           </div>
         </div>
       </div>

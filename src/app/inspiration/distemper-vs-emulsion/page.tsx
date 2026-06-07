@@ -133,6 +133,17 @@ export default function BlogPost() {
 
           </div>
         </article>
+
+        {/* CTA */}
+        <section className="max-w-4xl mx-auto mt-24 bg-primary-container rounded-[3rem] p-12 md:p-16 text-center animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <h2 className="text-4xl font-headline text-on-primary mb-6">Ready to choose your perfect finish?</h2>
+          <p className="text-xl text-on-primary-container mb-10 max-w-2xl mx-auto">
+            Explore our premium range of emulsions designed for durability and a flawless look.
+          </p>
+          <Link href="/products" className="bg-secondary-fixed text-on-secondary-fixed rounded-full px-10 py-5 font-bold text-lg hover:bg-secondary-fixed-dim transition-colors shadow-lg inline-block">
+            Explore Emulsions
+          </Link>
+        </section>
       </main>
       <Footer />
     </>

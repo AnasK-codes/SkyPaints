@@ -100,7 +100,7 @@ export default function VastuColoursPage() {
           <p className="text-xl text-on-primary-container mb-10 max-w-2xl mx-auto">
             Browse our carefully curated shade card to find the perfect Vastu-compliant tones for every direction of your home.
           </p>
-          <Link href="/products" className="bg-secondary-fixed text-on-secondary-fixed rounded-full px-10 py-5 font-bold text-lg hover:bg-secondary-fixed-dim transition-colors shadow-lg inline-block">
+          <Link href="/tools#vastu" className="bg-secondary-fixed text-on-secondary-fixed rounded-full px-10 py-5 font-bold text-lg hover:bg-secondary-fixed-dim transition-colors shadow-lg inline-block">
             Browse Vastu Shade Card
           </Link>
         </section>
