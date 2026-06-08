@@ -34,7 +34,7 @@ export default function BlogPost() {
           <div className="w-full h-[400px] md:h-[500px] relative rounded-[2rem] overflow-hidden mb-16 animate-fade-in-up shadow-[0px_12px_40px_rgba(46,16,101,0.08)]" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
             <Image
               alt="A bright, sunlit nursery featuring soft pastel cabinets and safe finishes"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0KWpOm5aMIvQJX19XZy83JFgRwKHGlZX_SxoEYNq6rTdHKxAy6ySShuPQjMMqzb3bFyrl9_8UsqxVtKYHDA_-3pCjn5sRPhFALUw7Uf7HSRaNZgw8AxqIjKFhGDG0MLDICteK-c5LrGNyDrCHc4qd9J3gYB8u6GGMVWcx63piDAsFHccYI9Fvo0qRSlJL2wbePtZoWhL8AwXksv21ETxxw2PJ-motDzxSe3pJqvkJvZsIVjAaxcFTnYUsPzUBIP-ecZKiIyXZfcE"
+              src="/images/blog-safe-paints.png"
               fill
               className="object-cover"
               priority

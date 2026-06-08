@@ -31,7 +31,7 @@ export default function WallTextureDesignsPage() {
         <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl mb-24 relative h-[600px] animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <Image
             alt="A close up of a luxurious metallic textured accent wall in a modern bedroom"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMIB0NwVG01CqLvA42sA4vcv3o0FT71OPGIcF6pdyXh6JKbI8mhkgy4-iiSPgIGhkoxKOBNcduX9r9JswrCc0WJp0MntspoIi5NxSZOUfTNMGTFb3YVa5eyvfsnTsXPEQSA62foScEjUjmyQldCoq9jkq3sqI15DvwV7weW9uN5SxGJWLe6lR6qkfPh4CZn9WmtfLB-QbqKr-hvDKioLwo1xovOhb8D6QhPwJ9dLmC8L-MV7rfoBwpZzpC_gxz0vUUU9JpaMrhRrM"
+            src="/images/blog-texture-designs.png"
             fill
             priority
             className="object-cover"

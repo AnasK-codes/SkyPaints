@@ -31,7 +31,7 @@ export default function HeatReflectivePaintsPage() {
         <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl mb-24 relative h-[600px] animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <Image
             alt="A beautifully painted bright exterior of an Indian home basking in sunlight"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4oNHilHUZbxIVEo8szEBxdU-LwtK7s5Le6fFL3KXuotMQ-7udnp7smueumDEcpAekOm6DbSqjYG4Mj8kxTFlysy95ksyt-ivB73UazB7uERHcItqxocXdC9021BvsVPE80GTQqWXa9kPF84LF_bIDBUwO0Pkoyra4xEAHayLmUotnNKJAngDH2ubfpODnhceq0SmFJZ2JZOON-s-Qg_FqtdTU5WU-D3COWqKMq7CpcgmvMZivkpvJFUAJUccyrkfADUWlYMGQJ8"
+            src="/images/blog-heat-reflective.png"
             fill
             priority
             className="object-cover"

@@ -34,7 +34,7 @@ export default function BlogPost() {
           <div className="w-full h-[400px] md:h-[500px] relative rounded-[2rem] overflow-hidden mb-16 animate-fade-in-up shadow-[0px_12px_40px_rgba(46,16,101,0.08)]" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
             <Image
               alt="A close-up shot of luxurious, thick paint being applied to a canvas"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMIB0NwVG01CqLvA42sA4vcv3o0FT71OPGIcF6pdyXh6JKbI8mhkgy4-iiSPgIGhkoxKOBNcduX9r9JswrCc0WJp0MntspoIi5NxSZOUfTNMGTFb3YVa5eyvfsnTsXPEQSA62foScEjUjmyQldCoq9jkq3sqI15DvwV7weW9uN5SxGJWLe6lR6qkfPh4CZn9WmtfLB-QbqKr-hvDKioLwo1xovOhb8D6QhPwJ9dLmC8L-MV7rfoBwpZzpC_gxz0vUUU9JpaMrhRrM"
+              src="/images/blog-featured-finish.png"
               fill
               className="object-cover"
               priority

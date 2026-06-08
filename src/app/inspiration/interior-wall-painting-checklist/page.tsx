@@ -34,7 +34,7 @@ export default function BlogPost() {
           <div className="w-full h-[400px] md:h-[500px] relative rounded-[2rem] overflow-hidden mb-16 animate-fade-in-up shadow-[0px_12px_40px_rgba(46,16,101,0.08)]" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
             <Image
               alt="A neatly organized collection of professional painting tools"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpXCP02ugbTAsirwc-6c-IAJH8MHoVaOaWmjFecqZyz5dTv2K6dGTt8zWMNPCikVQO3F57ZtcdhYqIitVZgftBJNXAtckr7JEMGCymXV3vOjdWQGmO4hmrK-dR5blm9ZQ8pRdCCHJ0XLoa1CN_NMA39ZHPp9hWpw3WxmQc7U3qal_qGdNXggdlPMXK1DuQ2ZtUCQZTh1a3_Lr2FGtM8N0vTKZdCel6zBIjSczbmH2TnlMBpmVdTjuv4UpHCF80-j32n5RhtA3nlAg"
+              src="/images/blog-checklist.png"
               fill
               className="object-cover"
               priority

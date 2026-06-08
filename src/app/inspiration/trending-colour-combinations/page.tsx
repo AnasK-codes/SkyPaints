@@ -31,7 +31,7 @@ export default function TrendingCombinationsPage() {
         <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl mb-24 relative h-[600px] animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <Image
             alt="A stunning modern living room with a two-tone colour combination"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7P521h11q4qYGpM0_t1AM-e5psuxAIFyZNS50mqwLUkKcE5yQnDkRqWAcPl3QHeTYxrpMrhnX5WaOdfHvn-fFE6Q-xaTh3mENG6x5d4k1vrP6BfCZUKX9I_lBaZ6IL4j4P4b8UyU15iig6ADefcNge4SF4LTSFzK72IgZJX4JU8yoNp_8oKlK1uYIeHrfozY3mPs5UOTZ16SgVNHT8IQYjrHQ-aXtdymif_jgw5DA9Ev5823oKZd33Oy4QDfT7kjXgHJ_tJPtKGk"
+            src="/images/blog-trending-colours.png"
             fill
             priority
             className="object-cover"

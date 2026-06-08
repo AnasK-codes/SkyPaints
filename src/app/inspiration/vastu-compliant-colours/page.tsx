@@ -31,7 +31,7 @@ export default function VastuColoursPage() {
         <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl mb-24 relative h-[600px] animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <Image
             alt="A beautifully lit living room featuring a calming vastu-compliant pale yellow wall"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyWkVnya0FbXD62uMzuyBa1KJv8ZGhXq_S49sDzZRgzFVa593hX35mqemZfKjztZyCQP46iLZWIn-Hv1KIpwsADdHrzsY6E5fvwzidCF2nYJdgtgZwRBxs_zOgaopR0Lvw4256WygriDnmlPJGyFg5XSeON4xDdxoX_bDvxoQMfi-gGmaDkg1IeqTW3duaYLfnd7cTVHfztWiac8q4hzN0ngvoI4y_6-J6GRFb-x3I-NyyeYxGIRaapgjclZ76M874o7_1Y0SfdBY"
+            src="/images/blog-vastu.png"
             fill
             priority
             className="object-cover"

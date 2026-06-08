@@ -35,7 +35,7 @@ export default function BlogPost() {
           <div className="w-full h-[400px] md:h-[500px] relative rounded-[2rem] overflow-hidden mb-16 animate-fade-in-up shadow-[0px_12px_40px_rgba(46,16,101,0.08)]" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
             <Image
               alt="A beautifully painted modern Indian living room with warm lighting"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyWkVnya0FbXD62uMzuyBa1KJv8ZGhXq_S49sDzZRgzFVa593hX35mqemZfKjztZyCQP46iLZWIn-Hv1KIpwsADdHrzsY6E5fvwzidCF2nYJdgtgZwRBxs_zOgaopR0Lvw4256WygriDnmlPJGyFg5XSeON4xDdxoX_bDvxoQMfi-gGmaDkg1IeqTW3duaYLfnd7cTVHfztWiac8q4hzN0ngvoI4y_6-J6GRFb-x3I-NyyeYxGIRaapgjclZ76M874o7_1Y0SfdBY"
+              src="/images/blog-cost-to-paint.png"
               fill
               className="object-cover"
               priority

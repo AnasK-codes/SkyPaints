@@ -34,7 +34,7 @@ export default function BlogPost() {
           <div className="w-full h-[400px] md:h-[500px] relative rounded-[2rem] overflow-hidden mb-16 animate-fade-in-up shadow-[0px_12px_40px_rgba(46,16,101,0.08)]" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
             <Image
               alt="A detailed close-up showing the textural difference between two painted surfaces"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7DnT1t18w6XKoxcuajO4pRkU283EBJkkmHchhqdDqU1dIUcJkf1kn6cV1UQoI9yvuDntiGMEYRwsM-r5r658Lpb_-z8Q4LvvNSY7xJSDEi7CKhby5pRHjm0JShpI6HL3f1fD3PIObgw348QLFrPmqTlSeoEUJh3oID6oEP1Rxmr5LaZoMIdiLMeKcxMWGLMxa022UMiKeFxriYAD4Y5HA6DpC66gMDHRmv2dXlUt5Y4LZlEAKBtIDd1KMmemFSCiJPryke1l8duY"
+              src="/images/blog-distemper-emulsion.png"
               fill
               className="object-cover"
               priority

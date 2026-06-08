@@ -34,7 +34,7 @@ export default function BlogPost() {
           <div className="w-full h-[400px] md:h-[500px] relative rounded-[2rem] overflow-hidden mb-16 animate-fade-in-up shadow-[0px_12px_40px_rgba(46,16,101,0.08)]" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
             <Image
               alt="An exterior shot of a modern, minimalist house wall during a light rain shower"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4oNHilHUZbxIVEo8szEBxdU-LwtK7s5Le6fFL3KXuotMQ-7udnp7smueumDEcpAekOm6DbSqjYG4Mj8kxTFlysy95ksyt-ivB73UazB7uERHcItqxocXdC9021BvsVPE80GTQqWXa9kPF84LF_bIDBUwO0Pkoyra4xEAHayLmUotnNKJAngDH2ubfpODnhceq0SmFJZ2JZOON-s-Qg_FqtdTU5WU-D3COWqKMq7CpcgmvMZivkpvJFUAJUccyrkfADUWlYMGQJ8"
+              src="/images/blog-waterproofing.png"
               fill
               className="object-cover"
               priority

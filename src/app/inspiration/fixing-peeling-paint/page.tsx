@@ -31,7 +31,7 @@ export default function FixingPeelingPaintPage() {
         <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl mb-24 relative h-[600px] animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <Image
             alt="A close up of someone scraping away damaged, peeling paint before applying a waterproof primer"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7DnT1t18w6XKoxcuajO4pRkU283EBJkkmHchhqdDqU1dIUcJkf1kn6cV1UQoI9yvuDntiGMEYRwsM-r5r658Lpb_-z8Q4LvvNSY7xJSDEi7CKhby5pRHjm0JShpI6HL3f1fD3PIObgw348QLFrPmqTlSeoEUJh3oID6oEP1Rxmr5LaZoMIdiLMeKcxMWGLMxa022UMiKeFxriYAD4Y5HA6DpC66gMDHRmv2dXlUt5Y4LZlEAKBtIDd1KMmemFSCiJPryke1l8duY"
+            src="/images/blog-peeling-paint.png"
             fill
             priority
             className="object-cover"
