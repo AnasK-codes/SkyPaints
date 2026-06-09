@@ -393,7 +393,7 @@ export default function AboutPage() {
                   <img
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     loading="lazy"
-                    data-alt="A professional portrait of Mustafa Malak, a charismatic man in his late 30s with an air of creative leadership. He is dressed in a structured navy linen blazer, standing against a soft-focus studio background of neutral lavender tones. His expression is confident and welcoming, reflecting the founder's vision for a premium lifestyle brand."
+                    data-alt="A professional portrait of Juzer Malak, founder of SkyPaints."
                     src="images/founder.png"
                   />
                 </div>
@@ -410,7 +410,7 @@ export default function AboutPage() {
                   <img
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     loading="lazy"
-                    data-alt="A portrait of Ayaan Khan, a sharp and professional product specialist. He wears a minimalist charcoal turtleneck, looking slightly away from the camera with an analytical gaze. The setting is a bright, modern architectural space with high-key lighting that emphasizes clean lines and premium textures."
+                    data-alt="A portrait of Qutbuddin Malak, Outreach partner of SkyPaints."
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDso8K7OvChX7qR__7ZKhJjJPyXAe-E8rQ3CBD_KQQNB6DHF8bRHNGsU5GKHwLoTPbMalmYv33UwvOALxFTg_MiZ_6nBaHXHGXmeYtVnfaQlIPDTegSJhLQ9YnaSJicCjfdG_OPLk48vsTkj4DZlC5EFLYa9wZIe1qnOmC5BDGhoAm0w8Rpn2z2DVNaK64dApoktxBov9vawcP5kv3Wd-Ui2bqPpkLsAhbUVpelWAau2kCyjP5Ijr5vXXPyrGNPdkuo0kfTv2L-NZ0"
                   />
                 </div>
