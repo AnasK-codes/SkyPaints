@@ -13,7 +13,7 @@ const notoSerif = Noto_Serif({
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "800"],
   style: ["normal"],
 });
 

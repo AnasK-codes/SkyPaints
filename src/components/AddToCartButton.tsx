@@ -9,28 +9,16 @@ interface AddToCartButtonProps {
 }
 
 export default function AddToCartButton({ product }: AddToCartButtonProps) {
-  const { addToCart } = useCart();
+  const { items, addToCart, removeFromCart, updateQuantity } = useCart();
   
   // Extract sizes
   const sizeOptions = product.sizes.split(',').map(s => s.trim()).filter(Boolean);
   const [selectedSize, setSelectedSize] = useState(sizeOptions[0] || 'Default');
-  const [quantity, setQuantity] = useState(1);
-  const [added, setAdded] = useState(false);
 
-  const handleAdd = () => {
-    addToCart({
-      name: product.name,
-      size: selectedSize,
-      quantity,
-      image: product.image,
-      price: currentPriceDisplay, // Ensure we pass the active price string to cart
-    });
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
-  };
-
-  const increment = () => setQuantity(q => q + 1);
-  const decrement = () => setQuantity(q => (q > 1 ? q - 1 : 1));
+  // Check cart status for this specific product + size
+  const id = `${product.name}-${selectedSize}`;
+  const cartItem = items.find(item => item.id === id);
+  const quantityInCart = cartItem ? cartItem.quantity : 0;
 
   // Determine pricing display based on size
   let currentPriceDisplay = "Price on request";
@@ -45,6 +33,28 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
 
   // Check if we have sizes to render as pills
   const showSizes = sizeOptions.length > 0 && sizeOptions[0] !== 'Packaging available on request';
+
+  const handleAdd = () => {
+    addToCart({
+      name: product.name,
+      size: selectedSize,
+      quantity: 1,
+      image: product.image,
+      price: currentPriceDisplay,
+    });
+  };
+
+  const increment = () => {
+    updateQuantity(id, quantityInCart + 1);
+  };
+
+  const decrement = () => {
+    if (quantityInCart === 1) {
+      removeFromCart(id);
+    } else {
+      updateQuantity(id, quantityInCart - 1);
+    }
+  };
 
   return (
     <div className="mt-auto flex flex-col gap-5 pt-4 border-t border-outline-variant/10">
@@ -87,43 +97,34 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
       </div>
 
       {/* CTA Row */}
-      <div className="flex items-center gap-3">
-        <div className="flex items-center bg-surface-container rounded-xl border border-outline-variant/20 p-1">
-          <button 
-            onClick={decrement}
-            className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest active:bg-surface-container transition-colors text-on-surface"
+      <div className="flex items-center w-full">
+        {quantityInCart > 0 ? (
+          <div className="w-full flex items-center justify-between bg-surface-container rounded-xl border border-outline-variant/20 p-1 h-12 shadow-inner">
+            <button 
+              onClick={decrement}
+              className="flex-1 h-full flex items-center justify-center rounded-lg hover:bg-surface-container-highest active:bg-surface-container transition-colors text-on-surface"
+              aria-label="Decrease quantity"
+            >
+              <span className="material-symbols-outlined text-[20px]">{quantityInCart === 1 ? 'delete' : 'remove'}</span>
+            </button>
+            <span className="text-base font-black w-16 text-center text-on-surface">{quantityInCart}</span>
+            <button 
+              onClick={increment}
+              className="flex-1 h-full flex items-center justify-center rounded-lg hover:bg-surface-container-highest active:bg-surface-container transition-colors text-on-surface"
+              aria-label="Increase quantity"
+            >
+              <span className="material-symbols-outlined text-[20px]">add</span>
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={handleAdd}
+            className="w-full flex items-center justify-center gap-2 h-12 rounded-xl text-sm font-black uppercase tracking-wide transition-all duration-300 active:scale-95 bg-primary text-on-primary hover:bg-primary/90 shadow-[0_8px_20px_rgba(46,16,101,0.15)] hover:shadow-[0_12px_24px_rgba(46,16,101,0.25)]"
           >
-            <span className="material-symbols-outlined text-[18px]">remove</span>
+            <span className="material-symbols-outlined text-[20px]">shopping_cart</span>
+            Add to Cart
           </button>
-          <span className="text-sm font-bold w-6 text-center text-on-surface">{quantity}</span>
-          <button 
-            onClick={increment}
-            className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest active:bg-surface-container transition-colors text-on-surface"
-          >
-            <span className="material-symbols-outlined text-[18px]">add</span>
-          </button>
-        </div>
-
-        <button
-          onClick={handleAdd}
-          className={`flex-grow flex items-center justify-center gap-2 h-12 rounded-xl text-sm font-black uppercase tracking-wide transition-all duration-300 active:scale-95 ${
-            added 
-            ? 'bg-green-600 text-white shadow-lg shadow-green-600/30' 
-            : 'bg-primary text-on-primary hover:bg-primary/90 shadow-[0_8px_20px_rgba(46,16,101,0.15)] hover:shadow-[0_12px_24px_rgba(46,16,101,0.25)]'
-          }`}
-        >
-          {added ? (
-            <>
-              <span className="material-symbols-outlined text-[20px]">check_circle</span>
-              Added
-            </>
-          ) : (
-            <>
-              <span className="material-symbols-outlined text-[20px]">shopping_cart</span>
-              Add to Cart
-            </>
-          )}
-        </button>
+        )}
       </div>
     </div>
   );

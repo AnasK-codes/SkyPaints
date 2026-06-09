@@ -14,14 +14,6 @@ export default function FeaturedCarousel() {
             into your private sanctuary.
           </p>
         </div>
-        <div className="hidden md:flex gap-4">
-          <button className="p-4 rounded-full bg-surface-container hover:bg-surface-container-high text-primary transition-all">
-            <span className="material-symbols-outlined">arrow_back</span>
-          </button>
-          <button className="p-4 rounded-full bg-surface-container hover:bg-surface-container-high text-primary transition-all">
-            <span className="material-symbols-outlined">arrow_forward</span>
-          </button>
-        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Card 1 */}
@@ -39,7 +31,10 @@ export default function FeaturedCarousel() {
               Warmth
             </span>
             <h3 className="font-headline text-3xl mb-4">Golden Hour</h3>
-            <Link href="/shades" className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors">
+            <Link
+              href="/shades"
+              className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors"
+            >
               Discover Palette
             </Link>
           </div>
@@ -59,7 +54,10 @@ export default function FeaturedCarousel() {
               Depth
             </span>
             <h3 className="font-headline text-3xl mb-4">Midnight Mist</h3>
-            <Link href="/shades" className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors">
+            <Link
+              href="/shades"
+              className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors"
+            >
               Discover Palette
             </Link>
           </div>
@@ -79,7 +77,10 @@ export default function FeaturedCarousel() {
               Balance
             </span>
             <h3 className="font-headline text-3xl mb-4">Ethereal Sage</h3>
-            <Link href="/shades" className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors">
+            <Link
+              href="/shades"
+              className="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary/30 pb-1 hover:border-on-primary transition-colors"
+            >
               Discover Palette
             </Link>
           </div>

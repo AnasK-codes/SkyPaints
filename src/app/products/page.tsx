@@ -453,7 +453,7 @@ export default function ProductsPage() {
                     "Low odour",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: {"20L":2500,"10L":1275,"4L":590,"1L":152},
+                  price: { "20L": 2500, "10L": 1275, "4L": 590, "1L": 152 },
                   image: "/images/emulsions/pro-royal-glow.png",
                 },
                 {
@@ -467,7 +467,7 @@ export default function ProductsPage() {
                     "Durable coating",
                   ],
                   sizes: "20L, 10L, 1L, 500ml",
-                  price: {"20L":3510,"10L":1800,"4L":735,"1L":195},
+                  price: { "20L": 3510, "10L": 1800, "4L": 735, "1L": 195 },
                   image: "/images/emulsions/hi-sheen.png",
                 },
                 {
@@ -481,7 +481,13 @@ export default function ProductsPage() {
                     "Premium quality finish",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: {"20L":5000,"10L":2600,"4L":1080,"1L":290,"500ml":155},
+                  price: {
+                    "20L": 5000,
+                    "10L": 2600,
+                    "4L": 1080,
+                    "1L": 290,
+                    "500ml": 155,
+                  },
                   image: "/images/emulsions/sky-neo-smart-premium.png",
                 },
                 {
@@ -495,7 +501,7 @@ export default function ProductsPage() {
                     "Smooth, refined finish",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: {"20L":1000,"10L":530,"4L":250,"1L":65},
+                  price: { "20L": 1000, "10L": 530, "4L": 250, "1L": 65 },
                   image: "/images/emulsions/sky-neo-advance.png",
                 },
               ].map((product, idx) => (
@@ -701,7 +707,7 @@ export default function ProductsPage() {
                   ],
                   sizes: "Packaging available on request",
                   price: "Price on request",
-                  image: "/images/oil-paint/taarpin.png",
+                  image: "/images/oil-paint/tarpin.png",
                 },
               ].map((product, idx) => (
                 <ProductCard key={idx} product={product} />
@@ -817,7 +823,7 @@ export default function ProductsPage() {
                     "Smooth flow and even coverage",
                   ],
                   sizes: "1kg, 2kg, 5kg, 10kg, 20kg",
-                  price: {"20kg":630,"10kg":350,"5kg":185,"2kg":80},
+                  price: { "20kg": 630, "10kg": 350, "5kg": 185, "2kg": 80 },
                   image: "/images/distemper/sky-neo-luxury-distemper.png",
                 },
                 {
@@ -830,7 +836,7 @@ export default function ProductsPage() {
                     "Suitable for interior walls",
                   ],
                   sizes: "1kg x 20 pc, 1kg x 30 pc",
-                  price: {"1kg":26,"20kg":520,"30kg":900},
+                  price: { "1kg": 26, "20kg": 520, "30kg": 900 },
                   image: "/images/distemper/sky-neo-smart-acrylic.png",
                 },
               ].map((product, idx) => (
@@ -1061,7 +1067,14 @@ export default function ProductsPage() {
                     "Wear resistance",
                   ],
                   sizes: "200ml, 500ml, 1L, 10L, 20L",
-                  price: {"20L":4100,"10L":2075,"4L":840,"1L":215,"500ml":111,"200ml":57},
+                  price: {
+                    "20L": 4100,
+                    "10L": 2075,
+                    "4L": 840,
+                    "1L": 215,
+                    "500ml": 111,
+                    "200ml": 57,
+                  },
                   image: "/images/syntheic-enamel/neo-smart-polyurethane.png",
                 },
                 {
@@ -1074,7 +1087,14 @@ export default function ProductsPage() {
                     "Surface protection",
                   ],
                   sizes: "Varies",
-                  price: {"20L":3200,"10L":1625,"4L":670,"1L":170,"500ml":89,"200ml":45},
+                  price: {
+                    "20L": 3200,
+                    "10L": 1625,
+                    "4L": 670,
+                    "1L": 170,
+                    "500ml": 89,
+                    "200ml": 45,
+                  },
                   image: "/images/syntheic-enamel/varnish.png",
                 },
                 {
@@ -1087,7 +1107,14 @@ export default function ProductsPage() {
                     "Smooth topcoat support",
                   ],
                   sizes: "Varies",
-                  price: {"20L":1500,"10L":775,"4L":330,"1L":87,"500ml":48,"200ml":25},
+                  price: {
+                    "20L": 1500,
+                    "10L": 775,
+                    "4L": 330,
+                    "1L": 87,
+                    "500ml": 48,
+                    "200ml": 25,
+                  },
                   image: "/images/syntheic-enamel/wood-metal-finish.png",
                 },
               ].map((product, idx) => (
@@ -1415,22 +1442,22 @@ export default function ProductsPage() {
                     "Durable & weather resistant",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: {"20L":4000,"10L":2100,"5L":1200,"1L":260},
+                  price: { "20L": 4000, "10L": 2100, "5L": 1200, "1L": 260 },
                   image: "/images/waterproofing/damp-proof-advance.png",
                 },
-                {
-                  name: "Super Ultra Fix-It",
-                  desc: "Cement-based waterproofing additive used to improve bonding, seal cracks, and prevent water seepage.",
-                  features: [
-                    "Cement-based additive",
-                    "Strong bonding",
-                    "Crack sealing support",
-                    "Prevents water seepage",
-                  ],
-                  sizes: "1L, 5L, 10L, 20L",
-                  price: {"20L":2000,"10L":1000,"5L":550,"1L":120},
-                  image: "/images/waterproofing/ultra-fix-it.png",
-                },
+                // {
+                //   name: "Super Ultra Fix-It",
+                //   desc: "Cement-based waterproofing additive used to improve bonding, seal cracks, and prevent water seepage.",
+                //   features: [
+                //     "Cement-based additive",
+                //     "Strong bonding",
+                //     "Crack sealing support",
+                //     "Prevents water seepage",
+                //   ],
+                //   sizes: "1L, 5L, 10L, 20L",
+                //   price: { "20L": 2000, "10L": 1000, "5L": 550, "1L": 120 },
+                //   image: "/images/waterproofing/ultra-fix-it.png",
+                // },
                 {
                   name: "Range of Waterproofing",
                   desc: "Specialized waterproofing range for surface protection, bonding, and water resistance.",
@@ -1441,7 +1468,7 @@ export default function ProductsPage() {
                     "Professional protection",
                   ],
                   sizes: "20L, 10L, 5L, 1L",
-                  price: {"20L":700,"10L":380,"5L":225,"1L":55},
+                  price: { "20L": 700, "10L": 380, "5L": 225, "1L": 55 },
                   image: "/images/waterproofing/range-of-waterproofing.png",
                 },
               ].map((product, idx) => (
@@ -1482,7 +1509,7 @@ export default function ProductsPage() {
                     "Enhances paint durability",
                   ],
                   sizes: "1kg, 5kg, 40kg",
-                  price: {"40kg":550,"20kg":290},
+                  price: { "40kg": 550, "20kg": 290 },
                   image: "/images/putty-lime-grout/wall-shield.png",
                 },
                 {
@@ -1495,7 +1522,7 @@ export default function ProductsPage() {
                     "Premium wall preparation",
                   ],
                   sizes: "1kg, 5kg, 40kg",
-                  price: {"20kg":600,"10kg":325,"5kg":200,"1kg":30},
+                  price: { "20kg": 600, "10kg": 325, "5kg": 200, "1kg": 30 },
                   image: "/images/putty-lime-grout/wall-coat.png",
                 },
                 {
@@ -1508,7 +1535,7 @@ export default function ProductsPage() {
                     "Economical and fresh look",
                   ],
                   sizes: "5kg, 10kg, 25kg",
-                  price: {"25kg":300,"10kg":160,"5kg":75},
+                  price: { "25kg": 300, "10kg": 160, "5kg": 75 },
                   image: "/images/putty-lime-grout/white-wall.png",
                 },
                 {
@@ -1521,7 +1548,7 @@ export default function ProductsPage() {
                     "Clean durable finish",
                   ],
                   sizes: "20kg, 1kg",
-                  price: {"25kg":300,"1kg":30},
+                  price: { "25kg": 300, "1kg": 30 },
                   image: "/images/putty-lime-grout/tile-grout.png",
                 },
               ].map((product, idx) => (
@@ -1556,51 +1583,21 @@ export default function ProductsPage() {
               </button>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <ProductCard product={{ name: "Sky Neo Microfine Stainer", sizes: "50ml, 100ml, 200ml", image: "/images/stainers/sky-neo-stainer.png", desc: "Microfine stainer designed to finely stain paint and coating systems. It provides smooth, lump-free application and improved shade control.", features: ["Smooth shade adjustment", "Lump-free application", "Fine dispersion & better control", "Suitable for coating customization"], price: "Price on request" }} />
-
-              <div className="flex flex-col gap-6">
-                <ProductCard product={{ name: "Universal Stainer", sizes: "50ml, 100ml, 200ml", image: "/images/stainers/universal-stainer.png", desc: "High-strength, multipurpose stainer for both interior and exterior use. It mixes easily with emulsions, distempers, and enamels for excellent color.", features: ["High-strength staining", "Multipurpose use", "Mixes easily with various paints", "Excellent color development"], price: "Price on request" }} />
-                
-                <div className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient border border-outline-variant/10">
-                  <h4 className="font-label font-bold text-on-surface-variant mb-4 text-sm">Universal Stainer Pricing</h4>
-                  <div className="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/10">
-                    <table className="w-full text-left text-sm font-body border-collapse">
-                      <thead className="bg-[#FBE4E4]/50">
-                        <tr>
-                          <th className="py-2 px-3 text-[#93000A] font-semibold border-b border-outline-variant/10">
-                            Stainer
-                          </th>
-                          <th className="py-2 px-3 text-[#93000A] text-center font-semibold border-b border-outline-variant/10">
-                            200ML
-                          </th>
-                          <th className="py-2 px-3 text-[#93000A] text-center font-semibold border-b border-outline-variant/10">
-                            100ML
-                          </th>
-                          <th className="py-2 px-3 text-[#93000A] text-center font-semibold border-b border-outline-variant/10">
-                            50ML
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="py-2 px-3 text-[#93000A] font-medium border-b border-outline-variant/5">
-                            All Colors
-                          </td>
-                          <td className="py-2 px-3 text-center text-[#93000A] font-bold border-b border-outline-variant/5">
-                            ₹52
-                          </td>
-                          <td className="py-2 px-3 text-center text-[#93000A] font-bold border-b border-outline-variant/5">
-                            ₹26
-                          </td>
-                          <td className="py-2 px-3 text-center text-[#93000A] font-bold border-b border-outline-variant/5">
-                            ₹14
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+              <ProductCard
+                product={{
+                  name: "Sky Neo Microfine Stainer",
+                  sizes: "50ml, 100ml, 200ml",
+                  image: "/images/stainers/sky-neo-stainer.png",
+                  desc: "Microfine stainer designed to finely stain paint and coating systems. It provides smooth, lump-free application and improved shade control.",
+                  features: [
+                    "Smooth shade adjustment",
+                    "Lump-free application",
+                    "Fine dispersion & better control",
+                    "Suitable for coating customization",
+                  ],
+                  price: "Price on request",
+                }}
+              />
             </div>
           </section>
 
@@ -1690,14 +1687,6 @@ export default function ProductsPage() {
                     "/images/cleaning-products/mr-shine-toilet-cleaner.png",
                 },
                 {
-                  name: "Doctor Phenyl",
-                  desc: "Cleaning phenyl for general hygiene, floor cleaning, and utility cleaning.",
-                  features: ["General hygiene", "Floor cleaning"],
-                  sizes: "1L, 5L",
-                  price: "1L ₹18.00, 5L ₹90.00",
-                  image: "/images/cleaning-products/doctor-phenyl.png",
-                },
-                {
                   name: "Mr. Shine Phenyl",
                   desc: "Daily cleaning phenyl for homes, offices, shops, and commercial use.",
                   features: ["Daily cleaning", "Commercial use"],
@@ -1712,14 +1701,6 @@ export default function ProductsPage() {
                   sizes: "1L, 5L",
                   price: "1L ₹25.00, 5L ₹125.00",
                   image: "/images/cleaning-products/toilet-cleaner-fast.png",
-                },
-                {
-                  name: "Acid & Phenyl",
-                  desc: "Powerful cleaning support for washrooms, utility areas, and tough cleaning.",
-                  features: ["Powerful cleaning", "Washroom support"],
-                  sizes: "Varies",
-                  price: "Price on request",
-                  image: "/images/cleaning-products/mr-shine-acidnphenyl.png",
                 },
               ].map((product, idx) => (
                 <ProductCard key={idx} product={product} />
@@ -1741,9 +1722,6 @@ export default function ProductsPage() {
                       Products Name
                     </th>
                     <th className="py-4 px-4 font-headline text-secondary text-center whitespace-nowrap">
-                      500 ML
-                    </th>
-                    <th className="py-4 px-4 font-headline text-secondary text-center whitespace-nowrap">
                       1 LTR
                     </th>
                     <th className="py-4 px-4 font-headline text-secondary text-center whitespace-nowrap">
@@ -1753,7 +1731,6 @@ export default function ProductsPage() {
                 </thead>
                 <tbody className="font-body text-sm">
                   {[
-                    { n: "DOCTOR PHENYL", p500: "-", p1: "18.00", p5: "90.00" },
                     {
                       n: "MR. SHINE PHENYL",
                       p500: "-",
@@ -1807,9 +1784,9 @@ export default function ProductsPage() {
                       <td className="py-4 px-4 text-on-surface font-semibold whitespace-nowrap">
                         {item.n}
                       </td>
-                      <td className="py-4 px-4 text-center text-on-surface-variant">
+                      {/* <td className="py-4 px-4 text-center text-on-surface-variant">
                         {item.p500}
-                      </td>
+                      </td> */}
                       <td className="py-4 px-4 text-center text-primary font-bold whitespace-nowrap">
                         ₹{item.p1}
                       </td>

@@ -79,7 +79,6 @@ export default function AboutPage() {
                     className="w-full h-full object-cover"
                     alt="Skypaints Factory"
                     fill
-
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/images/factory.jpeg"
                   />
@@ -413,7 +412,7 @@ export default function AboutPage() {
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     loading="lazy"
                     data-alt="A portrait of Qutbuddin Malak, Outreach partner of SkyPaints."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDso8K7OvChX7qR__7ZKhJjJPyXAe-E8rQ3CBD_KQQNB6DHF8bRHNGsU5GKHwLoTPbMalmYv33UwvOALxFTg_MiZ_6nBaHXHGXmeYtVnfaQlIPDTegSJhLQ9YnaSJicCjfdG_OPLk48vsTkj4DZlC5EFLYa9wZIe1qnOmC5BDGhoAm0w8Rpn2z2DVNaK64dApoktxBov9vawcP5kv3Wd-Ui2bqPpkLsAhbUVpelWAau2kCyjP5Ijr5vXXPyrGNPdkuo0kfTv2L-NZ0"
+                    src="/images/outreach-partner.png"
                   />
                 </div>
                 <h5 className="font-headline text-xl text-primary">
