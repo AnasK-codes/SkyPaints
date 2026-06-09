@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   description: "Experience the atmospheric depth of Skypaints. Our artisanal finishes capture the shifting light of the celestial hours.",
 };
 
+import FloatingContactButtons from "@/components/FloatingContactButtons";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,6 +41,7 @@ export default function RootLayout({
       >
         <CartProvider>
           {children}
+          <FloatingContactButtons />
         </CartProvider>
       </body>
     </html>

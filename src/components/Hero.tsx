@@ -48,7 +48,7 @@ export default function Hero() {
               <Image
                 alt={`Hero showcase ${index}`}
                 fill
-                priority={index === 0}
+                priority
                 className="object-cover"
                 src={src}
                 sizes="100vw"
