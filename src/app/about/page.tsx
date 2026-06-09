@@ -79,6 +79,8 @@ export default function AboutPage() {
                     className="w-full h-full object-cover"
                     alt="Skypaints Factory"
                     fill
+
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/images/factory.jpeg"
                   />
                   <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>

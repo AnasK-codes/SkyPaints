@@ -94,7 +94,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-surface-container-low/80 p-1.5 rounded-full backdrop-blur-md border border-outline-variant/20 shadow-inner">
+          <nav className="hidden xl:flex items-center gap-0.5 xl:gap-1 bg-surface-container-low/80 p-1.5 rounded-full backdrop-blur-md border border-outline-variant/20 shadow-inner">
             {navLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
@@ -159,7 +159,7 @@ export default function Navbar() {
             </Link>
 
             <button
-              className="lg:hidden w-10 h-10 text-on-surface bg-surface-container-low/80 rounded-full backdrop-blur-md border border-outline-variant/20 flex items-center justify-center transition-colors hover:bg-surface-container-high"
+              className="xl:hidden w-10 h-10 text-on-surface bg-surface-container-low/80 rounded-full backdrop-blur-md border border-outline-variant/20 flex items-center justify-center transition-colors hover:bg-surface-container-high"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -171,7 +171,7 @@ export default function Navbar() {
         </div>
         {/* Mobile Dropdown Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute left-0 right-0 top-[calc(100%+16px)] z-40 origin-top animate-fade-in-up px-2 md:px-4">
+          <div className="xl:hidden absolute left-0 right-0 top-[calc(100%+16px)] z-40 origin-top animate-fade-in-up px-2 md:px-4">
             <div className="w-full bg-surface dark:bg-surface-dark border border-outline-variant/30 shadow-[0_24px_48px_rgba(46,16,101,0.15)] rounded-[2rem] p-3 flex flex-col gap-1 max-h-[70vh] overflow-y-auto">
               {navLinks.map((link) => {
                 const isActive =

@@ -34,6 +34,8 @@ export default function InspirationPage() {
                 alt="A modern living room painted in a serene soft lavender hue"
                 src="/images/inspiration-hero.png"
                 fill
+
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
                 className="object-cover"
               />
@@ -58,6 +60,8 @@ export default function InspirationPage() {
                 alt="A close-up shot of luxurious, thick paint being applied to a canvas"
                 src="/images/blog-featured-finish.png"
                 fill
+
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -109,6 +113,8 @@ export default function InspirationPage() {
                   alt="A beautifully painted modern Indian living room with warm lighting"
                   src="/images/blog-cost.png"
                   fill
+
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -145,6 +151,8 @@ export default function InspirationPage() {
                   alt="A detailed close-up showing the textural difference between two painted surfaces"
                   src="/images/blog-distemper.png"
                   fill
+
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -181,6 +189,8 @@ export default function InspirationPage() {
                   alt="An exterior shot of a modern, minimalist house wall during a light rain shower"
                   src="/images/blog-waterproofing.png"
                   fill
+
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -217,6 +227,8 @@ export default function InspirationPage() {
                   alt="A beautifully painted bright exterior of an Indian home basking in sunlight"
                   src="/images/blog-heat-reflect.png"
                   fill
+
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -253,6 +265,8 @@ export default function InspirationPage() {
                   alt="A beautifully lit living room featuring a calming vastu-compliant pale yellow wall"
                   src="/images/blog-vastu-yellow.png"
                   fill
+
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -291,6 +305,8 @@ export default function InspirationPage() {
                   alt="A stunning modern living room with a two-tone colour combination"
                   src="/images/blog-trending-colours.png"
                   fill
+
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -343,6 +359,8 @@ export default function InspirationPage() {
                 alt="A highly detailed, macro photograph of a textured wall surface being carefully smoothed"
                 src="/images/inspiration-editorial.png"
                 fill
+
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover opacity-90"
               />
               {/* Floating Card inside image */}
@@ -387,6 +405,8 @@ export default function InspirationPage() {
                     alt="A neatly organized collection of professional painting tools"
                     src="/images/blog-checklist.png"
                     fill
+
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -413,6 +433,8 @@ export default function InspirationPage() {
                     alt="A sophisticated dining room corner featuring dark, dramatic accent walls"
                     src="/images/blog-dark-colours.png"
                     fill
+
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -439,6 +461,8 @@ export default function InspirationPage() {
                     alt="A bright, sunlit kitchen featuring soft pastel cabinets"
                     src="/images/blog-safe-paints.png"
                     fill
+
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -465,6 +489,8 @@ export default function InspirationPage() {
                     alt="A close up of a luxurious metallic textured accent wall in a modern bedroom"
                     src="/images/blog-texture-designs.png"
                     fill
+
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -491,6 +517,8 @@ export default function InspirationPage() {
                     alt="A close up of someone scraping away damaged, peeling paint before applying a waterproof primer"
                     src="/images/blog-peeling-paint.png"
                     fill
+
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>

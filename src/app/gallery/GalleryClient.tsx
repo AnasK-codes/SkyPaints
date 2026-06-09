@@ -37,6 +37,8 @@ export default function GalleryClient({ mediaItems }: { mediaItems: MediaItem[] 
                 src={item.url}
                 alt={item.title}
                 fill
+
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             )}
@@ -83,6 +85,8 @@ export default function GalleryClient({ mediaItems }: { mediaItems: MediaItem[] 
                 src={selectedItem.url}
                 alt={selectedItem.title}
                 fill
+
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-contain"
               />
             )}
