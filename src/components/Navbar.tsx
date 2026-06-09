@@ -31,10 +31,10 @@ export default function Navbar() {
       name: 'Products', 
       href: '/products',
       subLinks: [
-        { name: 'Interior Paints', href: '/products' },
-        { name: 'Exterior Paints', href: '/products' },
-        { name: 'Textures', href: '/products' },
-        { name: 'Waterproofing', href: '/products' },
+        { name: 'Interior Paints', href: '/products#emulsions' },
+        { name: 'Exterior Paints', href: '/products#emulsions' },
+        { name: 'Cleaning Products', href: '/products#cleaning' },
+        { name: 'Waterproofing', href: '/products#waterproofing' },
       ]
     },
     { 
