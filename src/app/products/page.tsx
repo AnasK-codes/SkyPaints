@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import AddToCartButton from "@/components/AddToCartButton";
+import ProductCard from "@/components/ProductCard";
 
 const scrollToCategory = (id: string) => {
   const element = document.getElementById(id);
@@ -77,6 +77,7 @@ export default function ProductsPage() {
                   src="/images/products-hero/range-of-emulsions.png"
                   alt="Range of Emulsions"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -90,6 +91,7 @@ export default function ProductsPage() {
                   src="/images/products-hero/range-of-putty.png"
                   alt="Putty Range"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -103,6 +105,7 @@ export default function ProductsPage() {
                   src="/images/products-hero/range-of-waterproofing.png"
                   alt="Waterproofing"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -116,6 +119,7 @@ export default function ProductsPage() {
                   src="/images/products-hero/sky-neo-range.png"
                   alt="Sky Neo Range"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -449,7 +453,7 @@ export default function ProductsPage() {
                     "Low odour",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: "Price on request",
+                  price: {"20L":2500,"10L":1275,"4L":590,"1L":152},
                   image: "/images/emulsions/pro-royal-glow.png",
                 },
                 {
@@ -463,7 +467,7 @@ export default function ProductsPage() {
                     "Durable coating",
                   ],
                   sizes: "20L, 10L, 1L, 500ml",
-                  price: "Price on request",
+                  price: {"20L":3510,"10L":1800,"4L":735,"1L":195},
                   image: "/images/emulsions/hi-sheen.png",
                 },
                 {
@@ -477,7 +481,7 @@ export default function ProductsPage() {
                     "Premium quality finish",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: "Price on request",
+                  price: {"20L":5000,"10L":2600,"4L":1080,"1L":290,"500ml":155},
                   image: "/images/emulsions/sky-neo-smart-premium.png",
                 },
                 {
@@ -491,35 +495,11 @@ export default function ProductsPage() {
                     "Smooth, refined finish",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: "Price on request",
+                  price: {"20L":1000,"10L":530,"4L":250,"1L":65},
                   image: "/images/emulsions/sky-neo-advance.png",
                 },
               ].map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group"
-                >
-                  <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                    {product.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <AddToCartButton product={product} />
-                </div>
+                <ProductCard key={idx} product={product} />
               ))}
             </div>
 
@@ -724,48 +704,7 @@ export default function ProductsPage() {
                   image: "/images/oil-paint/taarpin.png",
                 },
               ].map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group"
-                >
-                  <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                    {product.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                    <div>
-                      <p className="text-xs text-on-surface-variant mb-1">
-                        Sizes: {product.sizes}
-                      </p>
-                      <p className="text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
-                    </div>
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
-                  </div>
-                </div>
+                <ProductCard key={idx} product={product} />
               ))}
             </div>
 
@@ -878,7 +817,7 @@ export default function ProductsPage() {
                     "Smooth flow and even coverage",
                   ],
                   sizes: "1kg, 2kg, 5kg, 10kg, 20kg",
-                  price: "Starting from ₹70",
+                  price: {"20kg":630,"10kg":350,"5kg":185,"2kg":80},
                   image: "/images/distemper/sky-neo-luxury-distemper.png",
                 },
                 {
@@ -891,52 +830,11 @@ export default function ProductsPage() {
                     "Suitable for interior walls",
                   ],
                   sizes: "1kg x 20 pc, 1kg x 30 pc",
-                  price: "Price on request",
+                  price: {"1kg":26,"20kg":520,"30kg":900},
                   image: "/images/distemper/sky-neo-smart-acrylic.png",
                 },
               ].map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group"
-                >
-                  <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                    {product.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                    <div>
-                      <p className="text-xs text-on-surface-variant mb-1">
-                        Sizes: {product.sizes}
-                      </p>
-                      <p className="text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
-                    </div>
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
-                  </div>
-                </div>
+                <ProductCard key={idx} product={product} />
               ))}
             </div>
 
@@ -1163,7 +1061,7 @@ export default function ProductsPage() {
                     "Wear resistance",
                   ],
                   sizes: "200ml, 500ml, 1L, 10L, 20L",
-                  price: "Price on request",
+                  price: {"20L":4100,"10L":2075,"4L":840,"1L":215,"500ml":111,"200ml":57},
                   image: "/images/syntheic-enamel/neo-smart-polyurethane.png",
                 },
                 {
@@ -1176,7 +1074,7 @@ export default function ProductsPage() {
                     "Surface protection",
                   ],
                   sizes: "Varies",
-                  price: "Price on request",
+                  price: {"20L":3200,"10L":1625,"4L":670,"1L":170,"500ml":89,"200ml":45},
                   image: "/images/syntheic-enamel/varnish.png",
                 },
                 {
@@ -1189,52 +1087,11 @@ export default function ProductsPage() {
                     "Smooth topcoat support",
                   ],
                   sizes: "Varies",
-                  price: "Price on request",
+                  price: {"20L":1500,"10L":775,"4L":330,"1L":87,"500ml":48,"200ml":25},
                   image: "/images/syntheic-enamel/wood-metal-finish.png",
                 },
               ].map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group"
-                >
-                  <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                    {product.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                    <div>
-                      <p className="text-xs text-on-surface-variant mb-1">
-                        Sizes: {product.sizes}
-                      </p>
-                      <p className="text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
-                    </div>
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
-                  </div>
-                </div>
+                <ProductCard key={idx} product={product} />
               ))}
             </div>
 
@@ -1558,7 +1415,7 @@ export default function ProductsPage() {
                     "Durable & weather resistant",
                   ],
                   sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: "Price on request",
+                  price: {"20L":4000,"10L":2100,"5L":1200,"1L":260},
                   image: "/images/waterproofing/damp-proof-advance.png",
                 },
                 {
@@ -1571,7 +1428,7 @@ export default function ProductsPage() {
                     "Prevents water seepage",
                   ],
                   sizes: "1L, 5L, 10L, 20L",
-                  price: "Price on request",
+                  price: {"20L":2000,"10L":1000,"5L":550,"1L":120},
                   image: "/images/waterproofing/ultra-fix-it.png",
                 },
                 {
@@ -1584,52 +1441,11 @@ export default function ProductsPage() {
                     "Professional protection",
                   ],
                   sizes: "20L, 10L, 5L, 1L",
-                  price: "Price on request",
+                  price: {"20L":700,"10L":380,"5L":225,"1L":55},
                   image: "/images/waterproofing/range-of-waterproofing.png",
                 },
               ].map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group"
-                >
-                  <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                    {product.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                    <div>
-                      <p className="text-xs text-on-surface-variant mb-1">
-                        Sizes: {product.sizes}
-                      </p>
-                      <p className="text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
-                    </div>
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
-                  </div>
-                </div>
+                <ProductCard key={idx} product={product} />
               ))}
             </div>
           </section>
@@ -1666,7 +1482,7 @@ export default function ProductsPage() {
                     "Enhances paint durability",
                   ],
                   sizes: "1kg, 5kg, 40kg",
-                  price: "Price on request",
+                  price: {"40kg":550,"20kg":290},
                   image: "/images/putty-lime-grout/wall-shield.png",
                 },
                 {
@@ -1679,7 +1495,7 @@ export default function ProductsPage() {
                     "Premium wall preparation",
                   ],
                   sizes: "1kg, 5kg, 40kg",
-                  price: "Price on request",
+                  price: {"20kg":600,"10kg":325,"5kg":200,"1kg":30},
                   image: "/images/putty-lime-grout/wall-coat.png",
                 },
                 {
@@ -1692,7 +1508,7 @@ export default function ProductsPage() {
                     "Economical and fresh look",
                   ],
                   sizes: "5kg, 10kg, 25kg",
-                  price: "Price on request",
+                  price: {"25kg":300,"10kg":160,"5kg":75},
                   image: "/images/putty-lime-grout/white-wall.png",
                 },
                 {
@@ -1705,52 +1521,11 @@ export default function ProductsPage() {
                     "Clean durable finish",
                   ],
                   sizes: "20kg, 1kg",
-                  price: "Price on request",
+                  price: {"25kg":300,"1kg":30},
                   image: "/images/putty-lime-grout/tile-grout.png",
                 },
               ].map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group"
-                >
-                  <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                    {product.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                    <div>
-                      <p className="text-xs text-on-surface-variant mb-1">
-                        Sizes: {product.sizes}
-                      </p>
-                      <p className="text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
-                    </div>
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
-                  </div>
-                </div>
+                <ProductCard key={idx} product={product} />
               ))}
             </div>
             <div className="bg-surface-container-low p-6 rounded-[1.5rem] border border-outline-variant/10 text-center">
@@ -1781,65 +1556,14 @@ export default function ProductsPage() {
               </button>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group">
-                <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                  <Image
-                    src="/images/stainers/sky-neo-stainer.png"
-                    alt="Sky Neo Microfine Stainer"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                  Sky Neo Microfine Stainer
-                </h3>
-                <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                  Microfine stainer designed to finely stain paint and coating
-                  systems. It provides smooth, lump-free application and
-                  improved shade control.
-                </p>
-                <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                  <li>Smooth shade adjustment</li>
-                  <li>Lump-free application</li>
-                  <li>Fine dispersion & better control</li>
-                  <li>Suitable for coating customization</li>
-                </ul>
-                <AddToCartButton 
-                  product={{
-                    name: "Sky Neo Microfine Stainer",
-                    sizes: "50ml, 100ml, 200ml",
-                    image: "/images/stainers/sky-neo-stainer.png"
-                  }} 
-                />
-              </div>
+              <ProductCard product={{ name: "Sky Neo Microfine Stainer", sizes: "50ml, 100ml, 200ml", image: "/images/stainers/sky-neo-stainer.png", desc: "Microfine stainer designed to finely stain paint and coating systems. It provides smooth, lump-free application and improved shade control.", features: ["Smooth shade adjustment", "Lump-free application", "Fine dispersion & better control", "Suitable for coating customization"], price: "Price on request" }} />
 
-              <div className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group">
-                <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                  <Image
-                    src="/images/stainers/universal-stainer.png"
-                    alt="Universal Stainer"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                  Universal Stainer
-                </h3>
-                <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                  Universal stainer range for tinting and colour customization
-                  across compatible paint categories.
-                </p>
-                <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                  <li>Shade customization</li>
-                  <li>Easy mixing</li>
-                  <li>Strong tinting strength</li>
-                  <li>Multiple shade possibilities</li>
-                </ul>
-                <div className="mt-auto pt-4 border-t border-outline-variant/10">
-                  <p className="text-xs text-on-surface-variant mb-2">
-                    Sizes: 50ml, 100ml, 200ml
-                  </p>
-                  <div className="mb-4 bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/10">
+              <div className="flex flex-col gap-6">
+                <ProductCard product={{ name: "Universal Stainer", sizes: "50ml, 100ml, 200ml", image: "/images/stainers/universal-stainer.png", desc: "High-strength, multipurpose stainer for both interior and exterior use. It mixes easily with emulsions, distempers, and enamels for excellent color.", features: ["High-strength staining", "Multipurpose use", "Mixes easily with various paints", "Excellent color development"], price: "Price on request" }} />
+                
+                <div className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient border border-outline-variant/10">
+                  <h4 className="font-label font-bold text-on-surface-variant mb-4 text-sm">Universal Stainer Pricing</h4>
+                  <div className="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/10">
                     <table className="w-full text-left text-sm font-body border-collapse">
                       <thead className="bg-[#FBE4E4]/50">
                         <tr>
@@ -1874,16 +1598,6 @@ export default function ProductsPage() {
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                  <div className="flex justify-end">
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
                   </div>
                 </div>
               </div>
@@ -2008,48 +1722,7 @@ export default function ProductsPage() {
                   image: "/images/cleaning-products/mr-shine-acidnphenyl.png",
                 },
               ].map((product, idx) => (
-                <div
-                  key={idx}
-                  className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group"
-                >
-                  <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl text-primary leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-on-surface-variant mb-6 space-y-1 flex-grow">
-                    {product.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                    <div>
-                      <p className="text-xs text-on-surface-variant mb-1">
-                        Sizes: {product.sizes}
-                      </p>
-                      <p className="text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
-                    </div>
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
-                  </div>
-                </div>
+                <ProductCard key={idx} product={product} />
               ))}
             </div>
 

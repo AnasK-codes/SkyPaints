@@ -2,20 +2,17 @@
 
 import React, { useState } from 'react';
 import { useCart } from '@/context/CartContext';
+import { Product } from './ProductCard';
 
 interface AddToCartButtonProps {
-  product: {
-    name: string;
-    sizes: string;
-    image: string;
-  };
+  product: Product;
 }
 
 export default function AddToCartButton({ product }: AddToCartButtonProps) {
   const { addToCart } = useCart();
   
+  // Extract sizes
   const sizeOptions = product.sizes.split(',').map(s => s.trim()).filter(Boolean);
-  
   const [selectedSize, setSelectedSize] = useState(sizeOptions[0] || 'Default');
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
@@ -26,7 +23,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
       size: selectedSize,
       quantity,
       image: product.image,
-      price: "Price on request",
+      price: currentPriceDisplay, // Ensure we pass the active price string to cart
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
@@ -35,57 +32,95 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
   const increment = () => setQuantity(q => q + 1);
   const decrement = () => setQuantity(q => (q > 1 ? q - 1 : 1));
 
+  // Determine pricing display based on size
+  let currentPriceDisplay = "Price on request";
+  if (typeof product.price === 'string') {
+    currentPriceDisplay = product.price;
+  } else if (typeof product.price === 'object' && product.price !== null) {
+    const p = product.price[selectedSize];
+    if (p !== undefined) {
+      currentPriceDisplay = `₹${p.toLocaleString('en-IN')}`;
+    }
+  }
+
+  // Check if we have sizes to render as pills
+  const showSizes = sizeOptions.length > 0 && sizeOptions[0] !== 'Packaging available on request';
+
   return (
-    <div className="mt-auto pt-4 border-t border-outline-variant/10 flex flex-col gap-3">
-      {sizeOptions.length > 0 && (
-        <div className="flex items-center justify-between">
-          <label className="text-xs font-semibold text-on-surface-variant">Size:</label>
-          <select 
-            value={selectedSize}
-            onChange={(e) => setSelectedSize(e.target.value)}
-            className="text-xs bg-surface dark:bg-surface-dark rounded-md border border-outline-variant/20 px-2 py-1 outline-none focus:border-primary text-on-surface"
-          >
+    <div className="mt-auto flex flex-col gap-5 pt-4 border-t border-outline-variant/10">
+      
+      {/* Size Pills Row */}
+      {showSizes && (
+        <div className="flex flex-col gap-2">
+          <span className="text-xs font-label text-on-surface-variant uppercase tracking-wider font-bold">Select Size</span>
+          <div className="flex flex-wrap gap-2">
             {sizeOptions.map(size => (
-              <option key={size} value={size}>{size}</option>
+              <button
+                key={size}
+                onClick={() => setSelectedSize(size)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 border ${
+                  selectedSize === size
+                    ? 'bg-primary text-on-primary border-primary shadow-md scale-[1.02]'
+                    : 'bg-surface-container border-outline-variant/20 text-on-surface hover:border-primary/50 hover:bg-surface-container-high'
+                }`}
+              >
+                {size}
+              </button>
             ))}
-          </select>
+          </div>
         </div>
       )}
       
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-1 bg-surface-container-low rounded-full p-1 border border-outline-variant/20 shadow-sm">
+      {/* Price & Stock Row */}
+      <div className="flex justify-between items-end">
+        <div className="flex flex-col">
+          <span className="font-headline text-2xl font-black text-on-surface tracking-tight leading-none">
+            {currentPriceDisplay}
+          </span>
+          {currentPriceDisplay !== "Price on request" && (
+            <div className="flex items-center gap-1.5 mt-1.5">
+              <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+              <span className="text-[10px] font-bold text-green-600 uppercase tracking-wider">In Stock</span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* CTA Row */}
+      <div className="flex items-center gap-3">
+        <div className="flex items-center bg-surface-container rounded-xl border border-outline-variant/20 p-1">
           <button 
             onClick={decrement}
-            className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"
+            className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest active:bg-surface-container transition-colors text-on-surface"
           >
-            <span className="material-symbols-outlined text-[16px]">remove</span>
+            <span className="material-symbols-outlined text-[18px]">remove</span>
           </button>
-          <span className="text-sm font-medium w-5 text-center text-on-surface">{quantity}</span>
+          <span className="text-sm font-bold w-6 text-center text-on-surface">{quantity}</span>
           <button 
             onClick={increment}
-            className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"
+            className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest active:bg-surface-container transition-colors text-on-surface"
           >
-            <span className="material-symbols-outlined text-[16px]">add</span>
+            <span className="material-symbols-outlined text-[18px]">add</span>
           </button>
         </div>
 
         <button
           onClick={handleAdd}
-          className={`flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
+          className={`flex-grow flex items-center justify-center gap-2 h-12 rounded-xl text-sm font-black uppercase tracking-wide transition-all duration-300 active:scale-95 ${
             added 
-            ? 'bg-green-600 text-white shadow-md' 
-            : 'bg-primary text-on-primary hover:bg-primary/90 shadow-ambient shadow-ambient-hover'
+            ? 'bg-green-600 text-white shadow-lg shadow-green-600/30' 
+            : 'bg-primary text-on-primary hover:bg-primary/90 shadow-[0_8px_20px_rgba(46,16,101,0.15)] hover:shadow-[0_12px_24px_rgba(46,16,101,0.25)]'
           }`}
         >
           {added ? (
             <>
-              <span className="material-symbols-outlined text-[18px]">check</span>
+              <span className="material-symbols-outlined text-[20px]">check_circle</span>
               Added
             </>
           ) : (
             <>
-              <span className="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
-              Add
+              <span className="material-symbols-outlined text-[20px]">shopping_cart</span>
+              Add to Cart
             </>
           )}
         </button>
