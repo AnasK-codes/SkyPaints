@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import AddToCartButton from "@/components/AddToCartButton";
 
 const scrollToCategory = (id: string) => {
   const element = document.getElementById(id);
@@ -518,24 +518,7 @@ export default function ProductsPage() {
                       <li key={i}>{f}</li>
                     ))}
                   </ul>
-                  <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                    <div>
-                      <p className="text-xs text-on-surface-variant mb-1">
-                        Sizes: {product.sizes}
-                      </p>
-                      <p className="text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
-                    </div>
-                    <button
-                      className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                      aria-label="Enquire"
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        arrow_forward
-                      </span>
-                    </button>
-                  </div>
+                  <AddToCartButton product={product} />
                 </div>
               ))}
             </div>
@@ -1821,24 +1804,13 @@ export default function ProductsPage() {
                   <li>Fine dispersion & better control</li>
                   <li>Suitable for coating customization</li>
                 </ul>
-                <div className="mt-auto pt-4 border-t border-outline-variant/10 flex justify-between items-end">
-                  <div>
-                    <p className="text-xs text-on-surface-variant mb-1">
-                      Sizes: 50ml, 100ml, 200ml
-                    </p>
-                    <p className="text-sm text-primary font-bold">
-                      Price on request
-                    </p>
-                  </div>
-                  <button
-                    className="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary p-2 rounded-full transition-colors flex items-center justify-center"
-                    aria-label="Enquire"
-                  >
-                    <span className="material-symbols-outlined text-lg">
-                      arrow_forward
-                    </span>
-                  </button>
-                </div>
+                <AddToCartButton 
+                  product={{
+                    name: "Sky Neo Microfine Stainer",
+                    sizes: "50ml, 100ml, 200ml",
+                    image: "/images/stainers/sky-neo-stainer.png"
+                  }} 
+                />
               </div>
 
               <div className="bg-surface-container-lowest rounded-[2rem] p-6 shadow-ambient hover:shadow-elevated transition-all border border-outline-variant/10 flex flex-col h-full group">

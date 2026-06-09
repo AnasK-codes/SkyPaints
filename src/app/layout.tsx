@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif, Manrope } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -36,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${notoSerif.variable} ${manrope.variable} antialiased font-body bg-surface text-on-surface`}
       >
-        {children}
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
