@@ -684,19 +684,6 @@ export default function ProductsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
               {[
                 {
-                  name: "Paint Oil",
-                  desc: "Utility paint oil available in multiple pack sizes for professional and general paint-related use.",
-                  features: [
-                    "Available in small and bulk pack sizes",
-                    "Useful for paint-related applications",
-                    "Economical utility product",
-                    "Dealer and bulk supply support available",
-                  ],
-                  sizes: "Multiple pack sizes",
-                  price: "Price on request",
-                  image: "/images/oil-paint/paint-oil.png",
-                },
-                {
                   name: "Taarpin",
                   desc: "Paint-related support product used for application, thinning, finishing, cleaning support, and general surface work.",
                   features: [

@@ -34,14 +34,7 @@ const productItems = [
     category: "Primers",
     colSpan: "md:col-span-1 md:row-span-1",
   },
-  {
-    id: 6,
-    type: "video",
-    url: "/images/gallery/gallery-video-3.mp4",
-    title: "Smooth Application",
-    category: "Putty & Grout",
-    colSpan: "md:col-span-1 md:row-span-2",
-  },
+
   {
     id: 8,
     type: "video",
@@ -77,22 +70,7 @@ const productItems = [
 ];
 
 const journeyItems = [
-  {
-    id: 3,
-    type: "image",
-    url: "/images/gallery/gallery-image-2.jpeg",
-    title: "Manufacturing Plant",
-    tag: "Manufacturing",
-    colSpan: "md:col-span-1 md:row-span-2",
-  },
-  {
-    id: 5,
-    type: "image",
-    url: "/images/gallery/gallery-image-3.jpeg",
-    title: "Warehouse Operations",
-    tag: "Distribution",
-    colSpan: "md:col-span-2 md:row-span-1",
-  },
+
   {
     id: 7,
     type: "image",

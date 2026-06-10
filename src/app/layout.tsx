@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Serif, Manrope } from "next/font/google";
+import { Noto_Serif, Manrope, Gloock } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 
@@ -10,10 +10,19 @@ const notoSerif = Noto_Serif({
   style: ["normal", "italic"],
 });
 
+const gloock = Gloock({
+  subsets: ["latin"],
+  variable: "--font-gloock",
+  weight: ["400"],
+  style: ["normal"],
+});
+
+
+
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
-  weight: ["400", "500", "700", "800"],
+  weight: ["300", "400", "500", "700", "800"],
   style: ["normal"],
 });
 
@@ -37,7 +46,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
       </head>
       <body
-        className={`${notoSerif.variable} ${manrope.variable} antialiased font-body bg-surface text-on-surface`}
+        className={`${notoSerif.variable} ${manrope.variable} ${gloock.variable} antialiased font-body bg-surface text-on-surface`}
       >
         <CartProvider>
           {children}
