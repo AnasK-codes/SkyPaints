@@ -74,7 +74,7 @@ export default function ProductsPage() {
             <div className="relative rounded-[2rem] bg-surface-container-low shadow-elevated p-6 grid grid-cols-2 grid-rows-2 gap-4 border border-outline-variant/10">
               <div className="relative rounded-2xl overflow-hidden group aspect-square">
                 <Image
-                  src="/images/products-hero/range-of-emulsions.png"
+                  src="/images/products-hero/range-of-emulsion.png"
                   alt="Range of Emulsions"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -88,7 +88,7 @@ export default function ProductsPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden group aspect-square">
                 <Image
-                  src="/images/products-hero/range-of-putty.png"
+                  src="/images/products-hero/range-of-putty-hero.png"
                   alt="Putty Range"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -116,7 +116,7 @@ export default function ProductsPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden group aspect-square">
                 <Image
-                  src="/images/products-hero/sky-neo-range.png"
+                  src="/images/products-hero/sky-neo-range-hero.png"
                   alt="Sky Neo Range"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -534,21 +534,21 @@ export default function ProductsPage() {
                     <td className="py-4 text-on-surface font-medium">
                       Neo Advance Water BasePrimer
                     </td>
-                    <td className="py-4 text-primary">₹1550</td>
-                    <td className="py-4 text-primary">₹1000</td>
-                    <td className="py-4 text-primary">₹530</td>
-                    <td className="py-4 text-primary">₹250</td>
-                    <td className="py-4 text-primary">₹65</td>
+                    <td className="py-4 text-primary">₹2015</td>
+                    <td className="py-4 text-primary">₹1300</td>
+                    <td className="py-4 text-primary">₹689</td>
+                    <td className="py-4 text-primary">₹325</td>
+                    <td className="py-4 text-primary">₹85</td>
                   </tr>
                   <tr className="hover:bg-surface-container-low transition-colors">
                     <td className="py-4 text-on-surface font-medium">
                       Neo Smart Premium Water Base Primer
                     </td>
-                    <td className="py-4 text-primary">₹1750</td>
-                    <td className="py-4 text-primary">₹1100</td>
-                    <td className="py-4 text-primary">₹580</td>
-                    <td className="py-4 text-primary">₹365</td>
-                    <td className="py-4 text-primary">₹70</td>
+                    <td className="py-4 text-primary">₹2275</td>
+                    <td className="py-4 text-primary">₹1430</td>
+                    <td className="py-4 text-primary">₹754</td>
+                    <td className="py-4 text-primary">₹475</td>
+                    <td className="py-4 text-primary">₹91</td>
                   </tr>
                 </tbody>
               </table>
@@ -575,23 +575,23 @@ export default function ProductsPage() {
                     <td className="py-4 text-on-surface font-medium">
                       Metalic Emulsion
                     </td>
-                    <td className="py-4 text-primary">₹5000</td>
-                    <td className="py-4 text-primary">₹2600</td>
-                    <td className="py-4 text-primary">₹1080</td>
-                    <td className="py-4 text-primary">₹290</td>
-                    <td className="py-4 text-primary">₹155</td>
-                    <td className="py-4 text-primary">₹97.50</td>
-                    <td className="py-4 text-primary">₹52</td>
-                    <td className="py-4 text-primary">₹32</td>
+                    <td className="py-4 text-primary">₹6500</td>
+                    <td className="py-4 text-primary">₹3380</td>
+                    <td className="py-4 text-primary">₹1404</td>
+                    <td className="py-4 text-primary">₹377</td>
+                    <td className="py-4 text-primary">₹202</td>
+                    <td className="py-4 text-primary">₹127</td>
+                    <td className="py-4 text-primary">₹68</td>
+                    <td className="py-4 text-primary">₹42</td>
                   </tr>
                   <tr className="hover:bg-surface-container-low transition-colors">
                     <td className="py-4 text-on-surface font-medium">
                       Sheen (white & Base)
                     </td>
-                    <td className="py-4 text-primary">₹3510</td>
-                    <td className="py-4 text-primary">₹1800</td>
-                    <td className="py-4 text-primary">₹735</td>
-                    <td className="py-4 text-primary">₹195</td>
+                    <td className="py-4 text-primary">₹4563</td>
+                    <td className="py-4 text-primary">₹2340</td>
+                    <td className="py-4 text-primary">₹956</td>
+                    <td className="py-4 text-primary">₹254</td>
                     <td className="py-4 text-primary">-</td>
                     <td className="py-4 text-primary">-</td>
                     <td className="py-4 text-primary">-</td>
@@ -619,41 +619,41 @@ export default function ProductsPage() {
                     <td className="py-4 text-on-surface font-medium">
                       Interior Emulsion White
                     </td>
-                    <td className="py-4 text-primary">₹1150</td>
-                    <td className="py-4 text-primary">₹620</td>
-                    <td className="py-4 text-primary">₹254</td>
-                    <td className="py-4 text-primary">₹71.5</td>
+                    <td className="py-4 text-primary">₹1495</td>
+                    <td className="py-4 text-primary">₹806</td>
+                    <td className="py-4 text-primary">₹330</td>
+                    <td className="py-4 text-primary">₹93</td>
                     <td className="py-4 text-primary">-</td>
                   </tr>
                   <tr className="hover:bg-surface-container-low transition-colors">
                     <td className="py-4 text-on-surface font-medium">
                       Interior Emulsion Shade
                     </td>
-                    <td className="py-4 text-primary">₹1400</td>
-                    <td className="py-4 text-primary">₹700</td>
-                    <td className="py-4 text-primary">₹430</td>
-                    <td className="py-4 text-primary">₹110</td>
-                    <td className="py-4 text-primary">₹60</td>
+                    <td className="py-4 text-primary">₹1820</td>
+                    <td className="py-4 text-primary">₹910</td>
+                    <td className="py-4 text-primary">₹559</td>
+                    <td className="py-4 text-primary">₹143</td>
+                    <td className="py-4 text-primary">₹78</td>
                   </tr>
                   <tr className="hover:bg-surface-container-low transition-colors">
                     <td className="py-4 text-on-surface font-medium">
                       Exterior Emulsion White
                     </td>
-                    <td className="py-4 text-primary">₹2500</td>
-                    <td className="py-4 text-primary">₹1275</td>
-                    <td className="py-4 text-primary">₹590</td>
-                    <td className="py-4 text-primary">₹152</td>
+                    <td className="py-4 text-primary">₹3250</td>
+                    <td className="py-4 text-primary">₹1658</td>
+                    <td className="py-4 text-primary">₹767</td>
+                    <td className="py-4 text-primary">₹198</td>
                     <td className="py-4 text-primary">-</td>
                   </tr>
                   <tr className="hover:bg-surface-container-low transition-colors">
                     <td className="py-4 text-on-surface font-medium">
                       Exterior Emulsion Shade
                     </td>
-                    <td className="py-4 text-primary">₹2700</td>
-                    <td className="py-4 text-primary">₹1375</td>
-                    <td className="py-4 text-primary">₹640</td>
-                    <td className="py-4 text-primary">₹165</td>
-                    <td className="py-4 text-primary">₹86</td>
+                    <td className="py-4 text-primary">₹3510</td>
+                    <td className="py-4 text-primary">₹1788</td>
+                    <td className="py-4 text-primary">₹832</td>
+                    <td className="py-4 text-primary">₹215</td>
+                    <td className="py-4 text-primary">₹112</td>
                   </tr>
                 </tbody>
               </table>
@@ -713,18 +713,18 @@ export default function ProductsPage() {
                   </h4>
                   <ul className="space-y-3">
                     {[
-                      { s: "160 ML", p: "₹17.60" },
-                      { s: "180 ML", p: "₹18.28" },
-                      { s: "400 ML", p: "₹37.50" },
-                      { s: "500 ML", p: "₹45.00" },
-                      { s: "800 ML", p: "₹72.00" },
-                      { s: "1 LTR", p: "₹87.00" },
-                      { s: "2.5 LTR", p: "₹227.00" },
-                      { s: "4.5 LTR", p: "₹383.00" },
-                      { s: "5 LTR", p: "₹422.50" },
-                      { s: "18 LTR", p: "₹1652.00" },
-                      { s: "20 LTR", p: "₹1725.00" },
-                      { s: "50 LTR", p: "₹4021.00" },
+                      { s: "160 ML", p: "₹23" },
+                      { s: "180 ML", p: "₹24" },
+                      { s: "400 ML", p: "₹49" },
+                      { s: "500 ML", p: "₹59" },
+                      { s: "800 ML", p: "₹94" },
+                      { s: "1 LTR", p: "₹113" },
+                      { s: "2.5 LTR", p: "₹295" },
+                      { s: "4.5 LTR", p: "₹498" },
+                      { s: "5 LTR", p: "₹549" },
+                      { s: "18 LTR", p: "₹2148" },
+                      { s: "20 LTR", p: "₹2243" },
+                      { s: "50 LTR", p: "₹5227" },
                     ].map((item, i) => (
                       <li
                         key={i}
@@ -849,19 +849,19 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹630</span>
+                      <span className="font-semibold text-primary">₹819</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">10kg</span>
-                      <span className="font-semibold text-primary">₹350</span>
+                      <span className="font-semibold text-primary">₹455</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">5kg</span>
-                      <span className="font-semibold text-primary">₹165</span>
+                      <span className="font-semibold text-primary">₹215</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">2kg</span>
-                      <span className="font-semibold text-primary">₹80</span>
+                      <span className="font-semibold text-primary">₹104</span>
                     </li>
                   </ul>
                 </div>
@@ -872,19 +872,19 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹670</span>
+                      <span className="font-semibold text-primary">₹871</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">10kg</span>
-                      <span className="font-semibold text-primary">₹370</span>
+                      <span className="font-semibold text-primary">₹481</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">5kg</span>
-                      <span className="font-semibold text-primary">₹195</span>
+                      <span className="font-semibold text-primary">₹254</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">2kg</span>
-                      <span className="font-semibold text-primary">₹84</span>
+                      <span className="font-semibold text-primary">₹109</span>
                     </li>
                   </ul>
                 </div>
@@ -895,19 +895,19 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹550</span>
+                      <span className="font-semibold text-primary">₹715</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">10kg</span>
-                      <span className="font-semibold text-primary">₹310</span>
+                      <span className="font-semibold text-primary">₹403</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">5kg</span>
-                      <span className="font-semibold text-primary">₹170</span>
+                      <span className="font-semibold text-primary">₹221</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">2kg</span>
-                      <span className="font-semibold text-primary">₹70</span>
+                      <span className="font-semibold text-primary">₹91</span>
                     </li>
                   </ul>
                 </div>
@@ -918,19 +918,19 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹590</span>
+                      <span className="font-semibold text-primary">₹767</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">10kg</span>
-                      <span className="font-semibold text-primary">₹330</span>
+                      <span className="font-semibold text-primary">₹429</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">5kg</span>
-                      <span className="font-semibold text-primary">₹180</span>
+                      <span className="font-semibold text-primary">₹234</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">2kg</span>
-                      <span className="font-semibold text-primary">₹74</span>
+                      <span className="font-semibold text-primary">₹96</span>
                     </li>
                   </ul>
                 </div>
@@ -944,15 +944,15 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">1kg</span>
-                      <span className="font-semibold text-primary">₹26</span>
+                      <span className="font-semibold text-primary">₹34</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹520</span>
+                      <span className="font-semibold text-primary">₹676</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">30kg Bucket</span>
-                      <span className="font-semibold text-primary">₹900</span>
+                      <span className="font-semibold text-primary">₹1170</span>
                     </li>
                   </ul>
                 </div>
@@ -963,11 +963,11 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">28kg</span>
-                      <span className="font-semibold text-primary">₹560</span>
+                      <span className="font-semibold text-primary">₹728</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">30kg Bucket</span>
-                      <span className="font-semibold text-primary">₹960</span>
+                      <span className="font-semibold text-primary">₹1248</span>
                     </li>
                   </ul>
                 </div>
@@ -978,11 +978,11 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹400</span>
+                      <span className="font-semibold text-primary">₹520</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">30kg Bucket</span>
-                      <span className="font-semibold text-primary">₹750</span>
+                      <span className="font-semibold text-primary">₹975</span>
                     </li>
                   </ul>
                 </div>
@@ -993,15 +993,15 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹450</span>
+                      <span className="font-semibold text-primary">₹585</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">10kg</span>
-                      <span className="font-semibold text-primary">₹240</span>
+                      <span className="font-semibold text-primary">₹312</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">5kg</span>
-                      <span className="font-semibold text-primary">₹130</span>
+                      <span className="font-semibold text-primary">₹169</span>
                     </li>
                   </ul>
                 </div>
@@ -1084,26 +1084,6 @@ export default function ProductsPage() {
                   },
                   image: "/images/syntheic-enamel/varnish.png",
                 },
-                {
-                  name: "Sky Neo Wood & Metal Finish",
-                  desc: "Primer and finishing range for wood, metal, and utility surfaces.",
-                  features: [
-                    "Variants: White, Pink, Metal Primer, Red Oxide, Black Japan, Green/Black Board, Grey",
-                    "Better surface adhesion",
-                    "Wood and metal compatibility",
-                    "Smooth topcoat support",
-                  ],
-                  sizes: "Varies",
-                  price: {
-                    "20L": 1500,
-                    "10L": 775,
-                    "4L": 330,
-                    "1L": 87,
-                    "500ml": 48,
-                    "200ml": 25,
-                  },
-                  image: "/images/syntheic-enamel/wood-metal-finish.png",
-                },
               ].map((product, idx) => (
                 <ProductCard key={idx} product={product} />
               ))}
@@ -1133,58 +1113,58 @@ export default function ProductsPage() {
                     {[
                       [
                         "Deep Orange, Br White",
-                        "₹2850",
-                        "₹1450",
-                        "₹590",
-                        "₹150",
-                        "₹80",
-                        "₹42",
+                        "₹3705",
+                        "₹1885",
+                        "₹767",
+                        "₹195",
+                        "₹104",
+                        "₹55",
                         "-",
                         "-",
                       ],
                       [
                         "All Shade",
-                        "₹2750",
-                        "₹1400",
-                        "₹570",
-                        "₹145",
-                        "₹77",
-                        "₹39",
-                        "₹22",
-                        "₹14",
+                        "₹3575",
+                        "₹1820",
+                        "₹741",
+                        "₹189",
+                        "₹100",
+                        "₹51",
+                        "₹29",
+                        "₹18",
                       ],
                       [
                         "Aluminium Paints",
-                        "₹3950",
-                        "₹200",
-                        "₹810",
-                        "₹205",
-                        "₹103",
-                        "₹53",
+                        "₹5135",
+                        "₹260",
+                        "₹1053",
+                        "₹267",
+                        "₹134",
+                        "₹69",
                         "-",
                         "-",
                       ],
                       [
                         "Furniture Enamel",
-                        "₹3500",
-                        "₹1775",
-                        "₹720",
-                        "₹185",
-                        "₹96",
+                        "₹4550",
+                        "₹2308",
+                        "₹936",
+                        "₹241",
+                        "₹125",
                         "-",
                         "-",
                         "-",
                       ],
                       [
                         "Mint Green, Gdn Yellow, special Red",
-                        "₹3750",
-                        "₹1900",
-                        "₹770",
-                        "₹195",
-                        "₹101",
-                        "₹52",
-                        "₹35",
-                        "₹20",
+                        "₹4875",
+                        "₹2470",
+                        "₹1001",
+                        "₹254",
+                        "₹131",
+                        "₹68",
+                        "₹46",
+                        "₹26",
                       ],
                     ].map((row, i) => (
                       <tr
@@ -1225,48 +1205,48 @@ export default function ProductsPage() {
                     {[
                       [
                         "Hammertone",
-                        "₹4100",
-                        "₹2075",
-                        "₹840",
-                        "₹215",
-                        "₹111",
-                        "₹57",
+                        "₹5330",
+                        "₹2698",
+                        "₹1092",
+                        "₹280",
+                        "₹144",
+                        "₹74",
                       ],
                       [
                         "Texture Finish",
-                        "₹4100",
-                        "₹2075",
-                        "₹840",
-                        "₹215",
-                        "₹111",
-                        "₹57",
+                        "₹5330",
+                        "₹2698",
+                        "₹1092",
+                        "₹280",
+                        "₹144",
+                        "₹74",
                       ],
                       [
                         "Wood Protect",
-                        "₹4100",
-                        "₹2075",
-                        "₹840",
-                        "₹215",
-                        "₹111",
-                        "₹57",
+                        "₹5330",
+                        "₹2698",
+                        "₹1092",
+                        "₹280",
+                        "₹144",
+                        "₹74",
                       ],
                       [
                         "Murti Varnish",
-                        "₹3450",
-                        "₹1750",
-                        "₹710",
-                        "₹180",
-                        "₹94",
-                        "₹48",
+                        "₹4485",
+                        "₹2275",
+                        "₹923",
+                        "₹234",
+                        "₹122",
+                        "₹62",
                       ],
                       [
                         "Clear Varnish",
-                        "₹3200",
-                        "₹1625",
-                        "₹670",
-                        "₹170",
-                        "₹89",
-                        "₹45",
+                        "₹4160",
+                        "₹2113",
+                        "₹871",
+                        "₹221",
+                        "₹116",
+                        "₹59",
                       ],
                     ].map((row, i) => (
                       <tr
@@ -1289,7 +1269,7 @@ export default function ProductsPage() {
 
               <div>
                 <h3 className="font-headline text-2xl text-primary mb-6">
-                  Sky Neo Wood & Metal Finish
+                  Sky Neo Wood Finish
                 </h3>
                 <table className="w-full text-left font-body text-sm min-w-[800px]">
                   <thead>
@@ -1307,73 +1287,73 @@ export default function ProductsPage() {
                     {[
                       [
                         "White Primer",
-                        "₹1500",
-                        "₹775",
-                        "₹330",
-                        "₹87",
-                        "₹48",
-                        "₹25",
+                        "₹1950",
+                        "₹1008",
+                        "₹429",
+                        "₹113",
+                        "₹62",
+                        "₹33",
                       ],
                       [
                         "Pink Primer",
-                        "₹1500",
-                        "₹775",
-                        "₹330",
-                        "₹87",
-                        "₹48",
-                        "₹25",
+                        "₹1950",
+                        "₹1008",
+                        "₹429",
+                        "₹113",
+                        "₹62",
+                        "₹33",
                       ],
                       [
                         "Metal Primer",
-                        "₹1380",
-                        "₹640",
-                        "₹300",
-                        "₹85",
-                        "₹46",
-                        "₹24",
+                        "₹1794",
+                        "₹832",
+                        "₹390",
+                        "₹111",
+                        "₹60",
+                        "₹31",
                       ],
                       [
                         "Red Oxide Glossy",
-                        "₹1500",
-                        "₹775",
-                        "₹330",
-                        "₹85",
-                        "₹46",
-                        "₹24",
+                        "₹1950",
+                        "₹1008",
+                        "₹429",
+                        "₹111",
+                        "₹60",
+                        "₹31",
                       ],
                       [
                         "Black Japan - Rubber Paint",
-                        "₹1500",
-                        "₹775",
-                        "₹330",
-                        "₹85",
-                        "₹46",
-                        "₹24",
+                        "₹1950",
+                        "₹1008",
+                        "₹429",
+                        "₹111",
+                        "₹60",
+                        "₹31",
                       ],
                       [
                         "Green Board",
-                        "₹1650",
-                        "₹850",
-                        "₹350",
-                        "₹90",
-                        "₹49",
-                        "₹26",
+                        "₹2145",
+                        "₹1105",
+                        "₹455",
+                        "₹117",
+                        "₹64",
+                        "₹34",
                       ],
                       [
                         "Black Board",
-                        "₹1500",
-                        "₹775",
-                        "₹330",
-                        "₹85",
-                        "₹46",
-                        "₹24",
+                        "₹1950",
+                        "₹1008",
+                        "₹429",
+                        "₹111",
+                        "₹60",
+                        "₹31",
                       ],
                       [
                         "Grey Surfacer Primer",
-                        "₹1590",
-                        "₹845",
-                        "₹350",
-                        "₹92",
+                        "₹2067",
+                        "₹1099",
+                        "₹455",
+                        "₹120",
                         "-",
                         "-",
                       ],
@@ -1432,19 +1412,26 @@ export default function ProductsPage() {
                   price: { "20L": 4000, "10L": 2100, "5L": 1200, "1L": 260 },
                   image: "/images/waterproofing/damp-proof-advance.png",
                 },
-                // {
-                //   name: "Super Ultra Fix-It",
-                //   desc: "Cement-based waterproofing additive used to improve bonding, seal cracks, and prevent water seepage.",
-                //   features: [
-                //     "Cement-based additive",
-                //     "Strong bonding",
-                //     "Crack sealing support",
-                //     "Prevents water seepage",
-                //   ],
-                //   sizes: "1L, 5L, 10L, 20L",
-                //   price: { "20L": 2000, "10L": 1000, "5L": 550, "1L": 120 },
-                //   image: "/images/waterproofing/ultra-fix-it.png",
-                // },
+                {
+                  name: "Waterproof Glo",
+                  desc: "Transparent adhesive that provides a strong bond and long-lasting protection. Ideal for walls, tiles, concrete, wood, and plaster.",
+                  features: [
+                    "100% Waterproof",
+                    "Strong bond",
+                    "Long lasting protection",
+                    "Easy to apply",
+                    "Non toxic & safe",
+                  ],
+                  sizes: "500ml, 1L, 4L, 10L, 20L",
+                  price: {
+                    "20L": 6800,
+                    "10L": 3600,
+                    "4L": 1450,
+                    "1L": 380,
+                    "500ml": 210,
+                  },
+                  image: "/images/waterproofing/waterproof-glo.png",
+                },
                 {
                   name: "Range of Waterproofing",
                   desc: "Specialized waterproofing range for surface protection, bonding, and water resistance.",
@@ -1455,7 +1442,7 @@ export default function ProductsPage() {
                     "Professional protection",
                   ],
                   sizes: "20L, 10L, 5L, 1L",
-                  price: { "20L": 700, "10L": 380, "5L": 225, "1L": 55 },
+                  price: "Price on request",
                   image: "/images/waterproofing/range-of-waterproofing.png",
                 },
               ].map((product, idx) => (
@@ -1620,7 +1607,7 @@ export default function ProductsPage() {
                     "Skin-friendly formula",
                   ],
                   sizes: "1L, 5L",
-                  price: "1L ₹95.00, 5L ₹475.00",
+                  price: "1L ₹124, 5L ₹618",
                   image: "/images/cleaning-products/mr-shine-hand-wash.png",
                 },
                 {
@@ -1632,7 +1619,7 @@ export default function ProductsPage() {
                     "Safe for daily wash",
                   ],
                   sizes: "1L, 5L",
-                  price: "1L ₹60.00, 5L ₹300.00",
+                  price: "1L ₹78, 5L ₹390",
                   image: "/images/cleaning-products/mr-shine-detergent.png",
                 },
                 {
@@ -1644,7 +1631,7 @@ export default function ProductsPage() {
                     "Leaves surfaces fresh",
                   ],
                   sizes: "1L, 5L",
-                  price: "1L ₹75.00, 5L ₹375.00",
+                  price: "1L ₹98, 5L ₹488",
                   image:
                     "/images/cleaning-products/mr-shine-surface-cleaner.png",
                 },
@@ -1657,7 +1644,7 @@ export default function ProductsPage() {
                     "Quick rinse action",
                   ],
                   sizes: "1L, 5L",
-                  price: "1L ₹55.00, 5L ₹275.00",
+                  price: "1L ₹72, 5L ₹358",
                   image: "/images/cleaning-products/mr-shine-dish-wash.png",
                 },
                 {
@@ -1669,7 +1656,7 @@ export default function ProductsPage() {
                     "Long-lasting freshness",
                   ],
                   sizes: "1L, 5L",
-                  price: "1L ₹12.00, 5L ₹60.00",
+                  price: "1L ₹16, 5L ₹78",
                   image:
                     "/images/cleaning-products/mr-shine-toilet-cleaner.png",
                 },
@@ -1678,7 +1665,7 @@ export default function ProductsPage() {
                   desc: "Daily cleaning phenyl for homes, offices, shops, and commercial use.",
                   features: ["Daily cleaning", "Commercial use"],
                   sizes: "1L, 5L",
-                  price: "1L ₹25.00, 5L ₹125.00",
+                  price: "1L ₹33, 5L ₹163",
                   image: "/images/cleaning-products/mr-shine-phenyl.png",
                 },
                 {
@@ -1686,7 +1673,7 @@ export default function ProductsPage() {
                   desc: "Fast-action toilet cleaner for tough stains and washroom hygiene.",
                   features: ["Fast action", "Tough stains"],
                   sizes: "1L, 5L",
-                  price: "1L ₹25.00, 5L ₹125.00",
+                  price: "1L ₹33, 5L ₹163",
                   image: "/images/cleaning-products/toilet-cleaner-fast.png",
                 },
               ].map((product, idx) => (
