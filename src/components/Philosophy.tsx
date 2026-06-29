@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Philosophy() {
   return (
@@ -17,7 +18,7 @@ export default function Philosophy() {
           changing their mood from dawn to dusk.
         </p>
         <div className="pt-8">
-          <a
+          <Link
             className="group flex items-center gap-4 text-primary font-bold text-lg"
             href="/about"
           >
@@ -25,7 +26,7 @@ export default function Philosophy() {
             <span className="material-symbols-outlined bg-primary text-on-primary p-2 rounded-full group-hover:translate-x-2 transition-transform">
               east
             </span>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="w-full lg:w-1/2 relative min-h-[500px]">

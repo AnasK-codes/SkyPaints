@@ -7,7 +7,7 @@ import AddToCartButton from './AddToCartButton';
 export interface Product {
   name: string;
   desc: string;
-  features: string[];
+  features?: string[];
   sizes: string;
   price: string | Record<string, number | undefined>;
   image: string;
@@ -59,7 +59,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
         {/* Feature Chips */}
         <div className="flex flex-wrap gap-2 mb-8 flex-grow content-start">
-          {product.features.slice(0, 4).map((feature, idx) => (
+          {(product.features || []).slice(0, 4).map((feature, idx) => (
             <div key={idx} className="flex items-center gap-1.5 bg-surface-container-lowest border border-outline-variant/20 px-3 py-1.5 rounded-full shadow-sm">
               <span className="material-symbols-outlined text-[14px] text-green-600">
                 check_circle

@@ -1,38 +1,33 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 
-export default function Hero() {
-  const images = [
-    "/images/hero-image-1.jpg",
-    "/images/hero-image-2.jpg",
-    "/images/hero-image-3.jpg",
-    "/images/lavender-hero-2.png",
-  ];
+const heroImages = [
+  { src: "/images/hero-image-1.jpg", alt: "Modern living room painted with Skypaints premium lavender emulsion" },
+  { src: "/images/hero-image-2.jpg", alt: "Elegant bedroom interior with Skypaints warm tone wall finish" },
+  { src: "/images/hero-image-3.jpg", alt: "Contemporary home exterior painted with Skypaints weather-resistant paint" },
+  { src: "/images/lavender-hero-2.png", alt: "Skypaints ethereal lavender paint finish on accent wall" },
+];
 
+export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  }, [images.length]);
-
-  const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  }, [images.length]);
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
+    setCurrentIndex((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
+  }, []);
 
   useEffect(() => {
-    // Relying on currentIndex in dependency array ensures the interval
-    // completely resets whenever a user manually clicks an arrow or dot.
     const interval = setInterval(() => {
       nextSlide();
     }, 3000);
     return () => clearInterval(interval);
   }, [nextSlide, currentIndex]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
 
   return (
     <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -43,14 +38,15 @@ export default function Hero() {
           className="flex w-full h-full transition-transform duration-700 ease-in-out"
           style={{ transform: `translate3d(-${currentIndex * 100}%, 0, 0)` }}
         >
-          {images.map((src, index) => (
+          {heroImages.map((image, index) => (
             <div key={index} className="relative w-full h-full shrink-0">
               <Image
-                alt={`Hero showcase ${index}`}
+                alt={image.alt}
                 fill
-                priority
+                priority={index === 0}
+                loading={index === 0 ? undefined : "lazy"}
                 className="object-cover"
-                src={src}
+                src={image.src}
                 sizes="100vw"
               />
             </div>
@@ -66,25 +62,25 @@ export default function Hero() {
           capture the shifting light of the celestial hours.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-          <a
+          <Link
             href="/contact"
             className="bg-primary-container text-on-primary px-10 py-4 rounded-full text-lg font-medium transition-all hover:scale-105 shadow-xl shadow-primary-container/20"
           >
             Order Home Paints
-          </a>
-          <a
+          </Link>
+          <Link
             href="/products"
             className="bg-surface-container-lowest/80 backdrop-blur-md text-primary px-10 py-4 rounded-full text-lg font-medium border border-outline-variant/20 transition-all hover:bg-white"
           >
             View Collection
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* Carousel Controls Container */}
       <div className="absolute bottom-8 md:bottom-12 lg:bottom-16 left-1/2 -translate-x-1/2 z-20 flex items-center gap-6 bg-surface-container-lowest/60 hover:bg-surface-container-lowest/80 backdrop-blur-xl px-4 md:px-6 py-3 rounded-full shadow-[0px_8px_30px_rgba(46,16,101,0.15)] border border-white/30 transition-all duration-300">
         <div className="flex gap-3 items-center">
-          {images.map((_, idx) => (
+          {heroImages.map((_, idx) => (
             <button
               key={idx}
               onClick={() => goToSlide(idx)}
@@ -97,3 +93,4 @@ export default function Hero() {
     </section>
   );
 }
+

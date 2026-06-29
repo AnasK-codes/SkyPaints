@@ -17,9 +17,9 @@ export default function CategoryStrip() {
         .animate-scroll-infinite {
           animation: scroll 40s linear infinite;
         }
-        // .animate-scroll-infinite:hover {
-        //   animation-play-state: paused;
-        // }
+        .animate-scroll-infinite:hover {
+          animation-play-state: paused;
+        }
       `}</style>
       <div className="mask-fade flex whitespace-nowrap">
         <div className="flex w-max animate-scroll-infinite">

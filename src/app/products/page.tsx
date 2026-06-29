@@ -1,8 +1,15 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import CategoryNav from "@/components/CategoryNav";
+import { categories } from "@/data/products";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Products | Skypaints",
+  description:
+    "Explore Skypaints' complete range of emulsions, oil paint, distemper, synthetic enamel, waterproofing, putty, stainers, and cleaning products.",
+};
 import ProductCard from "@/components/ProductCard";
 
 const scrollToCategory = (id: string) => {
@@ -55,18 +62,18 @@ export default function ProductsPage() {
                 wash, tile grout, stainers, and cleaning products.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button
-                  onClick={() => scrollToCategory("shop-by-category")}
+                <a
+                  href="#shop-by-category"
                   className="bg-primary text-on-primary px-8 py-4 rounded-full font-label font-medium shadow-ambient shadow-ambient-hover transition-all duration-300 text-center hover:bg-primary/90"
                 >
                   Explore Categories
-                </button>
-                <button
-                  onClick={() => scrollToCategory("shop-by-category")}
+                </a>
+                <a
+                  href="#shop-by-category"
                   className="border border-outline-variant/30 text-primary hover:bg-surface-container-low px-8 py-4 rounded-full font-label font-medium transition-all duration-300 text-center"
                 >
                   View Price List
-                </button>
+                </a>
               </div>
             </div>
 
@@ -169,12 +176,12 @@ export default function ProductsPage() {
                   durable walls.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("emulsions")}
+              <a
+                href="#emulsions"
                 className="bg-surface-container-lowest text-primary px-8 py-4 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-lg relative z-10"
               >
                 View All Emulsions
-              </button>
+              </a>
             </div>
 
             {/* 2. Oil Paint */}
@@ -194,12 +201,12 @@ export default function ProductsPage() {
                   thinning, and professional paint work.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("oil-paint")}
+              <a
+                href="#oil-paint"
                 className="bg-surface-container-lowest text-primary px-6 py-3 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-sm"
               >
                 View Oil Paint Range
-              </button>
+              </a>
             </div>
 
             {/* 3. Distemper */}
@@ -219,12 +226,12 @@ export default function ProductsPage() {
                   budget-friendly interiors.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("distemper")}
+              <a
+                href="#distemper"
                 className="bg-surface-container-lowest text-[#855300] px-6 py-3 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-sm"
               >
                 View All Distemper
-              </button>
+              </a>
             </div>
 
             {/* 4. Synthetic Enamel */}
@@ -246,12 +253,12 @@ export default function ProductsPage() {
                   utility surfaces.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("synthetic-enamel")}
+              <a
+                href="#synthetic-enamel"
                 className="bg-surface-container-lowest text-[#684000] px-6 py-3 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-sm"
               >
                 View All Enamel
-              </button>
+              </a>
             </div>
 
             {/* 5. Waterproofing */}
@@ -271,12 +278,12 @@ export default function ProductsPage() {
                   exterior surfaces.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("waterproofing")}
+              <a
+                href="#waterproofing"
                 className="bg-surface-container-lowest text-[#003366] px-6 py-3 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-sm"
               >
                 View All Waterproofing
-              </button>
+              </a>
             </div>
 
             {/* 6. Putty, Lime Wash & Tile Grout */}
@@ -296,12 +303,12 @@ export default function ProductsPage() {
                   tile joints.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("putty-grout")}
+              <a
+                href="#putty-grout"
                 className="bg-surface-container-lowest text-primary px-6 py-3 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-sm border border-outline-variant/20"
               >
                 View All Putty & Grout
-              </button>
+              </a>
             </div>
 
             {/* 7. Stainers */}
@@ -321,12 +328,12 @@ export default function ProductsPage() {
                   and fine finishing.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("stainers")}
+              <a
+                href="#stainers"
                 className="bg-surface-container-lowest text-[#93000A] px-6 py-3 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-sm"
               >
                 View All Stainers
-              </button>
+              </a>
             </div>
 
             {/* 8. Cleaning Products */}
@@ -348,12 +355,12 @@ export default function ProductsPage() {
                   fabrics, washrooms, and daily use.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("cleaning")}
+              <a
+                href="#cleaning"
                 className="bg-surface-container-lowest text-on-secondary-fixed px-6 py-3 rounded-full font-label font-bold w-fit hover:bg-surface transition-colors shadow-sm"
               >
                 View Cleaning Range
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -367,54 +374,54 @@ export default function ProductsPage() {
             <button className="whitespace-nowrap px-6 py-3 rounded-full font-label font-bold bg-primary text-on-primary transition-all shadow-md">
               All
             </button>
-            <button
-              onClick={() => scrollToCategory("emulsions")}
+            <a
+              href="#emulsions"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Emulsions
-            </button>
-            <button
-              onClick={() => scrollToCategory("oil-paint")}
+            </a>
+            <a
+              href="#oil-paint"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Oil Paint
-            </button>
-            <button
-              onClick={() => scrollToCategory("distemper")}
+            </a>
+            <a
+              href="#distemper"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Distemper
-            </button>
-            <button
-              onClick={() => scrollToCategory("synthetic-enamel")}
+            </a>
+            <a
+              href="#synthetic-enamel"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Synthetic Enamel
-            </button>
-            <button
-              onClick={() => scrollToCategory("waterproofing")}
+            </a>
+            <a
+              href="#waterproofing"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Waterproofing
-            </button>
-            <button
-              onClick={() => scrollToCategory("putty-grout")}
+            </a>
+            <a
+              href="#putty-grout"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Putty & Grout
-            </button>
-            <button
-              onClick={() => scrollToCategory("stainers")}
+            </a>
+            <a
+              href="#stainers"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Stainers
-            </button>
-            <button
-              onClick={() => scrollToCategory("cleaning")}
+            </a>
+            <a
+              href="#cleaning"
               className="whitespace-nowrap px-6 py-3 rounded-full font-label font-medium bg-transparent text-on-surface-variant hover:bg-surface-container-highest transition-all"
             >
               Cleaning Products
-            </button>
+            </a>
           </div>
         </section>
 
@@ -433,80 +440,19 @@ export default function ProductsPage() {
                   protection.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "Pro Royal Glow – Exterior & Interior Emulsion",
-                  desc: "Premium smooth emulsion suitable for both interior and exterior walls. It gives walls a rich glow finish with smooth coverage and a refined appearance.",
-                  features: [
-                    "Rich royal glow finish",
-                    "Smooth application",
-                    "Interior and exterior use",
-                    "Durable and long-lasting",
-                    "Low odour",
-                  ],
-                  sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: { "20L": 2500, "10L": 1275, "4L": 590, "1L": 152 },
-                  image: "/images/emulsions/pro-royal-glow.png",
-                },
-                {
-                  name: "Hi-Sheen – Exterior & Interior Emulsion",
-                  desc: "High-gloss sheen emulsion designed for elegant modern walls. Suitable for homes, offices, commercial spaces, and exterior surfaces.",
-                  features: [
-                    "High gloss sheen finish",
-                    "Bright and elegant look",
-                    "Moisture and weather resistance",
-                    "Smooth application",
-                    "Durable coating",
-                  ],
-                  sizes: "20L, 10L, 1L, 500ml",
-                  price: { "20L": 3510, "10L": 1800, "4L": 735, "1L": 195 },
-                  image: "/images/emulsions/hi-sheen.png",
-                },
-                {
-                  name: "Neo Smart Premium – Exterior & Interior Emulsion",
-                  desc: "Ultra-smooth premium emulsion for luxury interiors and refined exterior walls. Designed for a rich matte finish and long-lasting colour brilliance.",
-                  features: [
-                    "Ultra-smooth rich matte finish",
-                    "UV shield for fade-free walls",
-                    "Anti-fungal and stain-resistant formula",
-                    "Quick dry and easy clean",
-                    "Premium quality finish",
-                  ],
-                  sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: {
-                    "20L": 5000,
-                    "10L": 2600,
-                    "4L": 1080,
-                    "1L": 290,
-                    "500ml": 155,
-                  },
-                  image: "/images/emulsions/sky-neo-smart-premium.png",
-                },
-                {
-                  name: "Neo Advance – Anti-Fungal Paint",
-                  desc: "Advanced anti-fungal paint for interior and exterior walls. Designed to prevent fungus, algae, black patches, moisture damage, and dampness impact.",
-                  features: [
-                    "Advanced anti-fungal protection",
-                    "Prevents fungus, algae, and black patches",
-                    "Moisture and dampness resistance",
-                    "Durable and long-lasting",
-                    "Smooth, refined finish",
-                  ],
-                  sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: { "20L": 1000, "10L": 530, "4L": 250, "1L": 65 },
-                  image: "/images/emulsions/sky-neo-advance.png",
-                },
-              ].map((product, idx) => (
-                <ProductCard key={idx} product={product} />
-              ))}
+              {categories
+                .find((c) => c.id === "emulsions")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
             </div>
 
             {/* Emulsions Pricing Table */}
@@ -673,108 +619,20 @@ export default function ProductsPage() {
                   includes Paint Oil and Taarpin.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
-              {[
-                {
-                  name: "Taarpin",
-                  desc: "Paint-related support product used for application, thinning, finishing, cleaning support, and general surface work.",
-                  features: [
-                    "Useful in paint work",
-                    "Supports application and finishing",
-                    "Suitable for professional use",
-                    "Available for bulk supply",
-                  ],
-                  sizes: "Packaging available on request",
-                  price: "Price on request",
-                  image: "/images/oil-paint/tarpin.png",
-                },
-              ].map((product, idx) => (
-                <ProductCard key={idx} product={product} />
-              ))}
-            </div>
-
-            {/* Price Table for Paint Oil */}
-            <div className="bg-surface-container-lowest rounded-[2rem] p-8 md:p-12 shadow-ambient border border-outline-variant/10">
-              <h3 className="font-headline text-2xl text-primary mb-6">
-                Paint Oil Pricing & Packaging
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                  <h4 className="font-label font-bold text-on-surface-variant mb-4 uppercase tracking-wide text-sm border-b border-outline-variant/20 pb-2">
-                    Price Reference
-                  </h4>
-                  <ul className="space-y-3">
-                    {[
-                      { s: "160 ML", p: "₹23" },
-                      { s: "180 ML", p: "₹24" },
-                      { s: "400 ML", p: "₹49" },
-                      { s: "500 ML", p: "₹59" },
-                      { s: "800 ML", p: "₹94" },
-                      { s: "1 LTR", p: "₹113" },
-                      { s: "2.5 LTR", p: "₹295" },
-                      { s: "4.5 LTR", p: "₹498" },
-                      { s: "5 LTR", p: "₹549" },
-                      { s: "18 LTR", p: "₹2148" },
-                      { s: "20 LTR", p: "₹2243" },
-                      { s: "50 LTR", p: "₹5227" },
-                    ].map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex justify-between text-sm font-body border-b border-outline-variant/5 pb-2"
-                      >
-                        <span className="text-on-surface">{item.s}</span>
-                        <span className="font-semibold text-primary">
-                          {item.p}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-label font-bold text-on-surface-variant mb-4 uppercase tracking-wide text-sm border-b border-outline-variant/20 pb-2">
-                    Packing Details
-                  </h4>
-                  <ul className="space-y-3 mb-8">
-                    {[
-                      { s: "180ml", q: "80 pcs" },
-                      { s: "400ml", q: "40 pcs" },
-                      { s: "500ml", q: "36 pcs" },
-                      { s: "800ml", q: "24 pcs" },
-                      { s: "1L", q: "20 pcs" },
-                      { s: "2.5L", q: "6 pcs" },
-                      { s: "4.5L", q: "4 pcs" },
-                      { s: "5L", q: "4 pcs" },
-                    ].map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex justify-between text-sm font-body border-b border-outline-variant/5 pb-2"
-                      >
-                        <span className="text-on-surface">{item.s}</span>
-                        <span className="text-on-surface-variant">
-                          {item.q}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="bg-surface-container-low p-6 rounded-xl text-sm text-on-surface-variant space-y-2">
-                    <p className="font-semibold text-primary mb-2">
-                      Trade Notes:
-                    </p>
-                    <p>• Ex. Godown Delivery</p>
-                    <p>• GST Extra</p>
-                    <p>• Payment Advance: 2% Discount</p>
-                    <p>• Extra Discount: 3% minimum purchase 20 box</p>
-                  </div>
-                </div>
-              </div>
+              {categories
+                .find((c) => c.id === "oil-paint")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
             </div>
           </section>
 
@@ -790,45 +648,20 @@ export default function ProductsPage() {
                   and fresh-looking interiors.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
-              {[
-                {
-                  name: "Neo Rich Wall Health Protect – Luxury Distemper",
-                  desc: "Premium interior wall distemper designed for elegant aesthetics and healthy wall protection. Suitable for smooth walls and fresh interior finishes.",
-                  features: [
-                    "Rich smooth finish",
-                    "Wall health protection",
-                    "Low odour & long-lasting colour",
-                    "Smooth flow and even coverage",
-                  ],
-                  sizes: "1kg, 2kg, 5kg, 10kg, 20kg",
-                  price: { "20kg": 630, "10kg": 350, "5kg": 185, "2kg": 80 },
-                  image: "/images/distemper/sky-neo-luxury-distemper.png",
-                },
-                {
-                  name: "Sky Neo Smart Acrylic Distemper",
-                  desc: "High-quality interior wall coating that provides a smooth, even finish with a fresh and long-lasting look.",
-                  features: [
-                    "Smooth interior finish",
-                    "Good coverage & economical",
-                    "Fresh colour appearance",
-                    "Suitable for interior walls",
-                  ],
-                  sizes: "1kg x 20 pc, 1kg x 30 pc",
-                  price: { "1kg": 26, "20kg": 520, "30kg": 900 },
-                  image: "/images/distemper/sky-neo-smart-acrylic.png",
-                },
-              ].map((product, idx) => (
-                <ProductCard key={idx} product={product} />
-              ))}
+              {categories
+                .find((c) => c.id === "distemper")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
             </div>
 
             {/* Distemper Price Reference */}
@@ -1021,72 +854,19 @@ export default function ProductsPage() {
                   and finishing applications.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
-              {[
-                {
-                  name: "Sky Neo Smart Synthetic Enamel",
-                  desc: "Glossy top coat for wood and metal surfaces, specially formulated for strong protection and long-lasting durability.",
-                  features: [
-                    "Smooth glossy finish",
-                    "Strong protection",
-                    "Suitable for wood and metal",
-                    "Long-lasting performance",
-                  ],
-                  sizes: "50ml, 100ml, 200ml, 500ml, 1L, 4L, 20L",
-                  price: "Price on request",
-                  image:
-                    "/images/syntheic-enamel/neo-smart-synthetic-enamel.png",
-                },
-                {
-                  name: "Sky Neo Polyurethane Wood Finish",
-                  desc: "Protective wood finish specially formulated to protect and enhance wooden surfaces with smooth durable finish.",
-                  features: [
-                    "Protects wood surfaces",
-                    "Premium shine",
-                    "Smooth finish",
-                    "Wear resistance",
-                  ],
-                  sizes: "200ml, 500ml, 1L, 10L, 20L",
-                  price: {
-                    "20L": 4100,
-                    "10L": 2075,
-                    "4L": 840,
-                    "1L": 215,
-                    "500ml": 111,
-                    "200ml": 57,
-                  },
-                  image: "/images/syntheic-enamel/neo-smart-polyurethane.png",
-                },
-                {
-                  name: "Sky Neo Varnish",
-                  desc: "Varnish range for protective and decorative finishing on wooden and utility surfaces.",
-                  features: [
-                    "Variants: Hammertone, Texture Finish, Wood Protect, Murl Varnish, Clear Varnish",
-                    "Protective coating & Decorative shine",
-                    "Smooth application",
-                    "Surface protection",
-                  ],
-                  sizes: "Varies",
-                  price: {
-                    "20L": 3200,
-                    "10L": 1625,
-                    "4L": 670,
-                    "1L": 170,
-                    "500ml": 89,
-                    "200ml": 45,
-                  },
-                  image: "/images/syntheic-enamel/varnish.png",
-                },
-              ].map((product, idx) => (
-                <ProductCard key={idx} product={product} />
-              ))}
+              {categories
+                .find((c) => c.id === "synthetic-enamel")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
             </div>
 
             {/* Synthetic Enamel Pricing Tables */}
@@ -1390,64 +1170,19 @@ export default function ProductsPage() {
                   roof coating, terrace protection, bonding, and surface repair.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
-              {[
-                {
-                  name: "Damp Proof Advance",
-                  desc: "Advanced elastomeric waterproof cool coating for roofs, terraces, and exterior walls. Helps prevent dampness, seepage, and heat impact.",
-                  features: [
-                    "Elastomeric protection",
-                    "Prevents seepage",
-                    "Reduces heat (cool coating)",
-                    "Durable & weather resistant",
-                  ],
-                  sizes: "20L, 10L, 4L, 1L, 500ml",
-                  price: { "20L": 4000, "10L": 2100, "5L": 1200, "1L": 260 },
-                  image: "/images/waterproofing/damp-proof-advance.png",
-                },
-                {
-                  name: "Waterproof Glo",
-                  desc: "Transparent adhesive that provides a strong bond and long-lasting protection. Ideal for walls, tiles, concrete, wood, and plaster.",
-                  features: [
-                    "100% Waterproof",
-                    "Strong bond",
-                    "Long lasting protection",
-                    "Easy to apply",
-                    "Non toxic & safe",
-                  ],
-                  sizes: "500ml, 1L, 4L, 10L, 20L",
-                  price: {
-                    "20L": 6800,
-                    "10L": 3600,
-                    "4L": 1450,
-                    "1L": 380,
-                    "500ml": 210,
-                  },
-                  image: "/images/waterproofing/waterproof-glo.png",
-                },
-                {
-                  name: "Range of Waterproofing",
-                  desc: "Specialized waterproofing range for surface protection, bonding, and water resistance.",
-                  features: [
-                    "Includes: Sky Ultra LW 786, Sky Ultra URP 521",
-                    "Sky Ultra Sealer",
-                    "Sky Paint Shine WTO",
-                    "Professional protection",
-                  ],
-                  sizes: "20L, 10L, 5L, 1L",
-                  price: "Price on request",
-                  image: "/images/waterproofing/range-of-waterproofing.png",
-                },
-              ].map((product, idx) => (
-                <ProductCard key={idx} product={product} />
-              ))}
+              {categories
+                .find((c) => c.id === "waterproofing")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
             </div>
           </section>
 
@@ -1464,70 +1199,19 @@ export default function ProductsPage() {
                   sealing.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
-              {[
-                {
-                  name: "Wall Shield – White Cement Based Putty",
-                  desc: "High-quality cement-based wall filler used to level and smooth wall surfaces before painting.",
-                  features: [
-                    "Strong wall base",
-                    "Smooth surface preparation",
-                    "Improves paint finish",
-                    "Enhances paint durability",
-                  ],
-                  sizes: "1kg, 5kg, 40kg",
-                  price: { "40kg": 550, "20kg": 290 },
-                  image: "/images/putty-lime-grout/wall-shield.png",
-                },
-                {
-                  name: "Wall Coat – World Standard Putty",
-                  desc: "Premium wall putty designed to provide a smooth, strong base for paint application and long-lasting finish.",
-                  features: [
-                    "Smooth base",
-                    "Strong adhesion",
-                    "Improved paint performance",
-                    "Premium wall preparation",
-                  ],
-                  sizes: "1kg, 5kg, 40kg",
-                  price: { "20kg": 600, "10kg": 325, "5kg": 200, "1kg": 30 },
-                  image: "/images/putty-lime-grout/wall-coat.png",
-                },
-                {
-                  name: "White Wall – Brilliant White Lime Wash",
-                  desc: "Traditional bright white lime wash that gives walls a fresh, white, breathable, and natural look.",
-                  features: [
-                    "Bright white finish",
-                    "Traditional wall coating",
-                    "Breathable finish",
-                    "Economical and fresh look",
-                  ],
-                  sizes: "5kg, 10kg, 25kg",
-                  price: { "25kg": 300, "10kg": 160, "5kg": 75 },
-                  image: "/images/putty-lime-grout/white-wall.png",
-                },
-                {
-                  name: "Tile Grout – Polymer Modified Grout",
-                  desc: "Polymer modified tile grout designed for filling and sealing tile joints with strong adhesion and water resistance.",
-                  features: [
-                    "Tile joint filling",
-                    "Strong adhesion",
-                    "Water resistance",
-                    "Clean durable finish",
-                  ],
-                  sizes: "20kg, 1kg",
-                  price: { "25kg": 300, "1kg": 30 },
-                  image: "/images/putty-lime-grout/tile-grout.png",
-                },
-              ].map((product, idx) => (
-                <ProductCard key={idx} product={product} />
-              ))}
+              {categories
+                .find((c) => c.id === "putty-grout")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
             </div>
             <div className="bg-surface-container-low p-6 rounded-[1.5rem] border border-outline-variant/10 text-center">
               <p className="font-body text-on-surface-variant text-sm">
@@ -1549,12 +1233,12 @@ export default function ProductsPage() {
                   and refined paint application.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <ProductCard
@@ -1588,97 +1272,20 @@ export default function ProductsPage() {
                   hospitals, and commercial spaces.
                 </p>
               </div>
-              <button
-                onClick={() => scrollToCategory("shop-by-category")}
+              <a
+                href="#shop-by-category"
                 className="text-primary font-label font-medium hover:underline whitespace-nowrap"
               >
                 ↑ Back to categories
-              </button>
+              </a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
-              {[
-                {
-                  name: "Mr. Shine Hand Wash",
-                  desc: "Gently cleans hands, kills germs, and keeps skin soft and fresh.",
-                  features: [
-                    "Gentle care",
-                    "Germ protection",
-                    "Skin-friendly formula",
-                  ],
-                  sizes: "1L, 5L",
-                  price: "1L ₹124, 5L ₹618",
-                  image: "/images/cleaning-products/mr-shine-hand-wash.png",
-                },
-                {
-                  name: "Mr. Shine Liquid Detergent",
-                  desc: "Removes tough stains while protecting fabric softness and colour.",
-                  features: [
-                    "Powerful stain removal",
-                    "Keeps colours bright",
-                    "Safe for daily wash",
-                  ],
-                  sizes: "1L, 5L",
-                  price: "1L ₹78, 5L ₹390",
-                  image: "/images/cleaning-products/mr-shine-detergent.png",
-                },
-                {
-                  name: "Mr. Shine Floor Cleaner",
-                  desc: "Cleaning solution for floors and hard surfaces in homes and commercial areas.",
-                  features: [
-                    "Removes grease and germs",
-                    "Suitable for tiles and ceramic",
-                    "Leaves surfaces fresh",
-                  ],
-                  sizes: "1L, 5L",
-                  price: "1L ₹98, 5L ₹488",
-                  image:
-                    "/images/cleaning-products/mr-shine-surface-cleaner.png",
-                },
-                {
-                  name: "Mr. Shine Dish Wash",
-                  desc: "Dish wash liquid for tough grease, food stains, and utensil cleaning.",
-                  features: [
-                    "Tough on grease",
-                    "Gentle on hands",
-                    "Quick rinse action",
-                  ],
-                  sizes: "1L, 5L",
-                  price: "1L ₹72, 5L ₹358",
-                  image: "/images/cleaning-products/mr-shine-dish-wash.png",
-                },
-                {
-                  name: "Mr. Shine Toilet Cleaner",
-                  desc: "Deep cleaning toilet cleaner for stains, germs, bad odour, and freshness.",
-                  features: [
-                    "Kills germs",
-                    "Removes tough stains",
-                    "Long-lasting freshness",
-                  ],
-                  sizes: "1L, 5L",
-                  price: "1L ₹16, 5L ₹78",
-                  image:
-                    "/images/cleaning-products/mr-shine-toilet-cleaner.png",
-                },
-                {
-                  name: "Mr. Shine Phenyl",
-                  desc: "Daily cleaning phenyl for homes, offices, shops, and commercial use.",
-                  features: ["Daily cleaning", "Commercial use"],
-                  sizes: "1L, 5L",
-                  price: "1L ₹33, 5L ₹163",
-                  image: "/images/cleaning-products/mr-shine-phenyl.png",
-                },
-                {
-                  name: "Toilet Cleaner Fast",
-                  desc: "Fast-action toilet cleaner for tough stains and washroom hygiene.",
-                  features: ["Fast action", "Tough stains"],
-                  sizes: "1L, 5L",
-                  price: "1L ₹33, 5L ₹163",
-                  image: "/images/cleaning-products/toilet-cleaner-fast.png",
-                },
-              ].map((product, idx) => (
-                <ProductCard key={idx} product={product} />
-              ))}
+              {categories
+                .find((c) => c.id === "stainers")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
             </div>
 
             {/* Cleaning Products Price List */}
