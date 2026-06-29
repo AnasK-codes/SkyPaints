@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export default function Philosophy() {
   return (
@@ -23,8 +24,8 @@ export default function Philosophy() {
             href="/about"
           >
             Read the Skypaints Story
-            <span className="material-symbols-outlined bg-primary text-on-primary p-2 rounded-full group-hover:translate-x-2 transition-transform">
-              east
+            <span className="bg-primary text-on-primary p-2 rounded-full group-hover:translate-x-2 transition-transform flex items-center justify-center">
+              <Icon name="east" />
             </span>
           </Link>
         </div>

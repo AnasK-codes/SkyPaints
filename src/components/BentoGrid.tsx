@@ -153,7 +153,11 @@ export default function BentoGrid() {
                 {/* Center glow */}
                 <div className="absolute h-[80px] w-[80px] rounded-full bg-gradient-to-br from-purple-500/25 to-indigo-500/15 blur-xl sm:h-[100px] sm:w-[100px]" />
                 {/* Shield icon */}
-                <svg viewBox="0 0 64 64" className="relative z-10 h-12 w-12 sm:h-14 sm:w-14" fill="none">
+                <svg
+                  viewBox="0 0 64 64"
+                  className="relative z-10 h-12 w-12 sm:h-14 sm:w-14"
+                  fill="none"
+                >
                   <path
                     d="M32 6 L54 18 V36 C54 48 44 57 32 60 C20 57 10 48 10 36 V18 Z"
                     stroke="url(#shieldGrad)"
@@ -169,11 +173,23 @@ export default function BentoGrid() {
                     fill="none"
                   />
                   <defs>
-                    <linearGradient id="shieldGrad" x1="10" y1="6" x2="54" y2="60">
+                    <linearGradient
+                      id="shieldGrad"
+                      x1="10"
+                      y1="6"
+                      x2="54"
+                      y2="60"
+                    >
                       <stop offset="0%" stopColor="#a78bfa" />
                       <stop offset="100%" stopColor="#7c3aed" />
                     </linearGradient>
-                    <linearGradient id="shieldFill" x1="10" y1="6" x2="54" y2="60">
+                    <linearGradient
+                      id="shieldFill"
+                      x1="10"
+                      y1="6"
+                      x2="54"
+                      y2="60"
+                    >
                       <stop offset="0%" stopColor="rgba(167,139,250,0.15)" />
                       <stop offset="100%" stopColor="rgba(124,58,237,0.08)" />
                     </linearGradient>

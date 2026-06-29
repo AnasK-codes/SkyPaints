@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Icon from "@/components/Icon";
 
 type MediaItem = {
   id: number;
@@ -195,9 +196,10 @@ export default function GalleryClient({
               className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors bg-white/10 hover:bg-white/20 backdrop-blur-md p-3 rounded-full z-[60]"
               onClick={() => setSelectedItem(null)}
             >
-              <span className="material-symbols-outlined text-2xl block h-[24px] w-[24px] leading-[24px] text-center">
-                close
-              </span>
+              <Icon
+                name="close"
+                className="text-2xl block h-[24px] w-[24px] leading-[24px] text-center"
+              />
             </button>
 
             <motion.div

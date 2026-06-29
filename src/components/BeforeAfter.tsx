@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
+import Icon from "@/components/Icon";
 
 export default function BeforeAfter() {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -83,7 +84,7 @@ export default function BeforeAfter() {
           style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
         >
           <div className="w-10 h-10 rounded-full bg-white shadow-xl flex items-center justify-center text-primary pointer-events-auto">
-            <span className="material-symbols-outlined">swap_horiz</span>
+            <Icon name="swap_horiz" className="" />
           </div>
         </div>
       </div>

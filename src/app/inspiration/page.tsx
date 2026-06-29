@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 
 export default function InspirationPage() {
   return (
@@ -34,7 +35,6 @@ export default function InspirationPage() {
                 alt="A modern living room painted in a serene soft lavender hue"
                 src="/images/inspiration-hero.png"
                 fill
-
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
                 className="object-cover"
@@ -60,7 +60,6 @@ export default function InspirationPage() {
                 alt="A close-up shot of luxurious, thick paint being applied to a canvas"
                 src="/images/blog-featured-finish.png"
                 fill
-
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -81,8 +80,7 @@ export default function InspirationPage() {
                 className="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all w-fit"
                 href="/inspiration/how-to-choose-paint-finish"
               >
-                Read Full Article{" "}
-                <span className="material-symbols-outlined">arrow_forward</span>
+                Read Full Article <Icon name="arrow_forward" className="" />
               </Link>
             </div>
           </div>
@@ -113,7 +111,6 @@ export default function InspirationPage() {
                   alt="A beautifully painted modern Indian living room with warm lighting"
                   src="/images/blog-cost.png"
                   fill
-
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -130,10 +127,7 @@ export default function InspirationPage() {
                   2026. Get our free paint calculator and accurate estimates.
                 </p>
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Read More{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  Read More <Icon name="arrow_forward" className="text-sm" />
                 </span>
               </div>
             </article>
@@ -151,7 +145,6 @@ export default function InspirationPage() {
                   alt="A detailed close-up showing the textural difference between two painted surfaces"
                   src="/images/blog-distemper.png"
                   fill
-
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -168,10 +161,7 @@ export default function InspirationPage() {
                   formulations and which is right for your project.
                 </p>
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Read More{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  Read More <Icon name="arrow_forward" className="text-sm" />
                 </span>
               </div>
             </article>
@@ -189,7 +179,6 @@ export default function InspirationPage() {
                   alt="An exterior shot of a modern, minimalist house wall during a light rain shower"
                   src="/images/blog-waterproofing.png"
                   fill
-
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -206,10 +195,7 @@ export default function InspirationPage() {
                   against moisture damage with proactive exterior care.
                 </p>
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Read More{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  Read More <Icon name="arrow_forward" className="text-sm" />
                 </span>
               </div>
             </article>
@@ -227,7 +213,6 @@ export default function InspirationPage() {
                   alt="A beautifully painted bright exterior of an Indian home basking in sunlight"
                   src="/images/blog-heat-reflect.png"
                   fill
-
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -244,10 +229,7 @@ export default function InspirationPage() {
                   heat-reflective exterior paints designed for harsh weather.
                 </p>
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Read More{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  Read More <Icon name="arrow_forward" className="text-sm" />
                 </span>
               </div>
             </article>
@@ -265,7 +247,6 @@ export default function InspirationPage() {
                   alt="A beautifully lit living room featuring a calming vastu-compliant pale yellow wall"
                   src="/images/blog-vastu-yellow.png"
                   fill
-
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -282,10 +263,7 @@ export default function InspirationPage() {
                   invite wealth, peace, and positivity in 2026.
                 </p>
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Read More{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  Read More <Icon name="arrow_forward" className="text-sm" />
                 </span>
               </div>
             </article>
@@ -305,7 +283,6 @@ export default function InspirationPage() {
                   alt="A stunning modern living room with a two-tone colour combination"
                   src="/images/blog-trending-colours.png"
                   fill
-
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -322,10 +299,7 @@ export default function InspirationPage() {
                   living rooms in 2026.
                 </p>
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Read More{" "}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  Read More <Icon name="arrow_forward" className="text-sm" />
                 </span>
               </div>
             </article>
@@ -359,16 +333,13 @@ export default function InspirationPage() {
                 alt="A highly detailed, macro photograph of a textured wall surface being carefully smoothed"
                 src="/images/inspiration-editorial.png"
                 fill
-
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover opacity-90"
               />
               {/* Floating Card inside image */}
               <div className="absolute bottom-8 right-8 bg-surface-container-lowest/90 backdrop-blur-md p-6 rounded-[1.5rem] shadow-[0px_12px_40px_rgba(46,16,101,0.15)] max-w-xs text-on-surface hidden md:flex items-start gap-4">
                 <div className="bg-secondary-container text-on-secondary-container p-3 rounded-full flex-shrink-0">
-                  <span className="material-symbols-outlined">
-                    auto_awesome
-                  </span>
+                  <Icon name="auto_awesome" className="" />
                 </div>
                 <div>
                   <h5 className="font-headline font-bold text-primary mb-1">
@@ -405,7 +376,6 @@ export default function InspirationPage() {
                     alt="A neatly organized collection of professional painting tools"
                     src="/images/blog-checklist.png"
                     fill
-
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -418,9 +388,10 @@ export default function InspirationPage() {
                     Everything you need before opening the can.
                   </p>
                 </div>
-                <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
-                  arrow_forward
-                </span>
+                <Icon
+                  name="arrow_forward"
+                  className="text-outline-variant group-hover:text-primary transition-colors"
+                />
               </Link>
 
               {/* Compact Card 2 */}
@@ -433,7 +404,6 @@ export default function InspirationPage() {
                     alt="A sophisticated dining room corner featuring dark, dramatic accent walls"
                     src="/images/blog-dark-colours.png"
                     fill
-
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -446,9 +416,10 @@ export default function InspirationPage() {
                     Balancing deep tones with light and texture.
                   </p>
                 </div>
-                <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
-                  arrow_forward
-                </span>
+                <Icon
+                  name="arrow_forward"
+                  className="text-outline-variant group-hover:text-primary transition-colors"
+                />
               </Link>
 
               {/* Compact Card 3 */}
@@ -461,7 +432,6 @@ export default function InspirationPage() {
                     alt="A bright, sunlit kitchen featuring soft pastel cabinets"
                     src="/images/blog-safe-paints.png"
                     fill
-
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -474,9 +444,10 @@ export default function InspirationPage() {
                     Understanding low-VOC and zero-VOC options.
                   </p>
                 </div>
-                <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
-                  arrow_forward
-                </span>
+                <Icon
+                  name="arrow_forward"
+                  className="text-outline-variant group-hover:text-primary transition-colors"
+                />
               </Link>
 
               {/* Compact Card 4 */}
@@ -489,7 +460,6 @@ export default function InspirationPage() {
                     alt="A close up of a luxurious metallic textured accent wall in a modern bedroom"
                     src="/images/blog-texture-designs.png"
                     fill
-
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -502,9 +472,10 @@ export default function InspirationPage() {
                     Give your bedroom a luxury makeover.
                   </p>
                 </div>
-                <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
-                  arrow_forward
-                </span>
+                <Icon
+                  name="arrow_forward"
+                  className="text-outline-variant group-hover:text-primary transition-colors"
+                />
               </Link>
 
               {/* Compact Card 5 */}
@@ -517,7 +488,6 @@ export default function InspirationPage() {
                     alt="A close up of someone scraping away damaged, peeling paint before applying a waterproof primer"
                     src="/images/blog-peeling-paint.png"
                     fill
-
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -530,9 +500,10 @@ export default function InspirationPage() {
                     A permanent solution to flaking walls.
                   </p>
                 </div>
-                <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
-                  arrow_forward
-                </span>
+                <Icon
+                  name="arrow_forward"
+                  className="text-outline-variant group-hover:text-primary transition-colors"
+                />
               </Link>
             </div>
           </div>
@@ -540,9 +511,10 @@ export default function InspirationPage() {
           {/* Newsletter (Right side, 5 cols) */}
           <div className="lg:col-span-5 flex items-stretch">
             <div className="bg-primary-container text-on-primary rounded-[2rem] p-10 flex flex-col justify-center w-full shadow-[0px_12px_40px_rgba(46,16,101,0.08)]">
-              <span className="material-symbols-outlined text-4xl text-secondary-fixed mb-6">
-                mail
-              </span>
+              <Icon
+                name="mail"
+                className="text-4xl text-secondary-fixed mb-6"
+              />
               <h3 className="text-3xl font-headline mb-4">
                 Curated Inspiration, Delivered.
               </h3>

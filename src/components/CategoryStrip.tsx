@@ -1,3 +1,4 @@
+import Icon from "@/components/Icon";
 export default function CategoryStrip() {
   const categories = [
     { icon: "home_pin", label: "Interior Finishes" },
@@ -30,7 +31,7 @@ export default function CategoryStrip() {
                   key={idx}
                   className="flex items-center gap-3 text-primary font-medium"
                 >
-                  <span className="material-symbols-outlined">{item.icon}</span>
+                  <Icon name={item.icon} className="" />
                   {item.label}
                 </div>
               ))}

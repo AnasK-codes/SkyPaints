@@ -42,10 +42,7 @@ export default function CategoryNav() {
           const elementTop = top + window.pageYOffset;
           const elementBottom = bottom + window.pageYOffset;
 
-          if (
-            scrollPosition >= elementTop &&
-            scrollPosition <= elementBottom
-          ) {
+          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
             setActiveCategory(category.id);
             break;
           }
@@ -58,7 +55,10 @@ export default function CategoryNav() {
   }, []);
 
   return (
-    <section id="shop-by-category" className="py-24 px-8 bg-surface border-y border-outline-variant/20 sticky top-0 z-40">
+    <section
+      id="shop-by-category"
+      className="py-24 px-8 bg-surface border-y border-outline-variant/20 sticky top-0 z-40"
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="font-headline text-3xl mb-8 text-center text-primary">
           Shop by Category

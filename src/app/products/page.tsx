@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Explore Skypaints' complete range of emulsions, oil paint, distemper, synthetic enamel, waterproofing, putty, stainers, and cleaning products.",
 };
 import ProductCard from "@/components/ProductCard";
+import Icon from "@/components/Icon";
 
 const scrollToCategory = (id: string) => {
   const element = document.getElementById(id);
@@ -32,11 +33,7 @@ const PlaceholderImage = ({
   <div
     className={`w-full h-full flex items-center justify-center ${bgClass} rounded-2xl`}
   >
-    <span
-      className={`material-symbols-outlined ${size} opacity-30 mix-blend-multiply`}
-    >
-      {icon}
-    </span>
+    <Icon name={icon} className={`${size} opacity-30 mix-blend-multiply`} />
   </div>
 );
 
@@ -161,9 +158,7 @@ export default function ProductsPage() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:scale-110 transition-transform duration-700"></div>
               <div>
                 <div className="flex items-center justify-between mb-8 relative z-10">
-                  <span className="material-symbols-outlined text-4xl opacity-80">
-                    format_paint
-                  </span>
+                  <Icon name="format_paint" className="text-4xl opacity-80" />
                   <span className="font-label text-sm uppercase tracking-wider opacity-80">
                     4 Products
                   </span>
@@ -188,9 +183,7 @@ export default function ProductsPage() {
             <div className="bg-primary-fixed text-on-primary-fixed rounded-[32px] p-8 shadow-ambient shadow-ambient-hover transition-transform duration-500 hover:-translate-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="material-symbols-outlined text-3xl opacity-70">
-                    opacity
-                  </span>
+                  <Icon name="opacity" className="text-3xl opacity-70" />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
                     2 Products + Table
                   </span>
@@ -213,9 +206,7 @@ export default function ProductsPage() {
             <div className="bg-[#FDF5E6] text-[#855300] rounded-[32px] p-8 shadow-ambient shadow-ambient-hover transition-transform duration-500 hover:-translate-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="material-symbols-outlined text-3xl opacity-70">
-                    texture
-                  </span>
+                  <Icon name="texture" className="text-3xl opacity-70" />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
                     2 Products + Table
                   </span>
@@ -238,9 +229,7 @@ export default function ProductsPage() {
             <div className="bg-[#FFDAB9] text-[#684000] rounded-[32px] p-8 shadow-ambient shadow-ambient-hover transition-transform duration-500 hover:-translate-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="material-symbols-outlined text-3xl opacity-70">
-                    brush
-                  </span>
+                  <Icon name="brush" className="text-3xl opacity-70" />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
                     4 Products
                   </span>
@@ -265,9 +254,7 @@ export default function ProductsPage() {
             <div className="bg-[#E6F0FA] text-[#003366] rounded-[32px] p-8 shadow-ambient shadow-ambient-hover transition-transform duration-500 hover:-translate-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="material-symbols-outlined text-3xl opacity-70">
-                    water_drop
-                  </span>
+                  <Icon name="water_drop" className="text-3xl opacity-70" />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
                     3 Products
                   </span>
@@ -290,9 +277,7 @@ export default function ProductsPage() {
             <div className="bg-surface-container-highest text-on-surface rounded-[32px] p-8 shadow-ambient shadow-ambient-hover transition-transform duration-500 hover:-translate-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="material-symbols-outlined text-3xl opacity-70">
-                    layers
-                  </span>
+                  <Icon name="layers" className="text-3xl opacity-70" />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
                     4 Products
                   </span>
@@ -315,9 +300,7 @@ export default function ProductsPage() {
             <div className="bg-[#FBE4E4] text-[#93000A] rounded-[32px] p-8 shadow-ambient shadow-ambient-hover transition-transform duration-500 hover:-translate-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="material-symbols-outlined text-3xl opacity-70">
-                    invert_colors
-                  </span>
+                  <Icon name="colorize" className="text-3xl opacity-70" />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
                     2 Products
                   </span>
@@ -340,9 +323,10 @@ export default function ProductsPage() {
             <div className="bg-secondary-fixed text-on-secondary-fixed rounded-[32px] p-8 shadow-ambient shadow-ambient-hover transition-transform duration-500 hover:-translate-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="material-symbols-outlined text-3xl opacity-70">
-                    cleaning_services
-                  </span>
+                  <Icon
+                    name="cleaning_services"
+                    className="text-3xl opacity-70"
+                  />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
                     9 Products + Table
                   </span>

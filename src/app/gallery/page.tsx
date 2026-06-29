@@ -70,7 +70,6 @@ const productItems = [
 ];
 
 const journeyItems = [
-
   {
     id: 7,
     type: "image",

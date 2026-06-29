@@ -9,8 +9,15 @@ import CostCalculator from "@/components/CostCalculator";
 import Palette from "@/components/Palette";
 import ShadeFinder from "@/components/ShadeFinder";
 import VastuGuide from "@/components/VastuGuide";
+import Icon from "@/components/Icon";
 
 export default function ToolsPage() {
+  const [openFaqIndex, setOpenFaqIndex] = React.useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
   return (
     <>
       <Navbar />
@@ -68,9 +75,7 @@ export default function ToolsPage() {
               <div className="absolute -bottom-8 -left-8 bg-surface-container-lowest/80 backdrop-blur-xl p-6 rounded-lg shadow-elevated border border-outline-variant/10 hidden md:block">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
-                    <span className="material-symbols-outlined fill-icon">
-                      palette
-                    </span>
+                    <Icon name="palette" className="fill-icon" />
                   </div>
                   <div>
                     <p className="font-headline text-primary font-semibold">
@@ -95,9 +100,7 @@ export default function ToolsPage() {
             {/* Card 1 */}
             <div className="bg-surface-container-lowest rounded-xl p-10 shadow-ambient shadow-ambient-hover transition-all duration-500 group flex flex-col items-start border border-outline-variant/5">
               <div className="w-16 h-16 rounded-full bg-surface-container-low text-primary flex items-center justify-center mb-8 group-hover:bg-primary-fixed transition-colors duration-300">
-                <span className="material-symbols-outlined text-3xl">
-                  calculate
-                </span>
+                <Icon name="calculate" className="text-3xl" />
               </div>
               <h3 className="font-headline text-2xl text-primary mb-4">
                 Paint Cost Calculator
@@ -114,19 +117,14 @@ export default function ToolsPage() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Calculate Now{" "}
-                <span className="material-symbols-outlined text-sm">
-                  arrow_forward
-                </span>
+                Calculate Now <Icon name="arrow_forward" className="text-sm" />
               </button>
             </div>
 
             {/* Card 2 */}
             <div className="bg-surface-container-lowest rounded-xl p-10 shadow-ambient shadow-ambient-hover transition-all duration-500 group flex flex-col items-start border border-outline-variant/5">
               <div className="w-16 h-16 rounded-full bg-surface-container-low text-primary flex items-center justify-center mb-8 group-hover:bg-primary-fixed transition-colors duration-300">
-                <span className="material-symbols-outlined text-3xl">
-                  home_pin
-                </span>
+                <Icon name="home_pin" className="text-3xl" />
               </div>
               <h3 className="font-headline text-2xl text-primary mb-4">
                 Vastu Colour Guide
@@ -143,19 +141,14 @@ export default function ToolsPage() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Explore Vastu{" "}
-                <span className="material-symbols-outlined text-sm">
-                  arrow_forward
-                </span>
+                Explore Vastu <Icon name="arrow_forward" className="text-sm" />
               </button>
             </div>
 
             {/* Card 3 */}
             <div className="bg-surface-container-lowest rounded-xl p-10 shadow-ambient shadow-ambient-hover transition-all duration-500 group flex flex-col items-start border border-outline-variant/5">
               <div className="w-16 h-16 rounded-full bg-surface-container-low text-primary flex items-center justify-center mb-8 group-hover:bg-primary-fixed transition-colors duration-300">
-                <span className="material-symbols-outlined text-3xl">
-                  format_paint
-                </span>
+                <Icon name="format_paint" className="text-3xl" />
               </div>
               <h3 className="font-headline text-2xl text-primary mb-4">
                 Colour Catalog
@@ -172,10 +165,7 @@ export default function ToolsPage() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                View Shades{" "}
-                <span className="material-symbols-outlined text-sm">
-                  arrow_forward
-                </span>
+                View Shades <Icon name="arrow_forward" className="text-sm" />
               </button>
             </div>
           </div>
@@ -210,51 +200,47 @@ export default function ToolsPage() {
             Inquiries
           </h2>
           <div className="space-y-4">
-            <div className="bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 rounded-[2rem] group cursor-pointer">
-              <div className="p-6 md:px-8 font-headline text-lg text-primary flex justify-between items-center select-none">
-                <span>How accurate is the Cost Calculator?</span>
-                <span className="material-symbols-outlined group-hover:rotate-180 transition-transform duration-300 text-on-surface-variant">
-                  expand_more
-                </span>
+            {[
+              {
+                question: "How accurate is the Cost Calculator?",
+                answer:
+                  "The calculator provides a highly accurate estimate based on standard industry coverage rates and current material costs. However, highly textured surfaces, extreme color changes (e.g., black to white), or significant wall damage requiring extensive putty work may alter the final volume of paint needed.",
+              },
+              {
+                question: "Do you offer physical shade cards?",
+                answer:
+                  "Yes, while our digital catalog is meticulously color-calibrated, we recommend viewing physical swatches in your room's specific lighting. You can order a curated 'Atelier Swatch Box' directly to your home through our online store.",
+              },
+              {
+                question: "Can your experts assist with Vastu compliance?",
+                answer:
+                  "Absolutely. Our premium consulting service pairs you with color specialists trained in Vastu Shastra principles. They can help navigate complex floor plans to ensure your color choices promote harmony and positive energy flow.",
+              },
+            ].map((faq, index) => (
+              <div
+                key={index}
+                className="bg-surface-container-lowest transition-colors duration-300 rounded-[2rem] cursor-pointer select-none"
+                onClick={() => toggleFaq(index)}
+              >
+                <div className="p-6 md:px-8 font-headline text-lg text-primary flex justify-between items-center">
+                  <span>{faq.question}</span>
+                  <Icon
+                    name="expand_more"
+                    className={`transition-transform duration-300 text-on-surface-variant ${
+                      openFaqIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+                {openFaqIndex === index && (
+                  <div
+                    className="px-6 md:px-8 pb-6 pt-0 font-body text-on-surface-variant leading-relaxed animate-fade-in-up"
+                    style={{ animationDuration: "300ms" }}
+                  >
+                    {faq.answer}
+                  </div>
+                )}
               </div>
-              <div className="px-6 md:px-8 pb-6 pt-0 font-body text-on-surface-variant leading-relaxed hidden group-hover:block animate-fade-in-up" style={{ animationDuration: '300ms' }}>
-                The calculator provides a highly accurate estimate based on
-                standard industry coverage rates and current material costs.
-                However, highly textured surfaces, extreme color changes (e.g.,
-                black to white), or significant wall damage requiring extensive
-                putty work may alter the final volume of paint needed.
-              </div>
-            </div>
-
-            <div className="bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 rounded-[2rem] group cursor-pointer">
-              <div className="p-6 md:px-8 font-headline text-lg text-primary flex justify-between items-center select-none">
-                <span>Do you offer physical shade cards?</span>
-                <span className="material-symbols-outlined group-hover:rotate-180 transition-transform duration-300 text-on-surface-variant">
-                  expand_more
-                </span>
-              </div>
-              <div className="px-6 md:px-8 pb-6 pt-0 font-body text-on-surface-variant leading-relaxed hidden group-hover:block animate-fade-in-up" style={{ animationDuration: '300ms' }}>
-                Yes, while our digital catalog is meticulously color-calibrated,
-                we recommend viewing physical swatches in your room's specific
-                lighting. You can order a curated 'Atelier Swatch Box' directly
-                to your home through our online store.
-              </div>
-            </div>
-
-            <div className="bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 rounded-[2rem] group cursor-pointer">
-              <div className="p-6 md:px-8 font-headline text-lg text-primary flex justify-between items-center select-none">
-                <span>Can your experts assist with Vastu compliance?</span>
-                <span className="material-symbols-outlined group-hover:rotate-180 transition-transform duration-300 text-on-surface-variant">
-                  expand_more
-                </span>
-              </div>
-              <div className="px-6 md:px-8 pb-6 pt-0 font-body text-on-surface-variant leading-relaxed hidden group-hover:block animate-fade-in-up" style={{ animationDuration: '300ms' }}>
-                Absolutely. Our premium consulting service pairs you with color
-                specialists trained in Vastu Shastra principles. They can help
-                navigate complex floor plans to ensure your color choices
-                promote harmony and positive energy flow.
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -275,18 +261,19 @@ export default function ToolsPage() {
                 recommendations for your unique space.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a 
-                  href="https://wa.me/917999295796" 
+                <a
+                  href="https://wa.me/917999295796"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-full font-label font-bold flex items-center justify-center gap-3 hover:shadow-lg transition-all duration-300"
                 >
-                  <span className="material-symbols-outlined fill-icon">
-                    forum
-                  </span>
+                  <Icon name="forum" className="fill-icon" />
                   Chat on WhatsApp
                 </a>
-                <Link href="/contact#inquiry-form" className="bg-transparent border border-outline-variant/30 text-on-primary hover:bg-white/5 px-8 py-4 rounded-full font-label font-medium transition-all duration-300 flex items-center justify-center">
+                <Link
+                  href="/contact#inquiry-form"
+                  className="bg-transparent border border-outline-variant/30 text-on-primary hover:bg-white/5 px-8 py-4 rounded-full font-label font-medium transition-all duration-300 flex items-center justify-center"
+                >
                   Submit an Inquiry
                 </Link>
               </div>

@@ -5,10 +5,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ParallaxHero from "@/components/ParallaxHero";
 import type { Metadata } from "next";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "About Us | Skypaints",
-  description: "Bringing color, protection, and beauty to every home. We curate atmospheric depth for modern spaces through precision and artistic vision.",
+  description:
+    "Bringing color, protection, and beauty to every home. We curate atmospheric depth for modern spaces through precision and artistic vision.",
 };
 
 export default function AboutPage() {
@@ -75,9 +77,7 @@ export default function AboutPage() {
             >
               <div className="bg-surface-container-lowest p-12 rounded-xl ambient-shadow transform hover:-translate-y-2 transition-transform duration-500 border border-outline-variant/10">
                 <div className="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-primary text-3xl">
-                    auto_awesome
-                  </span>
+                  <Icon name="auto_awesome" className="text-primary text-3xl" />
                 </div>
                 <h3 className="font-display text-3xl text-primary mb-6">
                   Our Mission
@@ -90,9 +90,7 @@ export default function AboutPage() {
               </div>
               <div className="bg-surface-container-lowest p-12 rounded-xl ambient-shadow transform hover:-translate-y-2 transition-transform duration-500 border border-outline-variant/10">
                 <div className="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-secondary text-3xl">
-                    visibility
-                  </span>
+                  <Icon name="visibility" className="text-secondary text-3xl" />
                 </div>
                 <h3 className="font-display text-3xl text-primary mb-6">
                   Our Vision
@@ -125,9 +123,10 @@ export default function AboutPage() {
             >
               {/* Service Cards */}
               <div className="group bg-surface hover:bg-surface-container transition-all duration-500 p-8 rounded-lg">
-                <span className="material-symbols-outlined text-primary-fixed-dim text-4xl mb-6">
-                  format_paint
-                </span>
+                <Icon
+                  name="format_paint"
+                  className="text-primary-fixed-dim text-4xl mb-6"
+                />
                 <h4 className="font-headline text-2xl text-primary mb-4">
                   Interior Painting
                 </h4>
@@ -137,9 +136,10 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="group bg-surface hover:bg-surface-container transition-all duration-500 p-8 rounded-lg">
-                <span className="material-symbols-outlined text-primary-fixed-dim text-4xl mb-6">
-                  shield
-                </span>
+                <Icon
+                  name="shield"
+                  className="text-primary-fixed-dim text-4xl mb-6"
+                />
                 <h4 className="font-headline text-2xl text-primary mb-4">
                   Exterior Protection
                 </h4>
@@ -149,9 +149,10 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="group bg-surface hover:bg-surface-container transition-all duration-500 p-8 rounded-lg">
-                <span className="material-symbols-outlined text-primary-fixed-dim text-4xl mb-6">
-                  water_drop
-                </span>
+                <Icon
+                  name="water_drop"
+                  className="text-primary-fixed-dim text-4xl mb-6"
+                />
                 <h4 className="font-headline text-2xl text-primary mb-4">
                   Waterproofing
                 </h4>
@@ -161,9 +162,10 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="group bg-surface hover:bg-surface-container transition-all duration-500 p-8 rounded-lg">
-                <span className="material-symbols-outlined text-primary-fixed-dim text-4xl mb-6">
-                  texture
-                </span>
+                <Icon
+                  name="texture"
+                  className="text-primary-fixed-dim text-4xl mb-6"
+                />
                 <h4 className="font-headline text-2xl text-primary mb-4">
                   Distemper
                 </h4>
@@ -173,9 +175,10 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="group bg-surface hover:bg-surface-container transition-all duration-500 p-8 rounded-lg">
-                <span className="material-symbols-outlined text-primary-fixed-dim text-4xl mb-6">
-                  cleaning_services
-                </span>
+                <Icon
+                  name="cleaning_services"
+                  className="text-primary-fixed-dim text-4xl mb-6"
+                />
                 <h4 className="font-headline text-2xl text-primary mb-4">
                   Wall Cleaning
                 </h4>
@@ -185,9 +188,10 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="group bg-surface hover:bg-surface-container transition-all duration-500 p-8 rounded-lg">
-                <span className="material-symbols-outlined text-primary-fixed-dim text-4xl mb-6">
-                  palette
-                </span>
+                <Icon
+                  name="palette"
+                  className="text-primary-fixed-dim text-4xl mb-6"
+                />
                 <h4 className="font-headline text-2xl text-primary mb-4">
                   Color Consultation
                 </h4>

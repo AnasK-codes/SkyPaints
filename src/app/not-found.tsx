@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -36,11 +36,17 @@ export default function NotFound() {
         </div>
 
         <div className="pt-8 flex items-center justify-center gap-6 text-sm text-on-surface-variant">
-          <Link href="/contact" className="hover:text-primary transition-colors">
+          <Link
+            href="/contact"
+            className="hover:text-primary transition-colors"
+          >
             Contact Us
           </Link>
           <span className="text-outline-variant">•</span>
-          <Link href="/inspiration" className="hover:text-primary transition-colors">
+          <Link
+            href="/inspiration"
+            className="hover:text-primary transition-colors"
+          >
             Read Blogs
           </Link>
         </div>

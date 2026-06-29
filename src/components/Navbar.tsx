@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useCart } from "@/context/CartContext";
+import Icon from "@/components/Icon";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -111,9 +112,10 @@ export default function Navbar() {
                   >
                     {link.name}
                     {link.subLinks && (
-                      <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">
-                        expand_more
-                      </span>
+                      <Icon
+                        name="expand_more"
+                        className="text-[16px] transition-transform duration-300 group-hover:rotate-180"
+                      />
                     )}
                   </Link>
                   {link.subLinks && (
@@ -148,9 +150,10 @@ export default function Navbar() {
               href="/cart"
               className="relative p-2 md:p-2.5 bg-surface-container-low/80 rounded-full backdrop-blur-md border border-outline-variant/20 hover:bg-surface-container-high transition-colors flex items-center justify-center text-on-surface"
             >
-              <span className="material-symbols-outlined text-[20px] md:text-[24px]">
-                shopping_cart
-              </span>
+              <Icon
+                name="shopping_cart"
+                className="text-[20px] md:text-[24px]"
+              />
               {totalItems > 0 && (
                 <span className="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] md:text-xs font-bold w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center shadow-sm">
                   {totalItems > 99 ? "99+" : totalItems}
@@ -163,9 +166,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              <span className="material-symbols-outlined">
-                {isMobileMenuOpen ? "close" : "menu"}
-              </span>
+              <Icon name={isMobileMenuOpen ? "close" : "menu"} className="" />
             </button>
           </div>
         </div>
@@ -191,13 +192,14 @@ export default function Navbar() {
                       }`}
                     >
                       <span>{link.name}</span>
-                      <span
-                        className={`material-symbols-outlined text-[20px] ${isActive && !link.subLinks ? "text-primary" : "opacity-40"}`}
-                      >
-                        {isActive && !link.subLinks
-                          ? "arrow_forward"
-                          : "chevron_right"}
-                      </span>
+                      <Icon
+                        name={
+                          isActive && !link.subLinks
+                            ? "arrow_forward"
+                            : "chevron_right"
+                        }
+                        className={`text-[20px] ${isActive && !link.subLinks ? "text-primary" : "opacity-40"}`}
+                      />
                     </Link>
                     {link.subLinks && (
                       <div className="pl-6 pr-2 py-2 flex flex-col gap-1 border-l-2 border-outline-variant/30 ml-8 mb-2 mt-1">

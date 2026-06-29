@@ -100,8 +100,15 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body
         className={`${notoSerif.variable} ${manrope.variable} ${gloock.variable} antialiased font-body bg-surface text-on-surface`}
@@ -123,9 +130,7 @@ export default function RootLayout({
                 addressRegion: "Chhattisgarh",
                 addressCountry: "IN",
               },
-              sameAs: [
-                "https://www.instagram.com/skyproductsraipur",
-              ],
+              sameAs: ["https://www.instagram.com/skyproductsraipur"],
               image: "https://skypaints.in/images/logo.png",
             }),
           }}

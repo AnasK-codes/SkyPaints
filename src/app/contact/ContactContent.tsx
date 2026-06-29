@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 
 export default function ContactContent() {
   const [showFeedbackModal, setShowFeedbackModal] = useState(false);
@@ -36,9 +37,7 @@ export default function ContactContent() {
                   rel="noopener noreferrer"
                   className="bg-gradient-to-br from-primary-container to-primary text-on-primary px-8 py-4 rounded-full font-label font-medium hover:shadow-[0px_12px_40px_rgba(46,16,101,0.15)] transition-all duration-300 flex items-center gap-2"
                 >
-                  <span className="material-symbols-outlined text-[20px]">
-                    chat
-                  </span>
+                  <Icon name="chat" className="text-[20px]" />
                   Contact on WhatsApp
                 </a>
                 <a
@@ -91,12 +90,7 @@ export default function ContactContent() {
               {/* Card 1 */}
               <div className="bg-surface-container-lowest p-8 rounded-[28px] shadow-[0px_4px_20px_rgba(46,16,101,0.04)] hover:shadow-[0px_12px_40px_rgba(46,16,101,0.08)] transition-all duration-500 flex flex-col items-center text-center group">
                 <div className="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <span
-                    className="material-symbols-outlined text-2xl"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    call
-                  </span>
+                  <Icon name="call" className="text-2xl" />
                 </div>
                 <h3 className="font-display text-xl text-primary mb-2">
                   WhatsApp / Phone
@@ -117,12 +111,7 @@ export default function ContactContent() {
               {/* Card 2 */}
               <div className="bg-surface-container-lowest p-8 rounded-[28px] shadow-[0px_4px_20px_rgba(46,16,101,0.04)] hover:shadow-[0px_12px_40px_rgba(46,16,101,0.08)] transition-all duration-500 flex flex-col items-center text-center group">
                 <div className="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <span
-                    className="material-symbols-outlined text-2xl"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    mail
-                  </span>
+                  <Icon name="mail" className="text-2xl" />
                 </div>
                 <h3 className="font-display text-xl text-primary mb-2">
                   Email
@@ -141,12 +130,7 @@ export default function ContactContent() {
               {/* Card 3 */}
               <div className="bg-surface-container-lowest p-8 rounded-[28px] shadow-[0px_4px_20px_rgba(46,16,101,0.04)] hover:shadow-[0px_12px_40px_rgba(46,16,101,0.08)] transition-all duration-500 flex flex-col items-center text-center group">
                 <div className="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <span
-                    className="material-symbols-outlined text-2xl"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    location_on
-                  </span>
+                  <Icon name="location_on" className="text-2xl" />
                 </div>
                 <h3 className="font-display text-xl text-primary mb-2">
                   Location
@@ -165,12 +149,7 @@ export default function ContactContent() {
               {/* Card 4 */}
               <div className="bg-surface-container-lowest p-8 rounded-[28px] shadow-[0px_4px_20px_rgba(46,16,101,0.04)] hover:shadow-[0px_12px_40px_rgba(46,16,101,0.08)] transition-all duration-500 flex flex-col items-center text-center group">
                 <div className="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <span
-                    className="material-symbols-outlined text-2xl"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    schedule
-                  </span>
+                  <Icon name="schedule" className="text-2xl" />
                 </div>
                 <h3 className="font-display text-xl text-primary mb-2">
                   Business Hours
@@ -334,15 +313,11 @@ export default function ContactContent() {
                   </p>
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-4">
-                      <span className="material-symbols-outlined text-secondary-fixed">
-                        call
-                      </span>
+                      <Icon name="call" className="text-secondary-fixed" />
                       <span className="font-label">+91 79992 95796</span>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="material-symbols-outlined text-secondary-fixed">
-                        mail
-                      </span>
+                      <Icon name="mail" className="text-secondary-fixed" />
                       <span className="font-label">
                         skyproducts2020@gmail.com
                       </span>
@@ -354,7 +329,7 @@ export default function ContactContent() {
                     rel="noopener noreferrer"
                     className="w-full bg-secondary-fixed text-on-secondary-fixed py-4 rounded-full font-label font-bold hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center gap-2"
                   >
-                    <span className="material-symbols-outlined">chat</span>
+                    <Icon name="chat" className="" />
                     WhatsApp Now
                   </a>
                 </div>
@@ -443,36 +418,11 @@ export default function ContactContent() {
 
                 <div className="bg-surface-container-lowest p-6 rounded-lg shadow-[0px_12px_40px_rgba(46,16,101,0.04)] ml-0 lg:ml-12 border border-outline-variant/10">
                   <div className="flex gap-1 text-secondary mb-3">
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star" className="text-sm" />
                   </div>
                   <p className="font-body text-on-surface-variant italic mb-4">
                     &quot;The serene red shade completely transformed my living
@@ -485,36 +435,11 @@ export default function ContactContent() {
 
                 <div className="bg-surface-container-lowest p-6 rounded-lg shadow-[0px_12px_40px_rgba(46,16,101,0.04)] mr-0 lg:mr-12 border border-outline-variant/10">
                   <div className="flex gap-1 text-secondary mb-3">
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star
-                    </span>
-                    <span
-                      className="material-symbols-outlined text-sm"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      star_half
-                    </span>
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star" className="text-sm" />
+                    <Icon name="star_half" className="text-sm" />
                   </div>
                   <p className="font-body text-on-surface-variant italic mb-4">
                     &quot;Great customer service when I needed help choosing
@@ -555,12 +480,7 @@ export default function ContactContent() {
               <div className="flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-primary-container text-primary rounded-full flex items-center justify-center">
-                    <span
-                      className="material-symbols-outlined text-xl"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      location_on
-                    </span>
+                    <Icon name="location_on" className="text-xl" />
                   </div>
                   <h3 className="font-headline text-2xl text-primary">
                     Raipur Factory
@@ -587,12 +507,7 @@ export default function ContactContent() {
               <div className="flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-primary-container text-primary rounded-full flex items-center justify-center">
-                    <span
-                      className="material-symbols-outlined text-xl"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                    >
-                      location_on
-                    </span>
+                    <Icon name="location_on" className="text-xl" />
                   </div>
                   <h3 className="font-headline text-2xl text-primary">
                     Indore Factory
@@ -629,9 +544,10 @@ export default function ContactContent() {
               <details className="group bg-surface-container-low rounded-lg p-6 cursor-pointer open:bg-surface-container transition-colors">
                 <summary className="font-label font-bold text-lg text-primary flex justify-between items-center list-none">
                   How do I get a price quote for bulk orders?
-                  <span className="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+                  <Icon
+                    name="expand_more"
+                    className="text-outline group-open:rotate-180 transition-transform"
+                  />
                 </summary>
                 <p className="mt-4 text-on-surface-variant font-body">
                   Please fill out the inquiry form above selecting 'Bulk Order'
@@ -643,9 +559,10 @@ export default function ContactContent() {
               <details className="group bg-surface-container-low rounded-lg p-6 cursor-pointer open:bg-surface-container transition-colors">
                 <summary className="font-label font-bold text-lg text-primary flex justify-between items-center list-none">
                   Do you offer dealership opportunities?
-                  <span className="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+                  <Icon
+                    name="expand_more"
+                    className="text-outline group-open:rotate-180 transition-transform"
+                  />
                 </summary>
                 <p className="mt-4 text-on-surface-variant font-body">
                   Yes, we are expanding our network. Select 'Dealership' in the
@@ -657,9 +574,10 @@ export default function ContactContent() {
               <details className="group bg-surface-container-low rounded-lg p-6 cursor-pointer open:bg-surface-container transition-colors">
                 <summary className="font-label font-bold text-lg text-primary flex justify-between items-center list-none">
                   Can I get help choosing the right paint for my project?
-                  <span className="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+                  <Icon
+                    name="expand_more"
+                    className="text-outline group-open:rotate-180 transition-transform"
+                  />
                 </summary>
                 <p className="mt-4 text-on-surface-variant font-body">
                   Absolutely. Our color consultants are available via email or
@@ -671,9 +589,10 @@ export default function ContactContent() {
               <details className="group bg-surface-container-low rounded-lg p-6 cursor-pointer open:bg-surface-container transition-colors">
                 <summary className="font-label font-bold text-lg text-primary flex justify-between items-center list-none">
                   Where can I find your products locally?
-                  <span className="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">
-                    expand_more
-                  </span>
+                  <Icon
+                    name="expand_more"
+                    className="text-outline group-open:rotate-180 transition-transform"
+                  />
                 </summary>
                 <p className="mt-4 text-on-surface-variant font-body">
                   You can use our 'Store Locator' linked in the footer, or
@@ -706,7 +625,7 @@ export default function ContactContent() {
                 rel="noopener noreferrer"
                 className="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-full font-label font-bold hover:bg-secondary-fixed-dim transition-colors flex items-center gap-2 shadow-xl"
               >
-                <span className="material-symbols-outlined">chat</span>
+                <Icon name="chat" className="" />
                 WhatsApp Skypaints
               </a>
               <a
@@ -726,12 +645,7 @@ export default function ContactContent() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-surface-dim/80 backdrop-blur-sm animate-fade-in">
           <div className="bg-surface-container-lowest p-8 rounded-[2rem] shadow-2xl max-w-md w-full text-center relative animate-fade-in-up border border-outline-variant/20">
             <div className="w-20 h-20 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
-              <span
-                className="material-symbols-outlined text-4xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                check_circle
-              </span>
+              <Icon name="check_circle" className="text-4xl" />
             </div>
             <h3 className="text-3xl font-display text-primary mb-4">
               Thank You!
@@ -755,12 +669,7 @@ export default function ContactContent() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-surface-dim/80 backdrop-blur-sm animate-fade-in">
           <div className="bg-surface-container-lowest p-8 rounded-[2rem] shadow-2xl max-w-md w-full text-center relative animate-fade-in-up border border-outline-variant/20">
             <div className="w-20 h-20 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
-              <span
-                className="material-symbols-outlined text-4xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                send
-              </span>
+              <Icon name="send" className="text-4xl" />
             </div>
             <h3 className="text-3xl font-display text-primary mb-4">
               Inquiry Prepared!

@@ -1,8 +1,9 @@
 "use client";
 
-import React from 'react';
-import Image from 'next/image';
-import AddToCartButton from './AddToCartButton';
+import React from "react";
+import Image from "next/image";
+import AddToCartButton from "./AddToCartButton";
+import Icon from "@/components/Icon";
 
 export interface Product {
   name: string;
@@ -16,13 +17,12 @@ export interface Product {
 
 export default function ProductCard({ product }: { product: Product }) {
   // Split title and subtitle if it has a hyphen
-  const parts = product.name.split(' - ');
+  const parts = product.name.split(" - ");
   const mainTitle = parts[0];
-  const subTitle = parts.slice(1).join(' - ');
+  const subTitle = parts.slice(1).join(" - ");
 
   return (
     <div className="bg-surface rounded-[2rem] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-500 border border-outline-variant/30 flex flex-col h-full group relative overflow-hidden">
-      
       {/* Optional Badge */}
       {product.badge && (
         <div className="absolute top-6 left-6 z-10 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-md">
@@ -60,11 +60,17 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* Feature Chips */}
         <div className="flex flex-wrap gap-2 mb-8 flex-grow content-start">
           {(product.features || []).slice(0, 4).map((feature, idx) => (
-            <div key={idx} className="flex items-center gap-1.5 bg-surface-container-lowest border border-outline-variant/20 px-3 py-1.5 rounded-full shadow-sm">
-              <span className="material-symbols-outlined text-[14px] text-green-600">
-                check_circle
+            <div
+              key={idx}
+              className="flex items-center gap-1.5 bg-surface-container-lowest border border-outline-variant/20 px-3 py-1.5 rounded-full shadow-sm"
+            >
+              <Icon
+                name="check_circle"
+                className="text-[14px] text-green-600"
+              />
+              <span className="text-xs font-medium text-on-surface-variant whitespace-nowrap">
+                {feature}
               </span>
-              <span className="text-xs font-medium text-on-surface-variant whitespace-nowrap">{feature}</span>
             </div>
           ))}
         </div>

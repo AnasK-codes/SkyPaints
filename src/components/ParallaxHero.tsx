@@ -44,14 +44,12 @@ export default function ParallaxHero() {
         </span>
         <h1 className="font-display text-6xl md:text-8xl text-primary leading-tight mb-8">
           About <br />
-          <span className="italic text-on-primary-container">
-            Skypaints
-          </span>
+          <span className="italic text-on-primary-container">Skypaints</span>
         </h1>
         <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
           Bringing color, protection, and beauty to every home. We curate
-          atmospheric depth for modern spaces through precision and
-          artistic vision.
+          atmospheric depth for modern spaces through precision and artistic
+          vision.
         </p>
       </div>
       <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden lg:block">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export default function ToolsSection() {
   return (
@@ -17,7 +18,7 @@ export default function ToolsSection() {
               className="flex items-start gap-6 p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer block"
             >
               <div className="p-3 rounded-full bg-secondary-fixed/20 text-secondary-fixed shrink-0">
-                <span className="material-symbols-outlined">calculate</span>
+                <Icon name="calculate" className="" />
               </div>
               <div>
                 <h4 className="text-on-primary font-bold text-lg">
@@ -34,7 +35,7 @@ export default function ToolsSection() {
               className="flex items-start gap-6 p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer block"
             >
               <div className="p-3 rounded-full bg-secondary-fixed/20 text-secondary-fixed shrink-0">
-                <span className="material-symbols-outlined">visibility</span>
+                <Icon name="visibility" className="" />
               </div>
               <div>
                 <h4 className="text-on-primary font-bold text-lg">
@@ -52,7 +53,7 @@ export default function ToolsSection() {
               className="flex items-start gap-6 p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer block"
             >
               <div className="p-3 rounded-full bg-secondary-fixed/20 text-secondary-fixed shrink-0">
-                <span className="material-symbols-outlined">colorize</span>
+                <Icon name="colorize" className="" />
               </div>
               <div>
                 <h4 className="text-on-primary font-bold text-lg">

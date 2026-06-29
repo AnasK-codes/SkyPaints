@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export default function Error({
   error,
@@ -10,7 +10,7 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error('Application error:', error);
+    console.error("Application error:", error);
   }, [error]);
 
   return (
@@ -39,7 +39,8 @@ export default function Error({
         </h1>
 
         <p className="text-on-surface-variant text-lg leading-relaxed">
-          We encountered an unexpected error. Please try again, or contact us if the problem persists.
+          We encountered an unexpected error. Please try again, or contact us if
+          the problem persists.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">

@@ -1,3 +1,4 @@
+import Icon from "@/components/Icon";
 const faqs = [
   {
     question: "What makes Skypaints low-VOC?",
@@ -78,11 +79,15 @@ export default function FAQ() {
           >
             <summary className="flex justify-between items-center text-primary font-bold text-lg cursor-pointer list-none py-2 [&::-webkit-details-marker]:hidden">
               <span>{faq.question}</span>
-              <span className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4">
-                expand_more
-              </span>
+              <Icon
+                name="expand_more"
+                className="transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4"
+              />
             </summary>
-            <div className="mt-4 text-on-surface-variant leading-relaxed animate-fade-in-up" style={{ animationDuration: '0.3s' }}>
+            <div
+              className="mt-4 text-on-surface-variant leading-relaxed animate-fade-in-up"
+              style={{ animationDuration: "0.3s" }}
+            >
               {faq.answer}
             </div>
           </details>
@@ -91,4 +96,3 @@ export default function FAQ() {
     </section>
   );
 }
-
