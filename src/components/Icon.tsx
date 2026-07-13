@@ -54,6 +54,12 @@ const iconMap: Record<string, any> = {
   explore: LucideIcons.Compass,
   menu: LucideIcons.Menu,
   chevron_right: LucideIcons.ChevronRight,
+  chevron_left: LucideIcons.ChevronLeft,
+  chevron_down: LucideIcons.ChevronDown,
+  zoom_in: LucideIcons.ZoomIn,
+  zoom_out: LucideIcons.ZoomOut,
+  maximize: LucideIcons.Maximize2,
+  refresh: LucideIcons.RotateCcw,
 };
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {

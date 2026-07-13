@@ -17,7 +17,22 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
-  const [selectedSize, setSelectedSize] = useState(sizeOptions[0] || "Default");
+
+  const getInitialSize = () => {
+    if (sizeOptions.length === 0) return "Default";
+    if (typeof product.price === "object" && product.price !== null) {
+      const validSize = sizeOptions.find(
+        (size) =>
+          typeof product.price === "object" &&
+          product.price !== null &&
+          product.price[size] !== undefined
+      );
+      if (validSize) return validSize;
+    }
+    return sizeOptions[0];
+  };
+
+  const [selectedSize, setSelectedSize] = useState<string>(getInitialSize);
 
   // Check cart status for this specific product + size
   const id = `${product.name}-${selectedSize}`;

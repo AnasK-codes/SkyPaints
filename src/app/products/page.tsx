@@ -328,7 +328,7 @@ export default function ProductsPage() {
                     className="text-3xl opacity-70"
                   />
                   <span className="font-label text-xs uppercase tracking-wider opacity-70">
-                    9 Products + Table
+                    7 Products + Table
                   </span>
                 </div>
                 <h3 className="font-headline text-3xl mb-3">
@@ -336,7 +336,7 @@ export default function ProductsPage() {
                 </h3>
                 <p className="font-body text-on-secondary-fixed-variant mb-8 text-sm">
                   Mr. Shine cleaning range for hygiene, floors, utensils,
-                  fabrics, washrooms, and daily use.
+                  washrooms, and commercial use.
                 </p>
               </div>
               <a
@@ -579,10 +579,10 @@ export default function ProductsPage() {
                     <td className="py-4 text-on-surface font-medium">
                       Exterior Emulsion Shade
                     </td>
-                    <td className="py-4 text-primary">₹3510</td>
-                    <td className="py-4 text-primary">₹1788</td>
-                    <td className="py-4 text-primary">₹832</td>
-                    <td className="py-4 text-primary">₹215</td>
+                    <td className="py-4 text-primary">₹3860</td>
+                    <td className="py-4 text-primary">₹1980</td>
+                    <td className="py-4 text-primary">₹810</td>
+                    <td className="py-4 text-primary">₹220</td>
                     <td className="py-4 text-primary">₹112</td>
                   </tr>
                 </tbody>
@@ -666,11 +666,11 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm font-body">
                     <li className="flex justify-between">
                       <span className="text-on-surface">20kg</span>
-                      <span className="font-semibold text-primary">₹819</span>
+                      <span className="font-semibold text-primary">₹740</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">10kg</span>
-                      <span className="font-semibold text-primary">₹455</span>
+                      <span className="font-semibold text-primary">₹410</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">5kg</span>
@@ -678,7 +678,7 @@ export default function ProductsPage() {
                     </li>
                     <li className="flex justify-between">
                       <span className="text-on-surface">2kg</span>
-                      <span className="font-semibold text-primary">₹104</span>
+                      <span className="font-semibold text-primary">₹95</span>
                     </li>
                   </ul>
                 </div>
@@ -888,14 +888,14 @@ export default function ProductsPage() {
                       ],
                       [
                         "All Shade",
-                        "₹3575",
-                        "₹1820",
-                        "₹741",
-                        "₹189",
-                        "₹100",
-                        "₹51",
-                        "₹29",
-                        "₹18",
+                        "₹4400",
+                        "₹2200",
+                        "₹890",
+                        "₹225",
+                        "₹115",
+                        "₹55",
+                        "₹30",
+                        "₹20",
                       ],
                       [
                         "Aluminium Paints",
@@ -1005,12 +1005,12 @@ export default function ProductsPage() {
                       ],
                       [
                         "Clear Varnish",
-                        "₹4160",
-                        "₹2113",
-                        "₹871",
-                        "₹221",
-                        "₹116",
-                        "₹59",
+                        "₹4500",
+                        "₹2275",
+                        "₹920",
+                        "₹235",
+                        "₹120",
+                        "₹60",
                       ],
                     ].map((row, i) => (
                       <tr
@@ -1224,22 +1224,52 @@ export default function ProductsPage() {
                 ↑ Back to categories
               </a>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <ProductCard
-                product={{
-                  name: "Sky Neo Microfine Stainer",
-                  sizes: "50ml, 100ml, 200ml",
-                  image: "/images/stainers/sky-neo-stainer.png",
-                  desc: "Microfine stainer designed to finely stain paint and coating systems. It provides smooth, lump-free application and improved shade control.",
-                  features: [
-                    "Smooth shade adjustment",
-                    "Lump-free application",
-                    "Fine dispersion & better control",
-                    "Suitable for coating customization",
-                  ],
-                  price: "Price on request",
-                }}
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+              {categories
+                .find((c) => c.id === "stainers")
+                ?.products.map((product, idx) => (
+                  <ProductCard key={idx} product={product} />
+                ))}
+            </div>
+
+            <div className="bg-surface-container-lowest rounded-[2rem] p-8 md:p-12 shadow-ambient border border-outline-variant/10 max-w-4xl mx-auto overflow-x-auto">
+              <h3 className="font-headline text-2xl text-primary mb-6 text-center">
+                Sky Neo Microfine Stainer Price List
+              </h3>
+              <table className="w-full text-left border-collapse min-w-[500px]">
+                <thead>
+                  <tr className="border-b-2 border-primary/20">
+                    <th className="py-4 px-4 font-headline text-primary">
+                      Product Name
+                    </th>
+                    <th className="py-4 px-4 font-headline text-secondary text-center">
+                      200 ML
+                    </th>
+                    <th className="py-4 px-4 font-headline text-secondary text-center">
+                      100 ML
+                    </th>
+                    <th className="py-4 px-4 font-headline text-secondary text-center">
+                      50 ML
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="font-body text-sm">
+                  <tr className="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+                    <td className="py-4 px-4 text-on-surface font-semibold">
+                      Sky Neo Microfine Stainer
+                    </td>
+                    <td className="py-4 px-4 text-center text-primary font-bold">
+                      ₹60
+                    </td>
+                    <td className="py-4 px-4 text-center text-primary font-bold">
+                      ₹30
+                    </td>
+                    <td className="py-4 px-4 text-center text-primary font-bold">
+                      ₹15
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
 
@@ -1266,7 +1296,7 @@ export default function ProductsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
               {categories
-                .find((c) => c.id === "stainers")
+                .find((c) => c.id === "cleaning")
                 ?.products.map((product, idx) => (
                   <ProductCard key={idx} product={product} />
                 ))}
@@ -1274,88 +1304,50 @@ export default function ProductsPage() {
 
             {/* Cleaning Products Price List */}
             <div className="bg-surface-container-lowest rounded-[2rem] p-8 md:p-12 shadow-ambient border border-outline-variant/10 max-w-4xl mx-auto overflow-x-auto">
-              <h3 className="font-headline text-2xl text-primary mb-8 text-center">
+              <h3 className="font-headline text-2xl text-primary mb-6 text-center">
                 Mr. Shine Complete Price List
               </h3>
-              <table className="w-full text-left border-collapse min-w-[600px]">
+              <table className="w-full text-left border-collapse min-w-[500px]">
                 <thead>
                   <tr className="border-b-2 border-primary/20">
                     <th className="py-4 px-4 font-headline text-primary text-center">
                       S.No.
                     </th>
                     <th className="py-4 px-4 font-headline text-primary">
-                      Products Name
+                      Product Name
                     </th>
-                    <th className="py-4 px-4 font-headline text-secondary text-center whitespace-nowrap">
+                    <th className="py-4 px-4 font-headline text-secondary text-center">
                       1 LTR
                     </th>
-                    <th className="py-4 px-4 font-headline text-secondary text-center whitespace-nowrap">
+                    <th className="py-4 px-4 font-headline text-secondary text-center">
                       5 LTR
                     </th>
                   </tr>
                 </thead>
                 <tbody className="font-body text-sm">
                   {[
-                    {
-                      n: "MR. SHINE PHENYL",
-                      p500: "-",
-                      p1: "25.00",
-                      p5: "125.00",
-                    },
-                    {
-                      n: "TOILET CLEANER",
-                      p500: "-",
-                      p1: "12.00",
-                      p5: "60.00",
-                    },
-                    {
-                      n: "TOILET CLEANER FAST",
-                      p500: "-",
-                      p1: "25.00",
-                      p5: "125.00",
-                    },
-                    {
-                      n: "FLOOR CLEANER WITH PHENYL",
-                      p500: "-",
-                      p1: "75.00",
-                      p5: "375.00",
-                    },
-                    {
-                      n: "MR. SHINE DISH WASH",
-                      p500: "-",
-                      p1: "55.00",
-                      p5: "275.00",
-                    },
-                    {
-                      n: "LIQUID DETERGENT",
-                      p500: "-",
-                      p1: "60.00",
-                      p5: "300.00",
-                    },
-                    {
-                      n: "MR. SHINE HAND WASH",
-                      p500: "-",
-                      p1: "95.00",
-                      p5: "475.00",
-                    },
-                  ].map((item, i) => (
+                    { n: "Mr. Shine Hand Wash", p1: "124", p5: "618" },
+                    { n: "Mr. Shine Liquid Detergent", p1: "78", p5: "390" },
+                    { n: "Mr. Shine Floor Cleaner", p1: "98", p5: "488" },
+                    { n: "Mr. Shine Dish Wash", p1: "72", p5: "358" },
+                    { n: "Mr. Shine Toilet Cleaner", p1: "16", p5: "78" },
+                    { n: "Mr. Shine Phenyl", p1: "33", p5: "163" },
+                    { n: "Toilet Cleaner Fast", p1: "33", p5: "163" },
+                  ].map((item, idx) => (
                     <tr
-                      key={i}
+                      key={idx}
                       className="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors"
                     >
                       <td className="py-4 px-4 text-on-surface-variant font-medium text-center">
-                        {i + 1}
+                        {idx + 1}
                       </td>
-                      <td className="py-4 px-4 text-on-surface font-semibold whitespace-nowrap">
+                      <td className="py-4 px-4 text-on-surface font-semibold">
                         {item.n}
                       </td>
-                      {/* <td className="py-4 px-4 text-center text-on-surface-variant">
-                        {item.p500}
-                      </td> */}
-                      <td className="py-4 px-4 text-center text-primary font-bold whitespace-nowrap">
+                      <td className="py-4 px-4 text-center text-primary font-bold">
                         ₹{item.p1}
                       </td>
-                      <td className="py-4 px-4 text-center text-primary font-bold whitespace-nowrap">
+                      <td className="py-4 px-4 text-center text-primary font-bold">
                         ₹{item.p5}
                       </td>
                     </tr>

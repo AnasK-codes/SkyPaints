@@ -1,23 +1,43 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Icon from "@/components/Icon";
 
 export default function FloatingContactButtons() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  if (isCollapsed) {
+    return (
+      <button
+        type="button"
+        onClick={() => setIsCollapsed(false)}
+        className="fixed bottom-5 right-0 z-[100] w-8 h-12 bg-surface-container-highest/95 backdrop-blur-md text-on-surface hover:bg-primary hover:text-on-primary border border-r-0 border-outline-variant/40 rounded-l-xl shadow-lg flex items-center justify-center transition-all duration-300 hover:w-10 group animate-fade-in"
+        aria-label="Show contact buttons"
+        title="Show contact buttons"
+      >
+        <Icon
+          name="chevron_left"
+          className="text-base group-hover:-translate-x-0.5 transition-transform"
+        />
+      </button>
+    );
+  }
+
   return (
-    <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-4 animate-fade-in-up">
+    <div className="fixed bottom-5 right-4 sm:right-6 z-[100] flex flex-col items-center gap-2.5 sm:gap-3 animate-fade-in-up">
       {/* WhatsApp Button */}
       <a
         href="https://wa.me/917999295796?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Sky%20Paints%20and%20its%20products.%20Can%20you%20help%3F"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 group"
+        className="w-11 h-11 sm:w-13 sm:h-13 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 group"
         aria-label="Chat on WhatsApp"
+        title="Chat on WhatsApp"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           fill="currentColor"
           className="drop-shadow-sm group-hover:rotate-12 transition-transform"
@@ -29,14 +49,36 @@ export default function FloatingContactButtons() {
       {/* Call Button */}
       <a
         href="tel:+917999295796"
-        className="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 group"
+        className="w-11 h-11 sm:w-13 sm:h-13 bg-gradient-to-tr from-[#0066FF] to-[#0088FF] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 group"
         aria-label="Call Us"
+        title="Call Us"
       >
-        <Icon
-          name="call"
-          className="text-[28px] drop-shadow-sm group-hover:rotate-12 transition-transform"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="drop-shadow-sm group-hover:rotate-12 transition-transform"
+        >
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
       </a>
+
+      {/* Small Collapse Arrow Button */}
+      <button
+        type="button"
+        onClick={() => setIsCollapsed(true)}
+        className="w-8 h-8 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-on-surface hover:bg-primary hover:text-on-primary border border-outline-variant/40 shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-110 mt-0.5"
+        aria-label="Hide contact buttons"
+        title="Hide contact buttons"
+      >
+        <Icon name="chevron_right" className="text-sm" />
+      </button>
     </div>
   );
 }

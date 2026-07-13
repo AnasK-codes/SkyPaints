@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import AddToCartButton from "./AddToCartButton";
 import Icon from "@/components/Icon";
+import ProductImageViewer from "./ProductImageViewer";
 
 export interface Product {
   name: string;
@@ -16,6 +17,8 @@ export interface Product {
 }
 
 export default function ProductCard({ product }: { product: Product }) {
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
+
   // Split title and subtitle if it has a hyphen
   const parts = product.name.split(" - ");
   const mainTitle = parts[0];
@@ -31,7 +34,10 @@ export default function ProductCard({ product }: { product: Product }) {
       )}
 
       {/* Image Container */}
-      <div className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/10 group-hover:border-primary/30 transition-colors duration-500">
+      <div
+        onClick={() => setIsImageViewerOpen(true)}
+        className="w-full aspect-square rounded-[1.5rem] mb-6 relative flex items-center justify-center overflow-hidden border border-outline-variant/10 group-hover:border-primary/30 transition-colors duration-500 cursor-pointer"
+      >
         <Image
           src={product.image}
           alt={product.name}
@@ -39,7 +45,30 @@ export default function ProductCard({ product }: { product: Product }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
         />
+
+        {/* Inspection Zoom Icon Button Overlay */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsImageViewerOpen(true);
+          }}
+          className="absolute bottom-3 right-3 z-10 w-9 h-9 bg-surface-container-lowest/95 backdrop-blur-md text-on-surface hover:bg-primary hover:text-on-primary border border-outline-variant/30 rounded-full shadow-md flex items-center justify-center transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-110 active:scale-95"
+          aria-label={`Inspect full screen image for ${product.name}`}
+          title="Full-Screen Zoom"
+        >
+          <Icon name="zoom_in" className="text-base" />
+        </button>
       </div>
+
+      <ProductImageViewer
+        isOpen={isImageViewerOpen}
+        onClose={() => setIsImageViewerOpen(false)}
+        productName={product.name}
+        imageSrc={product.image}
+        productDesc={product.desc}
+        badge={product.badge}
+      />
 
       <div className="flex flex-col flex-grow">
         {/* Title & Subtitle */}
