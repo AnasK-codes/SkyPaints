@@ -12,6 +12,9 @@ export interface Product {
   features?: string[];
   sizes: string;
   price: string | Record<string, number | undefined>;
+  interiorPrice?: Record<string, number | undefined>;
+  exteriorPrice?: Record<string, number | undefined>;
+  category?: string;
   image: string;
   badge?: string;
 }

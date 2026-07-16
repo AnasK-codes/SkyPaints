@@ -1,9 +1,25 @@
+import {
+  PricingSection,
+  emulsionsPricingSections,
+  distemperPricingSections,
+  syntheticEnamelPricingSections,
+  waterproofingPricingSections,
+  puttyGroutPricingSections,
+  stainersPricingSections,
+  cleaningPricingSections,
+} from "./pricingTables";
+
+export * from "./pricingTables";
+
 export interface Product {
   name: string;
   desc: string;
   features?: string[];
   sizes: string;
   price: string | Record<string, number | undefined>;
+  interiorPrice?: Record<string, number | undefined>;
+  exteriorPrice?: Record<string, number | undefined>;
+  category?: string;
   image: string;
 }
 
@@ -12,12 +28,14 @@ export interface Category {
   title: string;
   description: string;
   products: Product[];
+  pricingSections?: PricingSection[];
 }
 
 export const categories: Category[] = [
   {
     id: "emulsions",
     title: "Emulsions",
+    pricingSections: emulsionsPricingSections,
     description:
       "Premium interior and exterior wall emulsions designed for smooth finish, modern appearance, durability, and wall protection.",
     products: [
@@ -31,8 +49,11 @@ export const categories: Category[] = [
           "Durable and long-lasting",
           "Low odour",
         ],
-        sizes: "20L, 10L, 4L, 1L, 500ml",
+        sizes: "20L, 10L, 4L, 1L",
         price: { "20L": 2500, "10L": 1275, "4L": 590, "1L": 152 },
+        interiorPrice: { "20L": 2500, "10L": 1275, "4L": 590, "1L": 152 },
+        exteriorPrice: { "20L": 2700, "10L": 1380, "4L": 640, "1L": 168 },
+        category: "emulsions",
         image: "/images/emulsions/pro-royal-glow.png",
       },
       {
@@ -45,8 +66,11 @@ export const categories: Category[] = [
           "Smooth application",
           "Durable coating",
         ],
-        sizes: "20L, 10L, 4L, 1L, 500ml",
-        price: { "20L": 3860, "10L": 1980, "4L": 810, "1L": 220, "500ml": 112 },
+        sizes: "20L, 10L, 4L, 1L",
+        price: { "20L": 3860, "10L": 1980, "4L": 810, "1L": 215 },
+        interiorPrice: { "20L": 3860, "10L": 1980, "4L": 810, "1L": 215 },
+        exteriorPrice: { "20L": 3860, "10L": 1980, "4L": 810, "1L": 215 },
+        category: "emulsions",
         image: "/images/emulsions/hi-sheen.png",
       },
       {
@@ -61,12 +85,27 @@ export const categories: Category[] = [
         ],
         sizes: "20L, 10L, 4L, 1L, 500ml",
         price: {
-          "20L": 5000,
-          "10L": 2600,
-          "4L": 1080,
-          "1L": 290,
-          "500ml": 155,
+          "20L": 1540,
+          "10L": 770,
+          "4L": 475,
+          "1L": 120,
+          "500ml": 65,
         },
+        interiorPrice: {
+          "20L": 1540,
+          "10L": 770,
+          "4L": 475,
+          "1L": 120,
+          "500ml": 65,
+        },
+        exteriorPrice: {
+          "20L": 2970,
+          "10L": 1515,
+          "4L": 705,
+          "1L": 180,
+          "500ml": 95,
+        },
+        category: "emulsions",
         image: "/images/emulsions/sky-neo-smart-premium.png",
       },
       {
@@ -79,8 +118,11 @@ export const categories: Category[] = [
           "Durable and long-lasting",
           "Smooth, refined finish",
         ],
-        sizes: "20L, 10L, 4L, 1L, 500ml",
-        price: { "20L": 1000, "10L": 530, "4L": 250, "1L": 65, "500ml": 35 },
+        sizes: "50L, 20L, 10L, 4L, 1L",
+        price: { "50L": 1705, "20L": 1100, "10L": 585, "4L": 275, "1L": 70 },
+        interiorPrice: { "50L": 1705, "20L": 1100, "10L": 585, "4L": 275, "1L": 70 },
+        exteriorPrice: { "50L": 1705, "20L": 1100, "10L": 585, "4L": 275, "1L": 70 },
+        category: "emulsions",
         image: "/images/emulsions/sky-neo-advance.png",
       },
     ],
@@ -117,6 +159,7 @@ export const categories: Category[] = [
   {
     id: "distemper",
     title: "Distemper",
+    pricingSections: distemperPricingSections,
     description:
       "Smooth, economical, and practical wall coating range for clean and fresh-looking interiors.",
     products: [
@@ -151,6 +194,7 @@ export const categories: Category[] = [
   {
     id: "synthetic-enamel",
     title: "Synthetic Enamel",
+    pricingSections: syntheticEnamelPricingSections,
     description:
       "Glossy and durable products for metal, wood, primers, varnish, and finishing applications.",
     products: [
@@ -212,6 +256,7 @@ export const categories: Category[] = [
   {
     id: "waterproofing",
     title: "Waterproofing",
+    pricingSections: waterproofingPricingSections,
     description:
       "Advanced products for dampness protection, seepage control, roof coating, terrace protection, bonding, and surface repair.",
     products: [
@@ -257,8 +302,8 @@ export const categories: Category[] = [
           "Sky Paint Shine WTO",
           "Professional protection",
         ],
-        sizes: "",
-        price: "Price on request",
+        sizes: "20L, 10L, 5L, 1L",
+        price: { "20L": 4400, "10L": 2310, "5L": 1320, "1L": 285 },
         image: "/images/waterproofing/range-of-waterproofing.png",
       },
     ],
@@ -266,6 +311,7 @@ export const categories: Category[] = [
   {
     id: "putty-grout",
     title: "Putty, Lime Wash & Tile Grout",
+    pricingSections: puttyGroutPricingSections,
     description:
       "Surface preparation and finishing products for smooth walls, strong bases, traditional white coating, and tile joint sealing.",
     products: [
@@ -326,6 +372,7 @@ export const categories: Category[] = [
   {
     id: "stainers",
     title: "Stainers",
+    pricingSections: stainersPricingSections,
     description:
       "Tinting and shade-control products for colour customization and refined paint application.",
     products: [
@@ -342,6 +389,7 @@ export const categories: Category[] = [
   {
     id: "cleaning",
     title: "Cleaning Products",
+    pricingSections: cleaningPricingSections,
     description:
       "Mr. Shine cleaning products for hygiene, freshness, and daily cleaning across homes, shops, offices, hotels, restaurants, hospitals, and commercial spaces.",
     products: [
