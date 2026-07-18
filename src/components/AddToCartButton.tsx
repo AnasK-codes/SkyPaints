@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useCart } from "@/context/CartContext";
 import { Product } from "./ProductCard";
 import Icon from "@/components/Icon";
@@ -13,12 +13,28 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
   const { items, addToCart, removeFromCart, updateQuantity } = useCart();
 
   const isEmulsion =
-    product.category === "emulsions" ||
-    Boolean(product.exteriorPrice || product.interiorPrice);
+    !product.name.toLowerCase().includes("neo advance") &&
+    (product.category === "emulsions" ||
+      Boolean(product.exteriorPrice || product.interiorPrice));
 
   const [surfaceType, setSurfaceType] = useState<"interior" | "exterior">(
     "interior"
   );
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   // Extract sizes
   const sizeOptions = product.sizes
@@ -106,25 +122,72 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
     <div className="mt-auto flex flex-col gap-4 pt-4 border-t border-outline-variant/10">
       {/* Exterior / Interior Dropdown for Emulsions Only */}
       {isEmulsion && (
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-1.5" ref={dropdownRef}>
           <span className="text-xs font-label text-on-surface-variant uppercase tracking-wider font-bold flex items-center gap-1.5">
             <Icon name="landscape" className="text-sm text-primary" />
             <span>Select Surface / Application</span>
           </span>
           <div className="relative">
-            <select
-              value={surfaceType}
-              onChange={(e) =>
-                setSurfaceType(e.target.value as "interior" | "exterior")
-              }
-              className="w-full appearance-none bg-surface-container hover:bg-surface-container-high rounded-xl border border-outline-variant/30 px-3.5 py-2.5 text-xs sm:text-sm font-bold text-on-surface outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all cursor-pointer pr-9 shadow-sm"
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className={`w-full bg-surface-container hover:bg-surface-container-high rounded-xl border px-3.5 py-2.5 text-xs sm:text-sm font-bold text-on-surface flex items-center justify-between transition-all cursor-pointer shadow-sm ${
+                isDropdownOpen
+                  ? "border-primary ring-1 ring-primary"
+                  : "border-outline-variant/30"
+              }`}
             >
-              <option value="interior">Interior Walls (Standard Finish)</option>
-              <option value="exterior">Exterior Walls (Weather Shield)</option>
-            </select>
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant flex items-center">
-              <Icon name="expand_more" className="text-base" />
-            </div>
+              <span>
+                {surfaceType === "interior"
+                  ? "Interior Walls (Standard Finish)"
+                  : "Exterior Walls (Weather Shield)"}
+              </span>
+              <Icon
+                name="expand_more"
+                className={`text-base text-on-surface-variant transition-transform duration-200 ${
+                  isDropdownOpen ? "rotate-180 text-primary" : ""
+                }`}
+              />
+            </button>
+
+            {isDropdownOpen && (
+              <div className="absolute z-50 left-0 right-0 top-full mt-1.5 bg-surface-container-lowest border border-outline-variant/30 rounded-xl shadow-[0px_8px_30px_rgba(46,16,101,0.12)] p-1.5 flex flex-col gap-1 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSurfaceType("interior");
+                    setIsDropdownOpen(false);
+                  }}
+                  className={`w-full px-3 py-2 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-between transition-all text-left ${
+                    surfaceType === "interior"
+                      ? "bg-primary/10 text-primary"
+                      : "text-on-surface hover:bg-surface-container"
+                  }`}
+                >
+                  <span>Interior Walls (Standard Finish)</span>
+                  {surfaceType === "interior" && (
+                    <Icon name="check" className="text-sm text-primary flex-shrink-0 ml-2" />
+                  )}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSurfaceType("exterior");
+                    setIsDropdownOpen(false);
+                  }}
+                  className={`w-full px-3 py-2 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-between transition-all text-left ${
+                    surfaceType === "exterior"
+                      ? "bg-primary/10 text-primary"
+                      : "text-on-surface hover:bg-surface-container"
+                  }`}
+                >
+                  <span>Exterior Walls (Weather Shield)</span>
+                  {surfaceType === "exterior" && (
+                    <Icon name="check" className="text-sm text-primary flex-shrink-0 ml-2" />
+                  )}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}

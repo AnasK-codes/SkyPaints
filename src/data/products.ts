@@ -120,8 +120,6 @@ export const categories: Category[] = [
         ],
         sizes: "30L, 20L, 10L, 4L, 1L",
         price: { "30L": 1705, "20L": 1100, "10L": 585, "4L": 275, "1L": 70 },
-        interiorPrice: { "30L": 1705, "20L": 1100, "10L": 585, "4L": 275, "1L": 70 },
-        exteriorPrice: { "30L": 1705, "20L": 1100, "10L": 585, "4L": 275, "1L": 70 },
         category: "emulsions",
         image: "/images/emulsions/sky-neo-advance.png",
       },
