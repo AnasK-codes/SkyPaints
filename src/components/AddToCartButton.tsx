@@ -131,7 +131,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
             <button
               type="button"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className={`w-full bg-surface-container hover:bg-surface-container-high rounded-xl border px-3.5 py-2.5 text-xs sm:text-sm font-bold text-on-surface flex items-center justify-between transition-all cursor-pointer shadow-sm ${
+              className={`w-full bg-surface-container hover:bg-surface-container-high rounded-[14px] border px-3.5 py-2.5 text-xs sm:text-sm font-bold text-on-surface flex items-center justify-between transition-all cursor-pointer shadow-sm ${
                 isDropdownOpen
                   ? "border-primary ring-1 ring-primary"
                   : "border-outline-variant/30"
@@ -144,23 +144,23 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
               </span>
               <Icon
                 name="expand_more"
-                className={`text-base text-on-surface-variant transition-transform duration-200 ${
+                className={`text-base text-on-surface-variant transition-transform duration-200 flex-shrink-0 ml-2 ${
                   isDropdownOpen ? "rotate-180 text-primary" : ""
                 }`}
               />
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute z-50 left-0 right-0 top-full mt-1.5 bg-surface-container-lowest border border-outline-variant/30 rounded-xl shadow-[0px_8px_30px_rgba(46,16,101,0.12)] p-1.5 flex flex-col gap-1 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+              <div className="w-full mt-1.5 bg-surface-container-lowest border border-outline-variant/30 rounded-[14px] shadow-sm p-1.5 flex flex-col gap-1 animate-in fade-in zoom-in-95 duration-150">
                 <button
                   type="button"
                   onClick={() => {
                     setSurfaceType("interior");
                     setIsDropdownOpen(false);
                   }}
-                  className={`w-full px-3 py-2 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-between transition-all text-left ${
+                  className={`w-full px-3 py-2.5 rounded-[10px] text-xs sm:text-sm font-bold flex items-center justify-between transition-all text-left ${
                     surfaceType === "interior"
-                      ? "bg-primary/10 text-primary"
+                      ? "bg-primary/15 text-primary"
                       : "text-on-surface hover:bg-surface-container"
                   }`}
                 >
@@ -175,9 +175,9 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
                     setSurfaceType("exterior");
                     setIsDropdownOpen(false);
                   }}
-                  className={`w-full px-3 py-2 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-between transition-all text-left ${
+                  className={`w-full px-3 py-2.5 rounded-[10px] text-xs sm:text-sm font-bold flex items-center justify-between transition-all text-left ${
                     surfaceType === "exterior"
-                      ? "bg-primary/10 text-primary"
+                      ? "bg-primary/15 text-primary"
                       : "text-on-surface hover:bg-surface-container"
                   }`}
                 >
