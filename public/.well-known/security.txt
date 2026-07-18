@@ -1,0 +1,3 @@
+Contact: mailto:contact@skypaints.co.in
+Preferred-Languages: en
+Canonical: https://skypaints.co.in/.well-known/security.txt

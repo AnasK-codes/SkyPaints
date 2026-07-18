@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://skypaints.in";
+export const dynamic = "force-static";
+
+const BASE_URL = "https://skypaints.co.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -8,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/products",
     "/about",
     "/contact",
-    "/cart",
     "/tools",
     "/gallery",
     "/shades",

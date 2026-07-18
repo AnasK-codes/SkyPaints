@@ -9,6 +9,7 @@ const notoSerif = Noto_Serif({
   variable: "--font-noto",
   weight: ["400", "700"],
   style: ["normal", "italic"],
+  display: "swap",
 });
 
 const gloock = Gloock({
@@ -16,6 +17,7 @@ const gloock = Gloock({
   variable: "--font-gloock",
   weight: ["400"],
   style: ["normal"],
+  display: "swap",
 });
 
 const manrope = Manrope({
@@ -23,10 +25,11 @@ const manrope = Manrope({
   variable: "--font-manrope",
   weight: ["300", "400", "500", "700", "800"],
   style: ["normal"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://skypaints.in"),
+  metadataBase: new URL("https://skypaints.co.in"),
   title: {
     default: "Skypaints | Premium Wall Paints & Emulsions in India",
     template: "%s | Skypaints",
@@ -54,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://skypaints.in",
+    url: "https://skypaints.co.in",
     siteName: "Skypaints",
     title: "Skypaints | Premium Wall Paints & Emulsions in India",
     description:
@@ -87,7 +90,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://skypaints.in",
+    canonical: "https://skypaints.co.in",
   },
 };
 
@@ -98,18 +101,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+
       <body
         className={`${notoSerif.variable} ${manrope.variable} ${gloock.variable} antialiased font-body bg-surface text-on-surface`}
       >
@@ -122,7 +114,7 @@ export default function RootLayout({
               name: "Skypaints India",
               description:
                 "Premium wall paints, emulsions, waterproofing, distemper, and cleaning products manufacturer in Raipur, India.",
-              url: "https://skypaints.in",
+              url: "https://skypaints.co.in",
               telephone: "+91-7999295796",
               address: {
                 "@type": "PostalAddress",
@@ -131,7 +123,7 @@ export default function RootLayout({
                 addressCountry: "IN",
               },
               sameAs: ["https://www.instagram.com/skyproductsraipur"],
-              image: "https://skypaints.in/images/logo.png",
+              image: "https://skypaints.co.in/images/logo.png",
             }),
           }}
         />

@@ -1,0 +1,49 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality:
+    name: Code Quality & Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+
+
+      - name: Build
+        run: npm run build
+
+      - name: Check output size
+        run: |
+          echo "── Build output size ──"
+          du -sh out/
+          echo ""
+          echo "── Largest files ──"
+          find out/ -type f -size +500k -exec ls -lh {} \; | sort -k5 -hr | head -20
+
+      - name: Verify critical files
+        run: |
+          echo "Checking sitemap.xml..."
+          test -f out/sitemap.xml && echo "✓ sitemap.xml exists" || (echo "✗ sitemap.xml missing!" && exit 1)
+          echo "Checking robots.txt..."
+          test -f out/robots.txt && echo "✓ robots.txt exists" || (echo "✗ robots.txt missing!" && exit 1)
+          echo "Checking _headers..."
+          test -f out/_headers && echo "✓ _headers exists" || (echo "✗ _headers missing!" && exit 1)
+          echo "Checking 404.html..."
+          test -f out/404.html && echo "✓ 404.html exists" || (echo "✗ 404.html missing!" && exit 1)

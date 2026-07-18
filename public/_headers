@@ -1,0 +1,22 @@
+# ── HTML pages: short cache, always revalidate ──
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ── Immutable hashed assets (JS, CSS chunks) ──
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── Static images, fonts, videos ──
+/images/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# ── Security headers (all routes) ──
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'
