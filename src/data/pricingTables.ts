@@ -13,7 +13,7 @@ export interface PricingSection {
 export const emulsionsPricingSections: PricingSection[] = [
   {
     title: "Sky Neo Advance",
-    headers: ["Water Base", "50LTR", "20LTR", "10LTR", "4LTR", "1LTR"],
+    headers: ["Water Base", "30LTR", "20LTR", "10LTR", "4LTR", "1LTR"],
     rows: [
       {
         productName: "Neo Advance Water BasePrimer",

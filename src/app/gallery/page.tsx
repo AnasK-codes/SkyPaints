@@ -95,14 +95,6 @@ const journeyItems = [
     colSpan: "md:col-span-1 md:row-span-2",
   },
   {
-    id: 13,
-    type: "image",
-    url: "/images/gallery/gallery-image-7.jpeg",
-    title: "Distributor Meet",
-    tag: "Team",
-    colSpan: "md:col-span-2 md:row-span-1",
-  },
-  {
     id: 14,
     type: "image",
     url: "/images/gallery/gallery-image-8.jpeg",

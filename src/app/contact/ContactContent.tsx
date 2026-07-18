@@ -117,11 +117,11 @@ export default function ContactContent() {
                   Email
                 </h3>
                 <p className="font-body text-on-surface-variant mb-4">
-                  skyproducts2020@gmail.com
+                  skyproduct2020@gmail.com
                 </p>
                 <a
                   className="text-primary font-label font-medium hover:underline mt-auto"
-                  href="mailto:skyproducts2020@gmail.com"
+                  href="mailto:skyproduct2020@gmail.com"
                 >
                   Send Email
                 </a>
@@ -319,7 +319,7 @@ export default function ContactContent() {
                     <div className="flex items-center gap-4">
                       <Icon name="mail" className="text-secondary-fixed" />
                       <span className="font-label">
-                        skyproducts2020@gmail.com
+                        skyproduct2020@gmail.com
                       </span>
                     </div>
                   </div>
@@ -369,7 +369,7 @@ export default function ContactContent() {
                       `Name: ${name}\nContact Info: ${contactInfo}\n\nMessage:\n${message}`,
                     );
 
-                    window.location.href = `mailto:skyproducts2020@gmail.com?subject=${subject}&body=${body}`;
+                    window.location.href = `mailto:skyproduct2020@gmail.com?subject=${subject}&body=${body}`;
                     setShowFeedbackModal(true);
                     e.currentTarget.reset();
                   }}

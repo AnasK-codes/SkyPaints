@@ -61,7 +61,7 @@ export default function PrivacyPage() {
             </h2>
             <p className="text-on-surface-variant mb-4">
               If you have any questions about this Privacy Policy, please
-              contact us at support@skypaints.com.
+              contact us at skyproduct2020@gmail.com.
             </p>
           </section>
         </div>
