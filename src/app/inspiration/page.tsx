@@ -33,7 +33,7 @@ export default function InspirationPage() {
             <div className="rounded-[3rem] overflow-hidden shadow-[0px_12px_40px_rgba(46,16,101,0.08)] relative h-[600px]">
               <Image
                 alt="A modern living room painted in a serene soft lavender hue"
-                src="/images/inspiration-hero.png"
+                src="/images/inspiration-hero.webp"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
@@ -58,7 +58,7 @@ export default function InspirationPage() {
             <div className="md:w-1/2 h-80 md:h-auto overflow-hidden relative">
               <Image
                 alt="A close-up shot of luxurious, thick paint being applied to a canvas"
-                src="/images/blog-featured-finish.png"
+                src="/images/blog-featured-finish.webp"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -109,7 +109,7 @@ export default function InspirationPage() {
               <div className="h-64 overflow-hidden relative">
                 <Image
                   alt="A beautifully painted modern Indian living room with warm lighting"
-                  src="/images/blog-cost.png"
+                  src="/images/blog-cost.webp"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -143,7 +143,7 @@ export default function InspirationPage() {
               <div className="h-64 overflow-hidden relative">
                 <Image
                   alt="A detailed close-up showing the textural difference between two painted surfaces"
-                  src="/images/blog-distemper.png"
+                  src="/images/blog-distemper.webp"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -177,7 +177,7 @@ export default function InspirationPage() {
               <div className="h-64 overflow-hidden relative">
                 <Image
                   alt="An exterior shot of a modern, minimalist house wall during a light rain shower"
-                  src="/images/blog-waterproofing.png"
+                  src="/images/blog-waterproofing.webp"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -211,7 +211,7 @@ export default function InspirationPage() {
               <div className="h-64 overflow-hidden relative">
                 <Image
                   alt="A beautifully painted bright exterior of an Indian home basking in sunlight"
-                  src="/images/blog-heat-reflect.png"
+                  src="/images/blog-heat-reflect.webp"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -245,7 +245,7 @@ export default function InspirationPage() {
               <div className="h-64 overflow-hidden relative">
                 <Image
                   alt="A beautifully lit living room featuring a calming vastu-compliant pale yellow wall"
-                  src="/images/blog-vastu-yellow.png"
+                  src="/images/blog-vastu-yellow.webp"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -281,7 +281,7 @@ export default function InspirationPage() {
               <div className="h-64 overflow-hidden relative">
                 <Image
                   alt="A stunning modern living room with a two-tone colour combination"
-                  src="/images/blog-trending-colours.png"
+                  src="/images/blog-trending-colours.webp"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -331,7 +331,7 @@ export default function InspirationPage() {
             <div className="lg:w-7/12 relative h-96 lg:h-auto overflow-hidden">
               <Image
                 alt="A highly detailed, macro photograph of a textured wall surface being carefully smoothed"
-                src="/images/inspiration-editorial.png"
+                src="/images/inspiration-editorial.webp"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover opacity-90"
@@ -374,7 +374,7 @@ export default function InspirationPage() {
                 <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 relative">
                   <Image
                     alt="A neatly organized collection of professional painting tools"
-                    src="/images/blog-checklist.png"
+                    src="/images/blog-checklist.webp"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -402,7 +402,7 @@ export default function InspirationPage() {
                 <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 relative">
                   <Image
                     alt="A sophisticated dining room corner featuring dark, dramatic accent walls"
-                    src="/images/blog-dark-colours.png"
+                    src="/images/blog-dark-colours.webp"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -430,7 +430,7 @@ export default function InspirationPage() {
                 <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 relative">
                   <Image
                     alt="A bright, sunlit kitchen featuring soft pastel cabinets"
-                    src="/images/blog-safe-paints.png"
+                    src="/images/blog-safe-paints.webp"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -458,7 +458,7 @@ export default function InspirationPage() {
                 <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 relative">
                   <Image
                     alt="A close up of a luxurious metallic textured accent wall in a modern bedroom"
-                    src="/images/blog-texture-designs.png"
+                    src="/images/blog-texture-designs.webp"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -486,7 +486,7 @@ export default function InspirationPage() {
                 <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 relative">
                   <Image
                     alt="A close up of someone scraping away damaged, peeling paint before applying a waterproof primer"
-                    src="/images/blog-peeling-paint.png"
+                    src="/images/blog-peeling-paint.webp"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"

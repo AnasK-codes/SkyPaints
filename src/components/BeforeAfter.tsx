@@ -57,7 +57,7 @@ export default function BeforeAfter() {
             alt="Dull, unpainted gray room"
             fill
             className="object-cover"
-            src="/images/before-image.png"
+            src="/images/before-image.webp"
           />
           <span className="absolute top-6 left-6 px-4 py-2 bg-black/50 backdrop-blur-md text-white rounded-full text-xs font-bold uppercase tracking-widest hidden md:block">
             Before

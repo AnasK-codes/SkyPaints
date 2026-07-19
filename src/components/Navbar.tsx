@@ -83,7 +83,7 @@ export default function Navbar() {
             className="flex items-center gap-3 hover:opacity-80 transition-opacity group flex-shrink-0"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Skypaints Logo"
               width={32}
               height={32}

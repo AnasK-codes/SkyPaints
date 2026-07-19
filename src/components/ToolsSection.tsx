@@ -73,7 +73,7 @@ export default function ToolsSection() {
             width={600}
             height={400}
             className="relative z-10 rounded-xl shadow-2xl border border-white/10 w-full h-auto"
-            src="/images/canvas.png"
+            src="/images/canvas.webp"
           />
         </div>
       </div>

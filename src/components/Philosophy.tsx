@@ -36,7 +36,7 @@ export default function Philosophy() {
           fill
           className="object-cover"
           sizes="(max-width: 1024px) 100vw, 50vw"
-          src="/images/hand-brush.png"
+          src="/images/hand-brush.webp"
         />
         <div className="absolute top-12 left-12 p-8 bg-white/40 backdrop-blur-xl rounded-xl border border-white/20 shadow-xl max-w-xs hidden md:block">
           <p className="text-primary font-serif italic text-xl">

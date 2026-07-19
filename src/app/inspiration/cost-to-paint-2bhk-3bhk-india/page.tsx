@@ -45,7 +45,7 @@ export default function BlogPost() {
           >
             <Image
               alt="A beautifully painted modern Indian living room with warm lighting"
-              src="/images/blog-cost-to-paint.png"
+              src="/images/blog-cost.webp"
               fill
               className="object-cover"
               priority

@@ -79,7 +79,7 @@ export default function ProductsPage() {
             <div className="relative rounded-[2rem] bg-surface-container-low shadow-elevated p-6 grid grid-cols-2 grid-rows-2 gap-4 border border-outline-variant/10">
               <div className="relative rounded-2xl overflow-hidden group aspect-square">
                 <Image
-                  src="/images/products-hero/range-of-emulsion.png"
+                  src="/images/products-hero/range-of-emulsion.webp"
                   alt="Range of Emulsions"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -93,7 +93,7 @@ export default function ProductsPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden group aspect-square">
                 <Image
-                  src="/images/products-hero/range-of-putty-hero.png"
+                  src="/images/products-hero/range-of-putty-hero.webp"
                   alt="Putty Range"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -107,7 +107,7 @@ export default function ProductsPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden group aspect-square">
                 <Image
-                  src="/images/products-hero/range-of-waterproofing.png"
+                  src="/images/products-hero/range-of-waterproofing.webp"
                   alt="Waterproofing"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -121,7 +121,7 @@ export default function ProductsPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden group aspect-square">
                 <Image
-                  src="/images/products-hero/sky-neo-range-hero.png"
+                  src="/images/products-hero/sky-neo-range-hero.webp"
                   alt="Sky Neo Range"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

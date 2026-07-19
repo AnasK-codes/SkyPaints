@@ -42,7 +42,7 @@ export default function BlogPost() {
           >
             <Image
               alt="A bright, sunlit nursery featuring soft pastel cabinets and safe finishes"
-              src="/images/blog-safe-paints.png"
+              src="/images/blog-safe-paints.webp"
               fill
               className="object-cover"
               priority

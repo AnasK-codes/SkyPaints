@@ -37,7 +37,7 @@ export default function TrendingCombinationsPage() {
         >
           <Image
             alt="A stunning modern living room with a two-tone colour combination"
-            src="/images/blog-trending-colours.png"
+            src="/images/blog-trending-colours.webp"
             fill
             priority
             className="object-cover"

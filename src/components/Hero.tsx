@@ -6,19 +6,19 @@ import { useState, useEffect, useCallback } from "react";
 
 const heroImages = [
   {
-    src: "/images/hero-image-1.jpg",
+    src: "/images/hero-image-1.webp",
     alt: "Modern living room painted with Skypaints premium lavender emulsion",
   },
   {
-    src: "/images/hero-image-2.jpg",
+    src: "/images/hero-image-2.webp",
     alt: "Elegant bedroom interior with Skypaints warm tone wall finish",
   },
   {
-    src: "/images/hero-image-3.jpg",
+    src: "/images/hero-image-3.webp",
     alt: "Contemporary home exterior painted with Skypaints weather-resistant paint",
   },
   {
-    src: "/images/lavender-hero-2.png",
+    src: "/images/lavender-hero-2.webp",
     alt: "Skypaints ethereal lavender paint finish on accent wall",
   },
 ];

@@ -37,7 +37,7 @@ export default function WallTextureDesignsPage() {
         >
           <Image
             alt="A close up of a luxurious metallic textured accent wall in a modern bedroom"
-            src="/images/blog-texture-designs.png"
+            src="/images/blog-texture-designs.webp"
             fill
             priority
             className="object-cover"

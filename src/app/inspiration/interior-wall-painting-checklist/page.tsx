@@ -42,7 +42,7 @@ export default function BlogPost() {
           >
             <Image
               alt="A neatly organized collection of professional painting tools"
-              src="/images/blog-checklist.png"
+              src="/images/blog-checklist.webp"
               fill
               className="object-cover"
               priority

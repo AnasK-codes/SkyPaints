@@ -42,7 +42,7 @@ export default function BlogPost() {
           >
             <Image
               alt="A close-up shot of luxurious, thick paint being applied to a canvas"
-              src="/images/blog-featured-finish.png"
+              src="/images/blog-featured-finish.webp"
               fill
               className="object-cover"
               priority

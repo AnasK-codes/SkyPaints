@@ -37,7 +37,7 @@ export default function VastuColoursPage() {
         >
           <Image
             alt="A beautifully lit living room featuring a calming vastu-compliant pale yellow wall"
-            src="/images/blog-vastu.png"
+            src="/images/blog-vastu-yellow.webp"
             fill
             priority
             className="object-cover"

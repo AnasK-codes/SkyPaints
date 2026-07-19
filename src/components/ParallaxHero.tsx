@@ -34,7 +34,7 @@ export default function ParallaxHero() {
           className="w-full h-full object-cover brightness-75 opacity-95 scale-105 will-change-transform"
           fetchPriority="high"
           data-alt="A luxurious high-ceiling living room with walls painted in a sophisticated, soft lavender matte finish. The sunlight streams through large floor-to-ceiling windows, casting gentle shadows. The furniture is minimalist and high-end, featuring deep violet velvet textures. The entire scene feels serene, ethereal, and meticulously curated for a premium architectural publication."
-          src="/images/about-cover.png"
+          src="/images/about-cover.webp"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
       </div>

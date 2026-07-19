@@ -53,7 +53,7 @@ export default function ContactContent() {
               <div className="absolute inset-0 bg-surface-container-lowest rounded-xl shadow-[0px_12px_40px_rgba(46,16,101,0.08)] overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-700">
                 <Image
                   alt="Skypaints Contact"
-                  src="/images/contact-paintsbox.png"
+                  src="/images/contact-paintsbox.webp"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -300,7 +300,7 @@ export default function ContactContent() {
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{
-                    backgroundImage: "url('/images/lavender-hero-2.png')",
+                    backgroundImage: "url('/images/lavender-hero-2.webp')",
                   }}
                 ></div>
                 <div className="absolute inset-0 bg-primary/80 mix-blend-multiply"></div>

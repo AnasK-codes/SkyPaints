@@ -42,7 +42,7 @@ export default function BlogPost() {
           >
             <Image
               alt="An exterior shot of a modern, minimalist house wall during a light rain shower"
-              src="/images/blog-waterproofing.png"
+              src="/images/blog-waterproofing.webp"
               fill
               className="object-cover"
               priority

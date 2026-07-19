@@ -15,7 +15,7 @@ export default function Testimonials() {
               width={64}
               height={64}
               className="rounded-full object-cover ring-2 ring-secondary-fixed/50"
-              src="/images/review-1.png"
+              src="/images/review-1.webp"
             />
             <div>
               <p className="text-primary italic leading-tight">
@@ -34,7 +34,7 @@ export default function Testimonials() {
               width={64}
               height={64}
               className="rounded-full object-cover ring-2 ring-secondary-fixed/50"
-              src="/images/review-2.png"
+              src="/images/review-2.webp"
             />
             <div>
               <p className="text-primary italic leading-tight">
@@ -53,7 +53,7 @@ export default function Testimonials() {
               width={64}
               height={64}
               className="rounded-full object-cover ring-2 ring-secondary-fixed/50"
-              src="/images/review-3.png"
+              src="/images/review-3.webp"
             />
             <div>
               <p className="text-primary italic leading-tight">

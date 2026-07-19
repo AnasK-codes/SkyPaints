@@ -37,7 +37,7 @@ export default function HeatReflectivePaintsPage() {
         >
           <Image
             alt="A beautifully painted bright exterior of an Indian home basking in sunlight"
-            src="/images/blog-heat-reflective.png"
+            src="/images/blog-heat-reflect.webp"
             fill
             priority
             className="object-cover"

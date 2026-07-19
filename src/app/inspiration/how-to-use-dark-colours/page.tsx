@@ -42,7 +42,7 @@ export default function BlogPost() {
           >
             <Image
               alt="A sophisticated dining room corner featuring dark, dramatic accent walls"
-              src="/images/blog-dark-colours.png"
+              src="/images/blog-dark-colours.webp"
               fill
               className="object-cover"
               priority

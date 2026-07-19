@@ -21,7 +21,7 @@ const productItems = [
   {
     id: 2,
     type: "image",
-    url: "/images/gallery/gallery-image-1.png",
+    url: "/images/gallery/gallery-image-1.webp",
     title: "Premium Finish",
     category: "Exterior Paints",
     colSpan: "md:col-span-1 md:row-span-1",
@@ -73,7 +73,7 @@ const journeyItems = [
   {
     id: 7,
     type: "image",
-    url: "/images/gallery/gallery-image-4.jpeg",
+    url: "/images/gallery/gallery-image-4.webp",
     title: "Quality Assurance",
     tag: "Achievement",
     colSpan: "md:col-span-1 md:row-span-1",
@@ -81,7 +81,7 @@ const journeyItems = [
   {
     id: 9,
     type: "image",
-    url: "/images/gallery/gallery-image-5.jpeg",
+    url: "/images/gallery/gallery-image-5.webp",
     title: "Our Heritage",
     tag: "Legacy",
     colSpan: "md:col-span-1 md:row-span-1",
@@ -89,7 +89,7 @@ const journeyItems = [
   {
     id: 11,
     type: "image",
-    url: "/images/gallery/gallery-image-6.jpeg",
+    url: "/images/gallery/gallery-image-6.webp",
     title: "Team Milestone",
     tag: "Event",
     colSpan: "md:col-span-1 md:row-span-2",
@@ -97,7 +97,7 @@ const journeyItems = [
   {
     id: 14,
     type: "image",
-    url: "/images/gallery/gallery-image-8.jpeg",
+    url: "/images/gallery/gallery-image-8.webp",
     title: "Distributor Meet",
     tag: "Achievement",
     colSpan: "md:col-span-2 md:row-span-1",

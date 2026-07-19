@@ -23,7 +23,7 @@ export default function FeaturedCarousel() {
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
-            src="/images/golden-hour.png"
+            src="/images/golden-hour.webp"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-8 text-on-primary">
@@ -46,7 +46,7 @@ export default function FeaturedCarousel() {
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
-            src="/images/midnight-mist.png"
+            src="/images/midnight-mist.webp"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-8 text-on-primary">
@@ -69,7 +69,7 @@ export default function FeaturedCarousel() {
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
-            src="/images/ethereal-sage.png"
+            src="/images/ethereal-sage.webp"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-8 text-on-primary">

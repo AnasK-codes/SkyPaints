@@ -42,7 +42,7 @@ export default function BlogPost() {
           >
             <Image
               alt="A detailed close-up showing the textural difference between two painted surfaces"
-              src="/images/blog-distemper-emulsion.png"
+              src="/images/blog-distemper.webp"
               fill
               className="object-cover"
               priority

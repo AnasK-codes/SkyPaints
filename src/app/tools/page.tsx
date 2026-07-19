@@ -64,7 +64,7 @@ export default function ToolsPage() {
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-elevated relative">
                 <Image
                   alt="Premium paint tools"
-                  src="/images/color-box.png"
+                  src="/images/color-box.webp"
                   fill
                   priority
                   className="object-cover"

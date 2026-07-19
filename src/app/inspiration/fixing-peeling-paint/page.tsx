@@ -37,7 +37,7 @@ export default function FixingPeelingPaintPage() {
         >
           <Image
             alt="A close up of someone scraping away damaged, peeling paint before applying a waterproof primer"
-            src="/images/blog-peeling-paint.png"
+            src="/images/blog-peeling-paint.webp"
             fill
             priority
             className="object-cover"

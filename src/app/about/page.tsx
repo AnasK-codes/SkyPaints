@@ -34,7 +34,7 @@ export default function AboutPage() {
                     alt="Skypaints Factory"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="/images/factory.jpeg"
+                    src="/images/factory.webp"
                   />
                   <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
                 </div>
@@ -351,7 +351,7 @@ export default function AboutPage() {
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     loading="lazy"
                     data-alt="A professional portrait of Juzer Malak, founder of SkyPaints."
-                    src="images/founder.png"
+                    src="/images/founder.webp"
                   />
                 </div>
                 <h5 className="font-headline text-xl text-primary">
@@ -368,7 +368,7 @@ export default function AboutPage() {
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     loading="lazy"
                     data-alt="A portrait of Qutbuddin Malak, Outreach partner of SkyPaints."
-                    src="/images/outreach-partner.png"
+                    src="/images/outreach-partner.webp"
                   />
                 </div>
                 <h5 className="font-headline text-xl text-primary">
